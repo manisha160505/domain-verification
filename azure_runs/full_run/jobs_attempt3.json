@@ -1,0 +1,26 @@
+﻿{
+    "shard_1":  {
+                    "compute":  "HPC1",
+                    "resumed_from":  "silver_deer_qnfpnd6rxq",
+                    "shard":  "shards/shard_1.csv",
+                    "job":  "brave_kiwi_zf6nqbxmmg"
+                },
+    "shard_2":  {
+                    "compute":  "HPC2",
+                    "resumed_from":  "khaki_plastic_rkcb64b9qk",
+                    "shard":  "shards/shard_2.csv",
+                    "job":  "teal_sail_wd578srjjc"
+                },
+    "shard_3":  {
+                    "compute":  "HPC3",
+                    "resumed_from":  "olive_picture_3r8w24vrl9",
+                    "shard":  "shards/shard_3.csv",
+                    "job":  "keen_plum_xtbdm4szzk"
+                },
+    "shard_4":  {
+                    "compute":  "HPC4",
+                    "resumed_from":  "funny_tray_xfkbtd1lxy",
+                    "shard":  "shards/shard_4.csv",
+                    "job":  "crimson_pocket_lbd532tbxr"
+                }
+}

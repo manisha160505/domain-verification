@@ -1,0 +1,85 @@
+{
+  "rows_resolved": 5998,
+  "rows_in_queue": 5998,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "NEEDS_REVIEW": 2295,
+    "VERIFIED_ACTIVE": 1561,
+    "NEEDS_REVIEW_SUGGESTION": 362,
+    "RETRY_UNREACHABLE": 1158,
+    "REPLACED_VERIFIED": 135,
+    "NOT_FOUND": 239,
+    "COMPANY_CLOSED": 248
+  },
+  "decisions": {
+    "REVIEW": 4054,
+    "ACCEPT": 1696,
+    "REJECT": 248
+  },
+  "outcomes": {
+    "INSUFFICIENT_PROOF": 1303,
+    "VERIFIED": 1617,
+    "NO_PROOF": 618,
+    "REPLACEMENT_SUGGESTED": 362,
+    "TEMP_UNREACHABLE": 190,
+    "BLOCKED": 528,
+    "REDIRECT_UNCONFIRMED": 132,
+    "UNREADABLE": 440,
+    "NOT_FOUND": 239,
+    "COMPANY_CLOSED": 248,
+    "GOVERNMENT_SITE": 242,
+    "REPLACED": 79
+  },
+  "found_via": {
+    "SUPPLIED": 1475,
+    "REDIRECT": 54,
+    "WWW_VARIANT": 88,
+    "SEARCH": 79
+  },
+  "answer_types": {
+    "OWN_SITE": 1170,
+    "GROUP_SITE": 252,
+    "REGIONAL_SITE": 274
+  },
+  "domains_changed": 135,
+  "accepted_with_proof": 1696,
+  "accepted_with_proof_rate": 0.2828,
+  "strong_proof_accepts": 996,
+  "by_original_domain_status": {
+    "PRE_EXISTING_ACTIVE": {
+      "REVIEW:INSUFFICIENT_PROOF": 1035,
+      "ACCEPT:VERIFIED": 1503,
+      "REVIEW:NO_PROOF": 369,
+      "REVIEW:REPLACEMENT_SUGGESTED": 297,
+      "REVIEW:TEMP_UNREACHABLE": 175,
+      "REVIEW:BLOCKED": 359,
+      "REVIEW:REDIRECT_UNCONFIRMED": 129,
+      "REVIEW:UNREADABLE": 328,
+      "REVIEW:NOT_FOUND": 139,
+      "REJECT:COMPANY_CLOSED": 179,
+      "REVIEW:GOVERNMENT_SITE": 151,
+      "ACCEPT:REPLACED": 65
+    },
+    "VERIFIED_ACTIVE": {
+      "ACCEPT:VERIFIED": 114,
+      "REVIEW:BLOCKED": 169,
+      "REVIEW:GOVERNMENT_SITE": 91,
+      "REVIEW:REDIRECT_UNCONFIRMED": 3,
+      "REVIEW:NO_PROOF": 249,
+      "REVIEW:INSUFFICIENT_PROOF": 268,
+      "REVIEW:NOT_FOUND": 100,
+      "REJECT:COMPANY_CLOSED": 69,
+      "REVIEW:REPLACEMENT_SUGGESTED": 65,
+      "REVIEW:TEMP_UNREACHABLE": 15,
+      "REVIEW:UNREADABLE": 112,
+      "ACCEPT:REPLACED": 14
+    }
+  },
+  "consistency_flags": 17,
+  "review_queue_rows": 4437,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "shard.csv",
+  "input_sha256": "9771e9344d8026327f478f66d6df160b87c1eed065bf48ef4bd5fdadab6ecde0",
+  "generated_at": "2026-10-05T19:01:30.356167+00:00"
+}

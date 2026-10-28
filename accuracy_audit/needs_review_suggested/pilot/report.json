@@ -1,0 +1,106 @@
+{
+  "population": 16509,
+  "seed": 20261006,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "run_date": "2026-10-06T07:03:11+00:00",
+  "n_drawn": 100,
+  "n_judged": 50,
+  "n_match": 39,
+  "n_mismatch": 11,
+  "raw_accuracy": 0.78,
+  "wilson_fpc_95": [
+    0.6478,
+    0.8724
+  ],
+  "cluster_bootstrap_95": null,
+  "country_reweighted_accuracy": 0.78,
+  "replacement_rate": 0.5,
+  "replaced_reasons": {
+    "NO_DOMAIN_FOUND": 33,
+    "LOW_CONFIDENCE": 16,
+    "MEDIUM_NOT_CONFIRMED": 1
+  },
+  "bounds": [
+    0.39,
+    0.89
+  ],
+  "reliability_flag": true,
+  "by_country": {
+    "JP": {
+      "judged": 24,
+      "match": 18,
+      "replaced": 14,
+      "accuracy": 0.75,
+      "replacement_rate": 0.3684
+    },
+    "AU": {
+      "judged": 7,
+      "match": 6,
+      "replaced": 11,
+      "accuracy": 0.8571,
+      "replacement_rate": 0.6111
+    },
+    "SG": {
+      "judged": 7,
+      "match": 6,
+      "replaced": 3,
+      "accuracy": 0.8571,
+      "replacement_rate": 0.3
+    },
+    "TH": {
+      "judged": 3,
+      "match": 3,
+      "replaced": 6,
+      "accuracy": 1.0,
+      "replacement_rate": 0.6667
+    },
+    "MY": {
+      "judged": 2,
+      "match": 1,
+      "replaced": 7,
+      "accuracy": 0.5,
+      "replacement_rate": 0.7778
+    },
+    "ID": {
+      "judged": 4,
+      "match": 2,
+      "replaced": 2,
+      "accuracy": 0.5,
+      "replacement_rate": 0.3333
+    },
+    "KR": {
+      "judged": 2,
+      "match": 2,
+      "replaced": 2,
+      "accuracy": 1.0,
+      "replacement_rate": 0.5
+    },
+    "NZ": {
+      "judged": 1,
+      "match": 1,
+      "replaced": 2,
+      "accuracy": 1.0,
+      "replacement_rate": 0.6667
+    },
+    "PH": {
+      "judged": 0,
+      "match": 0,
+      "replaced": 2,
+      "accuracy": null,
+      "replacement_rate": 1.0
+    },
+    "VN": {
+      "judged": 0,
+      "match": 0,
+      "replaced": 1,
+      "accuracy": null,
+      "replacement_rate": 1.0
+    }
+  },
+  "tiers_of_judged": {
+    "HIGH": 48,
+    "MEDIUM": 2
+  }
+}

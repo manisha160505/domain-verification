@@ -1,0 +1,75 @@
+{
+  "rows_resolved": 844,
+  "rows_in_queue": 844,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "RETRY_UNREACHABLE": 766,
+    "COMPANY_CLOSED": 5,
+    "NEEDS_REVIEW_SUGGESTION": 26,
+    "NEEDS_REVIEW": 20,
+    "VERIFIED_ACTIVE": 6,
+    "REPLACED_VERIFIED": 11,
+    "NOT_FOUND": 10
+  },
+  "decisions": {
+    "REVIEW": 822,
+    "REJECT": 5,
+    "ACCEPT": 17
+  },
+  "outcomes": {
+    "TEMP_UNREACHABLE": 162,
+    "COMPANY_CLOSED": 5,
+    "UNREADABLE": 179,
+    "REPLACEMENT_SUGGESTED": 26,
+    "BLOCKED": 425,
+    "INSUFFICIENT_PROOF": 10,
+    "VERIFIED": 6,
+    "REPLACED": 11,
+    "NO_PROOF": 8,
+    "NOT_FOUND": 10,
+    "GOVERNMENT_SITE": 2
+  },
+  "found_via": {
+    "WWW_VARIANT": 6,
+    "SEARCH": 11
+  },
+  "answer_types": {
+    "OWN_SITE": 14,
+    "GROUP_SITE": 1,
+    "REGIONAL_SITE": 2
+  },
+  "domains_changed": 11,
+  "accepted_with_proof": 17,
+  "accepted_with_proof_rate": 0.0201,
+  "strong_proof_accepts": 13,
+  "by_original_domain_status": {
+    "UNVERIFIED_INACTIVE": {
+      "REVIEW:TEMP_UNREACHABLE": 66,
+      "REJECT:COMPANY_CLOSED": 1,
+      "REVIEW:UNREADABLE": 6,
+      "REVIEW:REPLACEMENT_SUGGESTED": 2,
+      "REVIEW:BLOCKED": 5,
+      "REVIEW:INSUFFICIENT_PROOF": 3
+    },
+    "REPLACED_INACTIVE": {
+      "REVIEW:BLOCKED": 420,
+      "ACCEPT:VERIFIED": 6,
+      "ACCEPT:REPLACED": 11,
+      "REVIEW:TEMP_UNREACHABLE": 96,
+      "REVIEW:UNREADABLE": 173,
+      "REVIEW:REPLACEMENT_SUGGESTED": 24,
+      "REVIEW:NO_PROOF": 8,
+      "REVIEW:NOT_FOUND": 10,
+      "REJECT:COMPANY_CLOSED": 4,
+      "REVIEW:INSUFFICIENT_PROOF": 7,
+      "REVIEW:GOVERNMENT_SITE": 2
+    }
+  },
+  "consistency_flags": 0,
+  "review_queue_rows": 838,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "/mnt/azureml/cr/j/9c81bb905bac4f259f1abb3268affda8/cap/data-capability/wd/INPUT_queue/shard_1.csv",
+  "input_sha256": "7e8be4673f5f71b926e8580038ebe816ce1f80d3fcdbe81a26a71070c7c75cdc",
+  "generated_at": "2026-10-04T07:30:29.873899+00:00"
+}

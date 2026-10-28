@@ -1,0 +1,90 @@
+== setting up Python 3.11 environment
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Python 3.11.17
+== starting resolver: --workers 10 --max-searches-per-minute 20 --input /mnt/azureml/cr/j/b9d722c4e89e46338964297b28dfc6f5/cap/data-capability/wd/INPUT_queue/work_queue_master.csv --output-dir /tmp/resolver_output --limit-per-worker 8
+2026-10-02 16:39:43,817 INFO run_parallel worker 0 started (pid 108), log /tmp/resolver_output/logs/worker_0.log
+2026-10-02 16:39:46,818 INFO run_parallel worker 1 started (pid 117), log /tmp/resolver_output/logs/worker_1.log
+2026-10-02 16:39:49,819 INFO run_parallel worker 2 started (pid 134), log /tmp/resolver_output/logs/worker_2.log
+2026-10-02 16:39:52,820 INFO run_parallel worker 3 started (pid 169), log /tmp/resolver_output/logs/worker_3.log
+2026-10-02 16:39:55,821 INFO run_parallel worker 4 started (pid 216), log /tmp/resolver_output/logs/worker_4.log
+2026-10-02 16:39:58,823 INFO run_parallel worker 5 started (pid 277), log /tmp/resolver_output/logs/worker_5.log
+2026-10-02 16:40:01,823 INFO run_parallel worker 6 started (pid 360), log /tmp/resolver_output/logs/worker_6.log
+2026-10-02 16:40:04,824 INFO run_parallel worker 7 started (pid 443), log /tmp/resolver_output/logs/worker_7.log
+2026-10-02 16:40:07,825 INFO run_parallel worker 8 started (pid 496), log /tmp/resolver_output/logs/worker_8.log
+2026-10-02 16:40:10,826 INFO run_parallel worker 9 started (pid 539), log /tmp/resolver_output/logs/worker_9.log
+2026-10-02 16:45:16,335 INFO run_parallel sheet refreshed: {"REPLACED_VERIFIED": 15, "VERIFIED_ACTIVE": 2, "NOT_FOUND": 11, "PENDING": 96795, "RETRY_UNREACHABLE": 1}
+2026-10-02 16:45:36,336 INFO run_parallel worker 2 finished
+2026-10-02 16:49:36,341 INFO run_parallel worker 0 finished
+2026-10-02 16:49:36,341 INFO run_parallel worker 5 finished
+backup saved to /mnt/azureml/cr/j/b9d722c4e89e46338964297b28dfc6f5/cap/data-capability/wd/results
+2026-10-02 16:50:18,734 INFO run_parallel sheet refreshed: {"REPLACED_VERIFIED": 27, "VERIFIED_ACTIVE": 2, "NOT_FOUND": 27, "NEEDS_REVIEW": 1, "RETRY_UNREACHABLE": 1, "COMPANY_CLOSED": 4, "PENDING": 96761, "MERGED_SUCCESSOR_SITE": 1}
+2026-10-02 16:50:58,736 INFO run_parallel worker 1 finished
+2026-10-02 16:50:58,736 INFO run_parallel worker 4 finished
+2026-10-02 16:51:38,737 INFO run_parallel worker 3 finished
+2026-10-02 16:51:38,737 INFO run_parallel worker 8 finished
+2026-10-02 16:51:48,738 INFO run_parallel worker 7 finished
+2026-10-02 16:52:38,739 INFO run_parallel worker 6 finished
+2026-10-02 16:52:58,740 INFO run_parallel worker 9 finished
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING        3     9631   0.0%      1390   2026-10-02T16:41:05
+     1   RUNNING        1     9739   0.0%      3041   2026-10-02T16:40:01
+     2   RUNNING        7     9728   0.1%      3142   2026-10-02T16:44:57
+     3   RUNNING        3     9700   0.0%       723   2026-10-02T16:45:01
+     4   RUNNING        1     9648   0.0%      1654   2026-10-02T16:43:15
+     5   RUNNING        4     9606   0.0%      3275   2026-10-02T16:44:58
+     6   RUNNING        2     9677   0.0%      1316   2026-10-02T16:44:01
+     7   RUNNING        3     9695   0.0%      1657   2026-10-02T16:44:55
+     8   RUNNING        3     9718   0.0%      1418   2026-10-02T16:45:01
+     9   RUNNING        2     9682   0.0%       759   2026-10-02T16:45:11
+ total                 29    96824   0.0%
+worker    status    saved    owned    pct  last row   updated
+     0   PARTIAL        8     9631   0.1%         -   2026-10-02T16:49:27
+     1   RUNNING        6     9739   0.1%      3651   2026-10-02T16:50:05
+     2   PARTIAL        8     9728   0.1%         -   2026-10-02T16:45:27
+     3   RUNNING        5     9700   0.1%      1113   2026-10-02T16:48:58
+     4   RUNNING        7     9648   0.1%       914   2026-10-02T16:48:59
+     5   PARTIAL        8     9606   0.1%         -   2026-10-02T16:49:27
+     6   RUNNING        6     9677   0.1%      3136   2026-10-02T16:50:17
+     7   RUNNING        5     9695   0.1%      4617   2026-10-02T16:48:02
+     8   RUNNING        6     9718   0.1%      3488   2026-10-02T16:49:54
+     9   RUNNING        5     9682   0.1%      1459   2026-10-02T16:50:02
+ total                 64    96824   0.1%
+worker    status    saved    owned    pct  last row   updated
+     0   PARTIAL        8     9631   0.1%         -   2026-10-02T16:49:27
+     1   PARTIAL        8     9739   0.1%         -   2026-10-02T16:50:52
+     2   PARTIAL        8     9728   0.1%         -   2026-10-02T16:45:27
+     3   PARTIAL        8     9700   0.1%         -   2026-10-02T16:51:30
+     4   PARTIAL        8     9648   0.1%         -   2026-10-02T16:50:53
+     5   PARTIAL        8     9606   0.1%         -   2026-10-02T16:49:27
+     6   PARTIAL        8     9677   0.1%         -   2026-10-02T16:52:28
+     7   PARTIAL        8     9695   0.1%         -   2026-10-02T16:51:40
+     8   PARTIAL        8     9718   0.1%         -   2026-10-02T16:51:33
+     9   PARTIAL        8     9682   0.1%         -   2026-10-02T16:52:56
+ total                 80    96824   0.1%
+{
+  "rows_resolved": 80,
+  "rows_pending": 96744,
+  "updated_domain_status": {
+    "REPLACED_VERIFIED": 29,
+    "VERIFIED_ACTIVE": 2,
+    "NOT_FOUND": 39,
+    "NEEDS_REVIEW": 1,
+    "RETRY_UNREACHABLE": 1,
+    "COMPANY_CLOSED": 5,
+    "MERGED_SUCCESSOR_SITE": 3,
+    "PENDING": 96744
+  }
+}
+worker    status    saved    owned    pct  last row   updated
+     0   PARTIAL        8     9631   0.1%         -   2026-10-02T16:49:27
+     1   PARTIAL        8     9739   0.1%         -   2026-10-02T16:50:52
+     2   PARTIAL        8     9728   0.1%         -   2026-10-02T16:45:27
+     3   PARTIAL        8     9700   0.1%         -   2026-10-02T16:51:30
+     4   PARTIAL        8     9648   0.1%         -   2026-10-02T16:50:53
+     5   PARTIAL        8     9606   0.1%         -   2026-10-02T16:49:27
+     6   PARTIAL        8     9677   0.1%         -   2026-10-02T16:52:28
+     7   PARTIAL        8     9695   0.1%         -   2026-10-02T16:51:40
+     8   PARTIAL        8     9718   0.1%         -   2026-10-02T16:51:33
+     9   PARTIAL        8     9682   0.1%         -   2026-10-02T16:52:56
+ total                 80    96824   0.1%
+backup saved to /mnt/azureml/cr/j/b9d722c4e89e46338964297b28dfc6f5/cap/data-capability/wd/results

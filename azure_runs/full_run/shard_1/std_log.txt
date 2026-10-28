@@ -1,0 +1,1644 @@
+== setting up Python 3.11 environment
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Python 3.11.17
+== restoring saved state from previous run
+'/mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_previous/domain_cache.sqlite' -> '/tmp/resolver_output/domain_cache.sqlite'
+'/mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_previous/rate_limits.sqlite' -> '/tmp/resolver_output/rate_limits.sqlite'
+'/mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_previous/registers.sqlite' -> '/tmp/resolver_output/registers.sqlite'
+'/mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_previous/resolver_state.sqlite' -> '/tmp/resolver_output/resolver_state.sqlite'
+'/mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_previous/search_cache.sqlite' -> '/tmp/resolver_output/search_cache.sqlite'
+== starting resolver: --workers 10 --max-searches-per-minute 20 --input /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_queue/shard_1.csv --output-dir /tmp/resolver_output --id-reference /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_id_reference/work_queue_master.csv
+2026-10-02 19:13:52,195 INFO run_parallel worker 0 started (pid 107), log /tmp/resolver_output/logs/worker_0.log
+2026-10-02 19:13:55,196 INFO run_parallel worker 1 started (pid 108), log /tmp/resolver_output/logs/worker_1.log
+2026-10-02 19:13:58,197 INFO run_parallel worker 2 started (pid 119), log /tmp/resolver_output/logs/worker_2.log
+2026-10-02 19:14:01,198 INFO run_parallel worker 3 started (pid 132), log /tmp/resolver_output/logs/worker_3.log
+2026-10-02 19:14:04,199 INFO run_parallel worker 4 started (pid 157), log /tmp/resolver_output/logs/worker_4.log
+2026-10-02 19:14:07,201 INFO run_parallel worker 5 started (pid 184), log /tmp/resolver_output/logs/worker_5.log
+2026-10-02 19:14:10,202 INFO run_parallel worker 6 started (pid 203), log /tmp/resolver_output/logs/worker_6.log
+2026-10-02 19:14:13,203 INFO run_parallel worker 7 started (pid 236), log /tmp/resolver_output/logs/worker_7.log
+2026-10-02 19:14:16,204 INFO run_parallel worker 8 started (pid 259), log /tmp/resolver_output/logs/worker_8.log
+2026-10-02 19:14:19,205 INFO run_parallel worker 9 started (pid 282), log /tmp/resolver_output/logs/worker_9.log
+2026-10-02 19:19:22,506 INFO run_parallel sheet refreshed: {"NOT_FOUND": 62, "REPLACED_VERIFIED": 49, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 9, "RETRY_UNREACHABLE": 13, "VERIFIED_ACTIVE": 3, "NEEDS_REVIEW_SUGGESTION": 3, "PENDING": 8877, "NEEDS_REVIEW": 2}
+2026-10-02 19:19:22,507 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 5
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       21      926   2.3%     41624   2026-10-02T19:16:05
+     1   RUNNING       20      914   2.2%     36768   2026-10-02T19:19:08
+     2   RUNNING       13      882   1.5%     31792   2026-10-02T19:15:05
+     3   RUNNING       11      909   1.2%     17552   2026-10-02T19:18:13
+     4   RUNNING       16      882   1.8%     25100   2026-10-02T19:18:08
+     5   RUNNING       14      907   1.5%         -   2026-10-02T19:14:11
+     6   RUNNING       14      886   1.6%         -   2026-10-02T19:14:14
+     7   RUNNING       12      914   1.3%     22908   2026-10-02T19:18:17
+     8   RUNNING        9      866   1.0%     10820   2026-10-02T19:17:10
+     9   RUNNING       12      933   1.3%     12632   2026-10-02T19:15:13
+ total                142     9019   1.6%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 19:24:22,909 INFO run_parallel sheet refreshed: {"NOT_FOUND": 70, "REPLACED_VERIFIED": 53, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 10, "RETRY_UNREACHABLE": 13, "VERIFIED_ACTIVE": 3, "NEEDS_REVIEW_SUGGESTION": 3, "PENDING": 8864, "NEEDS_REVIEW": 2}
+2026-10-02 19:24:22,910 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 8
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       23      926   2.5%     39488   2026-10-02T19:23:10
+     1   RUNNING       22      914   2.4%     44360   2026-10-02T19:22:19
+     2   RUNNING       13      882   1.5%     31792   2026-10-02T19:15:05
+     3   RUNNING       11      909   1.2%     17552   2026-10-02T19:18:13
+     4   RUNNING       20      882   2.3%     41228   2026-10-02T19:22:22
+     5   RUNNING       17      907   1.9%     14308   2026-10-02T19:24:17
+     6   RUNNING       15      886   1.7%     27284   2026-10-02T19:23:07
+     7   RUNNING       13      914   1.4%     18008   2026-10-02T19:21:11
+     8   RUNNING        9      866   1.0%     10820   2026-10-02T19:17:10
+     9   RUNNING       12      933   1.3%     12632   2026-10-02T19:15:13
+ total                155     9019   1.7%
+2026-10-02 19:29:23,159 INFO run_parallel sheet refreshed: {"NOT_FOUND": 86, "REPLACED_VERIFIED": 57, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 10, "RETRY_UNREACHABLE": 13, "VERIFIED_ACTIVE": 5, "NEEDS_REVIEW_SUGGESTION": 3, "PENDING": 8842, "NEEDS_REVIEW": 2}
+2026-10-02 19:29:23,160 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 13
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       26      926   2.8%     42752   2026-10-02T19:28:12
+     1   RUNNING       24      914   2.6%     45228   2026-10-02T19:26:08
+     2   RUNNING       14      882   1.6%     35272   2026-10-02T19:29:17
+     3   RUNNING       13      909   1.4%     21868   2026-10-02T19:29:05
+     4   RUNNING       20      882   2.3%     41228   2026-10-02T19:22:22
+     5   RUNNING       19      907   2.1%     17944   2026-10-02T19:29:01
+     6   RUNNING       17      886   1.9%     22272   2026-10-02T19:25:09
+     7   RUNNING       15      914   1.6%     26064   2026-10-02T19:28:18
+     8   RUNNING       13      866   1.5%     18784   2026-10-02T19:29:11
+     9   RUNNING       16      933   1.7%     13928   2026-10-02T19:29:05
+ total                177     9019   2.0%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 19:34:23,435 INFO run_parallel sheet refreshed: {"NOT_FOUND": 94, "REPLACED_VERIFIED": 61, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 10, "RETRY_UNREACHABLE": 16, "VERIFIED_ACTIVE": 6, "NEEDS_REVIEW_SUGGESTION": 3, "PENDING": 8826, "NEEDS_REVIEW": 2}
+2026-10-02 19:34:23,436 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 20
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       28      926   3.0%     45224   2026-10-02T19:33:10
+     1   RUNNING       25      914   2.7%     42692   2026-10-02T19:31:12
+     2   RUNNING       19      882   2.2%     37112   2026-10-02T19:34:15
+     3   RUNNING       15      909   1.7%     29412   2026-10-02T19:32:12
+     4   RUNNING       21      882   2.4%     41180   2026-10-02T19:34:09
+     5   RUNNING       19      907   2.1%     17944   2026-10-02T19:29:01
+     6   RUNNING       19      886   2.1%     36516   2026-10-02T19:30:30
+     7   RUNNING       18      914   2.0%     32636   2026-10-02T19:32:16
+     8   RUNNING       13      866   1.5%     18784   2026-10-02T19:29:11
+     9   RUNNING       16      933   1.7%     13928   2026-10-02T19:29:05
+ total                193     9019   2.1%
+2026-10-02 19:39:23,691 INFO run_parallel sheet refreshed: {"NOT_FOUND": 102, "REPLACED_VERIFIED": 65, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 10, "RETRY_UNREACHABLE": 18, "VERIFIED_ACTIVE": 7, "NEEDS_REVIEW_SUGGESTION": 3, "PENDING": 8809, "NEEDS_REVIEW": 4}
+2026-10-02 19:39:23,692 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 24
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       30      926   3.2%     46896   2026-10-02T19:39:18
+     1   RUNNING       26      914   2.8%     46032   2026-10-02T19:35:19
+     2   RUNNING       20      882   2.3%     37188   2026-10-02T19:37:44
+     3   RUNNING       16      909   1.8%     21884   2026-10-02T19:35:11
+     4   RUNNING       24      882   2.7%     42356   2026-10-02T19:38:30
+     5   RUNNING       22      907   2.4%     22088   2026-10-02T19:39:15
+     6   RUNNING       20      886   2.3%     31828   2026-10-02T19:39:19
+     7   RUNNING       20      914   2.2%     28400   2026-10-02T19:39:09
+     8   RUNNING       13      866   1.5%     18784   2026-10-02T19:29:11
+     9   RUNNING       19      933   2.0%     22464   2026-10-02T19:39:23
+ total                210     9019   2.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 19:44:23,947 INFO run_parallel sheet refreshed: {"NOT_FOUND": 108, "REPLACED_VERIFIED": 70, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 11, "RETRY_UNREACHABLE": 22, "VERIFIED_ACTIVE": 7, "NEEDS_REVIEW_SUGGESTION": 3, "NEEDS_REVIEW": 4, "PENDING": 8793}
+2026-10-02 19:44:23,948 INFO run_parallel search health: limit 10/min, blocks since last check 11, total blocks 35
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       33      926   3.6%     47268   2026-10-02T19:40:51
+     1   RUNNING       31      914   3.4%     46852   2026-10-02T19:42:43
+     2   RUNNING       20      882   2.3%     37188   2026-10-02T19:37:44
+     3   RUNNING       16      909   1.8%     21884   2026-10-02T19:35:11
+     4   RUNNING       26      882   2.9%     42000   2026-10-02T19:44:11
+     5   RUNNING       24      907   2.6%     30452   2026-10-02T19:42:16
+     6   RUNNING       22      886   2.5%     37320   2026-10-02T19:41:26
+     7   RUNNING       21      914   2.3%     31784   2026-10-02T19:40:11
+     8   RUNNING       13      866   1.5%     18784   2026-10-02T19:29:11
+     9   RUNNING       20      933   2.1%     14424   2026-10-02T19:44:15
+ total                226     9019   2.5%
+2026-10-02 19:49:24,212 INFO run_parallel sheet refreshed: {"NOT_FOUND": 120, "REPLACED_VERIFIED": 75, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 11, "RETRY_UNREACHABLE": 24, "VERIFIED_ACTIVE": 8, "NEEDS_REVIEW_SUGGESTION": 3, "NEEDS_REVIEW": 4, "PENDING": 8773}
+2026-10-02 19:49:24,213 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 38
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       35      926   3.8%     46060   2026-10-02T19:49:19
+     1   RUNNING       31      914   3.4%     46852   2026-10-02T19:42:43
+     2   RUNNING       23      882   2.6%     42352   2026-10-02T19:48:29
+     3   RUNNING       17      909   1.9%     26660   2026-10-02T19:48:14
+     4   RUNNING       28      882   3.2%     44612   2026-10-02T19:46:00
+     5   RUNNING       25      907   2.8%     38012   2026-10-02T19:46:17
+     6   RUNNING       26      886   2.9%     36792   2026-10-02T19:47:18
+     7   RUNNING       23      914   2.5%     39532   2026-10-02T19:49:15
+     8   RUNNING       17      866   2.0%     28584   2026-10-02T19:48:04
+     9   RUNNING       21      933   2.3%     18968   2026-10-02T19:45:14
+ total                246     9019   2.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 19:54:24,481 INFO run_parallel sheet refreshed: {"NOT_FOUND": 125, "REPLACED_VERIFIED": 80, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 11, "RETRY_UNREACHABLE": 25, "VERIFIED_ACTIVE": 8, "NEEDS_REVIEW_SUGGESTION": 3, "NEEDS_REVIEW": 5, "PENDING": 8761}
+2026-10-02 19:54:24,481 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 44
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       36      926   3.9%     46912   2026-10-02T19:54:16
+     1   RUNNING       31      914   3.4%     46852   2026-10-02T19:42:43
+     2   RUNNING       25      882   2.8%     41332   2026-10-02T19:53:10
+     3   RUNNING       17      909   1.9%     26660   2026-10-02T19:48:14
+     4   RUNNING       30      882   3.4%     45016   2026-10-02T19:53:12
+     5   RUNNING       25      907   2.8%     38012   2026-10-02T19:46:17
+     6   RUNNING       28      886   3.2%     37132   2026-10-02T19:52:03
+     7   RUNNING       23      914   2.5%     39532   2026-10-02T19:49:15
+     8   RUNNING       20      866   2.3%     41976   2026-10-02T19:52:19
+     9   RUNNING       23      933   2.5%     22928   2026-10-02T19:54:11
+ total                258     9019   2.9%
+2026-10-02 19:59:24,741 INFO run_parallel sheet refreshed: {"NOT_FOUND": 131, "REPLACED_VERIFIED": 85, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 13, "RETRY_UNREACHABLE": 26, "VERIFIED_ACTIVE": 8, "NEEDS_REVIEW_SUGGESTION": 4, "NEEDS_REVIEW": 6, "PENDING": 8745}
+2026-10-02 19:59:24,741 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 49
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       38      926   4.1%     48348   2026-10-02T19:57:14
+     1   RUNNING       33      914   3.6%     46496   2026-10-02T19:58:10
+     2   RUNNING       28      882   3.2%     45988   2026-10-02T19:56:16
+     3   RUNNING       18      909   2.0%     30588   2026-10-02T19:54:24
+     4   RUNNING       32      882   3.6%     44520   2026-10-02T19:58:29
+     5   RUNNING       29      907   3.2%     39652   2026-10-02T19:59:20
+     6   RUNNING       28      886   3.2%     37132   2026-10-02T19:52:03
+     7   RUNNING       25      914   2.7%     44648   2026-10-02T19:58:12
+     8   RUNNING       20      866   2.3%     41976   2026-10-02T19:52:19
+     9   RUNNING       23      933   2.5%     22928   2026-10-02T19:54:11
+ total                274     9019   3.0%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 20:04:25,005 INFO run_parallel sheet refreshed: {"NOT_FOUND": 137, "REPLACED_VERIFIED": 89, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 15, "RETRY_UNREACHABLE": 26, "VERIFIED_ACTIVE": 10, "NEEDS_REVIEW_SUGGESTION": 4, "NEEDS_REVIEW": 7, "PENDING": 8730}
+2026-10-02 20:04:25,006 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 57
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       38      926   4.1%     48348   2026-10-02T19:57:14
+     1   RUNNING       34      914   3.7%     46680   2026-10-02T20:03:13
+     2   RUNNING       29      882   3.3%     45104   2026-10-02T20:00:08
+     3   RUNNING       21      909   2.3%     38520   2026-10-02T20:02:29
+     4   RUNNING       33      882   3.7%     44660   2026-10-02T20:00:17
+     5   RUNNING       30      907   3.3%     39636   2026-10-02T20:04:21
+     6   RUNNING       31      886   3.5%     38416   2026-10-02T20:04:13
+     7   RUNNING       27      914   3.0%     44292   2026-10-02T20:03:16
+     8   RUNNING       22      866   2.5%     45036   2026-10-02T20:01:15
+     9   RUNNING       24      933   2.6%     25896   2026-10-02T20:00:16
+ total                289     9019   3.2%
+2026-10-02 20:09:25,270 INFO run_parallel sheet refreshed: {"NOT_FOUND": 146, "REPLACED_VERIFIED": 99, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 15, "RETRY_UNREACHABLE": 28, "VERIFIED_ACTIVE": 10, "NEEDS_REVIEW_SUGGESTION": 4, "NEEDS_REVIEW": 7, "PENDING": 8709}
+2026-10-02 20:09:25,270 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 59
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       42      926   4.5%     48736   2026-10-02T20:07:17
+     1   RUNNING       35      914   3.8%     48012   2026-10-02T20:07:18
+     2   RUNNING       32      882   3.6%     44844   2026-10-02T20:09:12
+     3   RUNNING       22      909   2.4%     42076   2026-10-02T20:09:13
+     4   RUNNING       34      882   3.9%     45308   2026-10-02T20:09:13
+     5   RUNNING       31      907   3.4%     42264   2026-10-02T20:08:21
+     6   RUNNING       31      886   3.5%     38416   2026-10-02T20:04:13
+     7   RUNNING       31      914   3.4%     46412   2026-10-02T20:09:24
+     8   RUNNING       26      866   3.0%     44064   2026-10-02T20:07:17
+     9   RUNNING       26      933   2.8%     30364   2026-10-02T20:07:16
+ total                310     9019   3.4%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 20:14:25,541 INFO run_parallel sheet refreshed: {"NOT_FOUND": 153, "REPLACED_VERIFIED": 107, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 15, "RETRY_UNREACHABLE": 29, "VERIFIED_ACTIVE": 12, "NEEDS_REVIEW_SUGGESTION": 4, "NEEDS_REVIEW": 7, "PENDING": 8691}
+2026-10-02 20:14:25,542 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 65
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       43      926   4.6%     48008   2026-10-02T20:10:14
+     1   RUNNING       37      914   4.0%     50128   2026-10-02T20:10:13
+     2   RUNNING       33      882   3.7%     47580   2026-10-02T20:10:15
+     3   RUNNING       25      909   2.8%     36632   2026-10-02T20:14:16
+     4   RUNNING       34      882   3.9%     45308   2026-10-02T20:09:13
+     5   RUNNING       36      907   4.0%     42928   2026-10-02T20:14:22
+     6   RUNNING       35      886   4.0%     47136   2026-10-02T20:13:20
+     7   RUNNING       32      914   3.5%     46968   2026-10-02T20:13:19
+     8   RUNNING       27      866   3.1%     46892   2026-10-02T20:10:24
+     9   RUNNING       26      933   2.8%     30364   2026-10-02T20:07:16
+ total                328     9019   3.6%
+2026-10-02 20:19:25,816 INFO run_parallel sheet refreshed: {"NOT_FOUND": 157, "REPLACED_VERIFIED": 112, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 17, "RETRY_UNREACHABLE": 29, "VERIFIED_ACTIVE": 12, "NEEDS_REVIEW_SUGGESTION": 4, "NEEDS_REVIEW": 7, "PENDING": 8680}
+2026-10-02 20:19:25,817 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 72
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       43      926   4.6%     48008   2026-10-02T20:10:14
+     1   RUNNING       39      914   4.3%     48612   2026-10-02T20:19:19
+     2   RUNNING       34      882   3.9%     46420   2026-10-02T20:18:15
+     3   RUNNING       27      909   3.0%     44396   2026-10-02T20:18:21
+     4   RUNNING       34      882   3.9%     45308   2026-10-02T20:09:13
+     5   RUNNING       38      907   4.2%     45696   2026-10-02T20:19:17
+     6   RUNNING       35      886   4.0%     47136   2026-10-02T20:13:20
+     7   RUNNING       32      914   3.5%     46968   2026-10-02T20:13:19
+     8   RUNNING       30      866   3.5%     47048   2026-10-02T20:16:11
+     9   RUNNING       27      933   2.9%     33828   2026-10-02T20:15:21
+ total                339     9019   3.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 20:24:26,089 INFO run_parallel sheet refreshed: {"NOT_FOUND": 167, "REPLACED_VERIFIED": 121, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 18, "RETRY_UNREACHABLE": 31, "VERIFIED_ACTIVE": 13, "NEEDS_REVIEW_SUGGESTION": 5, "NEEDS_REVIEW": 7, "PENDING": 8656}
+2026-10-02 20:24:26,090 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 74
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       45      926   4.9%     49508   2026-10-02T20:24:15
+     1   RUNNING       41      914   4.5%     50916   2026-10-02T20:24:22
+     2   RUNNING       35      882   4.0%     46776   2026-10-02T20:20:15
+     3   RUNNING       29      909   3.2%     44428   2026-10-02T20:22:26
+     4   RUNNING       38      882   4.3%     47428   2026-10-02T20:23:32
+     5   RUNNING       40      907   4.4%     42960   2026-10-02T20:21:21
+     6   RUNNING       39      886   4.4%     46860   2026-10-02T20:24:17
+     7   RUNNING       36      914   3.9%     47044   2026-10-02T20:23:16
+     8   RUNNING       31      866   3.6%     47404   2026-10-02T20:20:25
+     9   RUNNING       29      933   3.1%     38096   2026-10-02T20:23:21
+ total                363     9019   4.0%
+2026-10-02 20:29:26,363 INFO run_parallel sheet refreshed: {"NOT_FOUND": 176, "REPLACED_VERIFIED": 127, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 18, "RETRY_UNREACHABLE": 33, "VERIFIED_ACTIVE": 13, "NEEDS_REVIEW_SUGGESTION": 5, "NEEDS_REVIEW": 7, "PENDING": 8639}
+2026-10-02 20:29:26,364 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 78
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       46      926   5.0%     50236   2026-10-02T20:25:19
+     1   RUNNING       42      914   4.6%     50468   2026-10-02T20:25:18
+     2   RUNNING       37      882   4.2%     48924   2026-10-02T20:29:25
+     3   RUNNING       32      909   3.5%     44412   2026-10-02T20:28:16
+     4   RUNNING       40      882   4.5%     47336   2026-10-02T20:27:21
+     5   RUNNING       41      907   4.5%     46888   2026-10-02T20:26:20
+     6   RUNNING       39      886   4.4%     46860   2026-10-02T20:24:17
+     7   RUNNING       37      914   4.0%     47896   2026-10-02T20:29:18
+     8   RUNNING       35      866   4.0%     48980   2026-10-02T20:28:37
+     9   RUNNING       31      933   3.3%     39596   2026-10-02T20:28:14
+ total                380     9019   4.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 20:34:26,644 INFO run_parallel sheet refreshed: {"NOT_FOUND": 186, "REPLACED_VERIFIED": 143, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 19, "RETRY_UNREACHABLE": 35, "VERIFIED_ACTIVE": 15, "NEEDS_REVIEW_SUGGESTION": 5, "NEEDS_REVIEW": 7, "PENDING": 8608}
+2026-10-02 20:34:26,645 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 81
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       50      926   5.4%     50544   2026-10-02T20:34:24
+     1   RUNNING       44      914   4.8%     50932   2026-10-02T20:33:23
+     2   RUNNING       39      882   4.4%     49728   2026-10-02T20:33:25
+     3   RUNNING       36      909   4.0%     46884   2026-10-02T20:33:24
+     4   RUNNING       43      882   4.9%     46192   2026-10-02T20:31:20
+     5   RUNNING       46      907   5.1%     47724   2026-10-02T20:34:20
+     6   RUNNING       41      886   4.6%     48296   2026-10-02T20:33:19
+     7   RUNNING       41      914   4.5%     47480   2026-10-02T20:32:16
+     8   RUNNING       39      866   4.5%     48020   2026-10-02T20:34:19
+     9   RUNNING       32      933   3.4%     40092   2026-10-02T20:30:25
+ total                411     9019   4.6%
+2026-10-02 20:39:26,933 INFO run_parallel sheet refreshed: {"NOT_FOUND": 190, "REPLACED_VERIFIED": 152, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 21, "RETRY_UNREACHABLE": 37, "VERIFIED_ACTIVE": 15, "NEEDS_REVIEW_SUGGESTION": 5, "NEEDS_REVIEW": 7, "PENDING": 8591}
+2026-10-02 20:39:26,934 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 86
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       51      926   5.5%     52136   2026-10-02T20:35:27
+     1   RUNNING       47      914   5.1%     54908   2026-10-02T20:38:39
+     2   RUNNING       42      882   4.8%     48244   2026-10-02T20:39:16
+     3   RUNNING       36      909   4.0%     46884   2026-10-02T20:33:24
+     4   RUNNING       43      882   4.9%     46192   2026-10-02T20:31:20
+     5   RUNNING       47      907   5.2%     52484   2026-10-02T20:38:27
+     6   RUNNING       43      886   4.9%     48328   2026-10-02T20:36:31
+     7   RUNNING       45      914   4.9%     49736   2026-10-02T20:36:18
+     8   RUNNING       40      866   4.6%     48176   2026-10-02T20:35:19
+     9   RUNNING       34      933   3.6%     41204   2026-10-02T20:37:19
+ total                428     9019   4.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 20:44:27,219 INFO run_parallel sheet refreshed: {"NOT_FOUND": 198, "REPLACED_VERIFIED": 156, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 22, "RETRY_UNREACHABLE": 38, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 5, "NEEDS_REVIEW": 7, "PENDING": 8576}
+2026-10-02 20:44:27,220 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 90
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       51      926   5.5%     52136   2026-10-02T20:35:27
+     1   RUNNING       48      914   5.3%     53376   2026-10-02T20:43:16
+     2   RUNNING       44      882   5.0%     49388   2026-10-02T20:44:14
+     3   RUNNING       37      909   4.1%     46544   2026-10-02T20:41:17
+     4   RUNNING       48      882   5.4%     49096   2026-10-02T20:43:15
+     5   RUNNING       47      907   5.2%     52484   2026-10-02T20:38:27
+     6   RUNNING       45      886   5.1%     48792   2026-10-02T20:44:23
+     7   RUNNING       46      914   5.0%     48884   2026-10-02T20:43:19
+     8   RUNNING       41      866   4.7%     52028   2026-10-02T20:43:19
+     9   RUNNING       36      933   3.9%     44512   2026-10-02T20:41:29
+ total                443     9019   4.9%
+2026-10-02 20:49:27,507 INFO run_parallel sheet refreshed: {"NOT_FOUND": 203, "REPLACED_VERIFIED": 164, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 24, "RETRY_UNREACHABLE": 39, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 5, "NEEDS_REVIEW": 7, "PENDING": 8560}
+2026-10-02 20:49:27,508 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 94
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       52      926   5.6%     53792   2026-10-02T20:48:15
+     1   RUNNING       50      914   5.5%     53592   2026-10-02T20:47:20
+     2   RUNNING       45      882   5.1%     50936   2026-10-02T20:49:18
+     3   RUNNING       40      909   4.4%     48152   2026-10-02T20:49:19
+     4   RUNNING       50      882   5.7%     51540   2026-10-02T20:49:26
+     5   RUNNING       49      907   5.4%     49888   2026-10-02T20:49:20
+     6   RUNNING       45      886   5.1%     48792   2026-10-02T20:44:23
+     7   RUNNING       50      914   5.5%     50572   2026-10-02T20:49:20
+     8   RUNNING       41      866   4.7%     52028   2026-10-02T20:43:19
+     9   RUNNING       37      933   4.0%     41268   2026-10-02T20:47:14
+ total                459     9019   5.1%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 20:54:27,799 INFO run_parallel sheet refreshed: {"NOT_FOUND": 220, "REPLACED_VERIFIED": 169, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 24, "RETRY_UNREACHABLE": 39, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8537}
+2026-10-02 20:54:27,800 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 97
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       54      926   5.8%     52524   2026-10-02T20:53:20
+     1   RUNNING       52      914   5.7%     55076   2026-10-02T20:53:21
+     2   RUNNING       47      882   5.3%     52884   2026-10-02T20:54:16
+     3   RUNNING       43      909   4.7%     48184   2026-10-02T20:52:22
+     4   RUNNING       51      882   5.8%     49544   2026-10-02T20:51:21
+     5   RUNNING       52      907   5.7%     53320   2026-10-02T20:53:31
+     6   RUNNING       47      886   5.3%     48684   2026-10-02T20:52:18
+     7   RUNNING       51      914   5.6%     49876   2026-10-02T20:52:02
+     8   RUNNING       45      866   5.2%     52736   2026-10-02T20:53:32
+     9   RUNNING       40      933   4.3%     44312   2026-10-02T20:53:22
+ total                482     9019   5.3%
+2026-10-02 20:59:28,154 INFO run_parallel sheet refreshed: {"NOT_FOUND": 228, "REPLACED_VERIFIED": 175, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 24, "RETRY_UNREACHABLE": 39, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8523}
+2026-10-02 20:59:28,155 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 101
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       55      926   5.9%     54844   2026-10-02T20:56:17
+     1   RUNNING       54      914   5.9%     55216   2026-10-02T20:59:15
+     2   RUNNING       48      882   5.4%     52852   2026-10-02T20:57:16
+     3   RUNNING       45      909   5.0%     48572   2026-10-02T20:59:18
+     4   RUNNING       53      882   6.0%     52576   2026-10-02T20:57:20
+     5   RUNNING       52      907   5.7%     53320   2026-10-02T20:53:31
+     6   RUNNING       50      886   5.6%     49812   2026-10-02T20:58:29
+     7   RUNNING       52      914   5.7%     50076   2026-10-02T20:59:16
+     8   RUNNING       46      866   5.3%     53076   2026-10-02T20:55:24
+     9   RUNNING       41      933   4.4%     46600   2026-10-02T20:56:21
+ total                496     9019   5.5%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 21:04:28,474 INFO run_parallel sheet refreshed: {"NOT_FOUND": 237, "REPLACED_VERIFIED": 181, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 25, "RETRY_UNREACHABLE": 41, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8505}
+2026-10-02 21:04:28,475 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 108
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       57      926   6.2%     56452   2026-10-02T21:04:20
+     1   RUNNING       55      914   6.0%     55540   2026-10-02T21:03:21
+     2   RUNNING       49      882   5.6%     53160   2026-10-02T21:01:17
+     3   RUNNING       46      909   5.1%     48816   2026-10-02T21:00:22
+     4   RUNNING       54      882   6.1%     53088   2026-10-02T21:04:21
+     5   RUNNING       53      907   5.8%     52856   2026-10-02T20:59:30
+     6   RUNNING       51      886   5.8%     49456   2026-10-02T21:04:27
+     7   RUNNING       55      914   6.0%     52364   2026-10-02T21:03:19
+     8   RUNNING       48      866   5.5%     52752   2026-10-02T21:02:17
+     9   RUNNING       46      933   4.9%     47296   2026-10-02T21:04:19
+ total                514     9019   5.7%
+2026-10-02 21:09:28,793 INFO run_parallel sheet refreshed: {"NOT_FOUND": 245, "REPLACED_VERIFIED": 187, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 26, "RETRY_UNREACHABLE": 44, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8487}
+2026-10-02 21:09:28,795 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 111
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       59      926   6.4%     56420   2026-10-02T21:07:29
+     1   RUNNING       55      914   6.0%     55540   2026-10-02T21:03:21
+     2   RUNNING       55      882   6.2%     55528   2026-10-02T21:08:44
+     3   RUNNING       47      909   5.2%     48864   2026-10-02T21:09:20
+     4   RUNNING       56      882   6.3%     52284   2026-10-02T21:08:51
+     5   RUNNING       55      907   6.1%     54432   2026-10-02T21:08:20
+     6   RUNNING       52      886   5.9%     49504   2026-10-02T21:08:21
+     7   RUNNING       56      914   6.1%     53044   2026-10-02T21:06:23
+     8   RUNNING       51      866   5.9%     52816   2026-10-02T21:07:17
+     9   RUNNING       46      933   4.9%     47296   2026-10-02T21:04:19
+ total                532     9019   5.9%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 21:14:29,092 INFO run_parallel sheet refreshed: {"NOT_FOUND": 253, "REPLACED_VERIFIED": 192, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 27, "RETRY_UNREACHABLE": 44, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8473}
+2026-10-02 21:14:29,093 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 117
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       59      926   6.4%     56420   2026-10-02T21:07:29
+     1   RUNNING       57      914   6.2%     57396   2026-10-02T21:12:25
+     2   RUNNING       56      882   6.3%     54644   2026-10-02T21:13:19
+     3   RUNNING       48      909   5.3%     49020   2026-10-02T21:10:33
+     4   RUNNING       57      882   6.5%     53104   2026-10-02T21:12:17
+     5   RUNNING       57      907   6.3%     55948   2026-10-02T21:11:33
+     6   RUNNING       54      886   6.1%     49936   2026-10-02T21:13:20
+     7   RUNNING       59      914   6.5%     53152   2026-10-02T21:13:25
+     8   RUNNING       52      866   6.0%     56620   2026-10-02T21:14:20
+     9   RUNNING       47      933   5.0%     47652   2026-10-02T21:13:51
+ total                546     9019   6.1%
+2026-10-02 21:19:29,393 INFO run_parallel sheet refreshed: {"NOT_FOUND": 260, "REPLACED_VERIFIED": 202, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 30, "RETRY_UNREACHABLE": 46, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8451}
+2026-10-02 21:19:29,394 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 123
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       60      926   6.5%     55924   2026-10-02T21:18:18
+     1   RUNNING       59      914   6.5%     59004   2026-10-02T21:15:30
+     2   RUNNING       60      882   6.8%     55804   2026-10-02T21:18:55
+     3   RUNNING       51      909   5.6%     49700   2026-10-02T21:18:52
+     4   RUNNING       61      882   6.9%     55992   2026-10-02T21:17:03
+     5   RUNNING       58      907   6.4%     55160   2026-10-02T21:17:23
+     6   RUNNING       54      886   6.1%     49936   2026-10-02T21:13:20
+     7   RUNNING       62      914   6.8%     52720   2026-10-02T21:19:27
+     8   RUNNING       53      866   6.1%     56848   2026-10-02T21:16:20
+     9   RUNNING       50      933   5.4%     51952   2026-10-02T21:17:41
+ total                568     9019   6.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 21:24:29,696 INFO run_parallel sheet refreshed: {"NOT_FOUND": 264, "REPLACED_VERIFIED": 213, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 31, "RETRY_UNREACHABLE": 46, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 6, "NEEDS_REVIEW": 7, "PENDING": 8435}
+2026-10-02 21:24:29,697 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 127
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       60      926   6.5%     55924   2026-10-02T21:18:18
+     1   RUNNING       60      914   6.6%     59068   2026-10-02T21:24:05
+     2   RUNNING       60      882   6.8%     55804   2026-10-02T21:18:55
+     3   RUNNING       52      909   5.7%     50316   2026-10-02T21:22:29
+     4   RUNNING       61      882   6.9%     55992   2026-10-02T21:17:03
+     5   RUNNING       64      907   7.1%     57232   2026-10-02T21:23:24
+     6   RUNNING       54      886   6.1%     49936   2026-10-02T21:13:20
+     7   RUNNING       65      914   7.1%     53184   2026-10-02T21:21:31
+     8   RUNNING       55      866   6.4%     58008   2026-10-02T21:19:39
+     9   RUNNING       53      933   5.7%     51856   2026-10-02T21:24:24
+ total                584     9019   6.5%
+2026-10-02 21:29:30,001 INFO run_parallel sheet refreshed: {"NOT_FOUND": 269, "REPLACED_VERIFIED": 221, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 35, "RETRY_UNREACHABLE": 47, "VERIFIED_ACTIVE": 16, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8416}
+2026-10-02 21:29:30,002 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 130
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       61      926   6.6%     58228   2026-10-02T21:25:28
+     1   RUNNING       63      914   6.9%     57812   2026-10-02T21:28:21
+     2   RUNNING       63      882   7.1%     56176   2026-10-02T21:28:23
+     3   RUNNING       52      909   5.7%     50316   2026-10-02T21:22:29
+     4   RUNNING       64      882   7.3%     56984   2026-10-02T21:27:20
+     5   RUNNING       65      907   7.2%     57880   2026-10-02T21:26:23
+     6   RUNNING       58      886   6.5%     50600   2026-10-02T21:27:52
+     7   RUNNING       68      914   7.4%     57020   2026-10-02T21:29:26
+     8   RUNNING       56      866   6.5%     59972   2026-10-02T21:27:10
+     9   RUNNING       53      933   5.7%     51856   2026-10-02T21:24:24
+ total                603     9019   6.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 21:34:30,308 INFO run_parallel sheet refreshed: {"NOT_FOUND": 280, "REPLACED_VERIFIED": 227, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 36, "RETRY_UNREACHABLE": 48, "VERIFIED_ACTIVE": 17, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8396}
+2026-10-02 21:34:30,309 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 135
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       67      926   7.2%     57920   2026-10-02T21:34:20
+     1   RUNNING       63      914   6.9%     57812   2026-10-02T21:28:21
+     2   RUNNING       65      882   7.4%     55836   2026-10-02T21:32:25
+     3   RUNNING       53      909   5.8%     49716   2026-10-02T21:32:24
+     4   RUNNING       64      882   7.3%     56984   2026-10-02T21:27:20
+     5   RUNNING       65      907   7.2%     57880   2026-10-02T21:26:23
+     6   RUNNING       58      886   6.5%     50600   2026-10-02T21:27:52
+     7   RUNNING       70      914   7.7%     55968   2026-10-02T21:34:22
+     8   RUNNING       61      866   7.0%     57732   2026-10-02T21:31:01
+     9   RUNNING       57      933   6.1%     53048   2026-10-02T21:33:30
+ total                623     9019   6.9%
+2026-10-02 21:39:30,653 INFO run_parallel sheet refreshed: {"NOT_FOUND": 289, "REPLACED_VERIFIED": 232, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 36, "RETRY_UNREACHABLE": 49, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8380}
+2026-10-02 21:39:30,654 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 141
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       67      926   7.2%     57920   2026-10-02T21:34:20
+     1   RUNNING       65      914   7.1%     60628   2026-10-02T21:36:20
+     2   RUNNING       65      882   7.4%     55836   2026-10-02T21:32:25
+     3   RUNNING       57      909   6.3%     50440   2026-10-02T21:38:23
+     4   RUNNING       65      882   7.4%     58328   2026-10-02T21:37:32
+     5   RUNNING       66      907   7.3%     57248   2026-10-02T21:38:22
+     6   RUNNING       59      886   6.7%     52472   2026-10-02T21:38:21
+     7   RUNNING       73      914   8.0%     57776   2026-10-02T21:37:53
+     8   RUNNING       65      866   7.5%     62988   2026-10-02T21:39:24
+     9   RUNNING       57      933   6.1%     53048   2026-10-02T21:33:30
+ total                639     9019   7.1%
+2026-10-02 21:44:30,965 INFO run_parallel sheet refreshed: {"NOT_FOUND": 300, "REPLACED_VERIFIED": 238, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 36, "RETRY_UNREACHABLE": 49, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8363}
+2026-10-02 21:44:30,966 INFO run_parallel search health: limit 10/min, blocks since last check 1, total blocks 142
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       69      926   7.5%     59868   2026-10-02T21:44:21
+     1   RUNNING       67      914   7.3%     61972   2026-10-02T21:41:23
+     2   RUNNING       68      882   7.7%     60040   2026-10-02T21:44:26
+     3   RUNNING       59      909   6.5%     53780   2026-10-02T21:42:29
+     4   RUNNING       66      882   7.5%     57988   2026-10-02T21:40:26
+     5   RUNNING       67      907   7.4%     58408   2026-10-02T21:43:24
+     6   RUNNING       62      886   7.0%     52052   2026-10-02T21:43:23
+     7   RUNNING       74      914   8.1%     59292   2026-10-02T21:43:06
+     8   RUNNING       65      866   7.5%     62988   2026-10-02T21:39:24
+     9   RUNNING       59      933   6.3%     53356   2026-10-02T21:44:21
+ total                656     9019   7.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 21:49:31,276 INFO run_parallel sheet refreshed: {"NOT_FOUND": 311, "REPLACED_VERIFIED": 246, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 36, "RETRY_UNREACHABLE": 50, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8343}
+2026-10-02 21:49:31,277 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 148
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       72      926   7.8%     60516   2026-10-02T21:49:27
+     1   RUNNING       72      914   7.9%     63304   2026-10-02T21:48:27
+     2   RUNNING       70      882   7.9%     60120   2026-10-02T21:48:54
+     3   RUNNING       59      909   6.5%     53780   2026-10-02T21:42:29
+     4   RUNNING       68      882   7.7%     58668   2026-10-02T21:47:25
+     5   RUNNING       69      907   7.6%     58700   2026-10-02T21:45:54
+     6   RUNNING       64      886   7.2%     52796   2026-10-02T21:47:28
+     7   RUNNING       75      914   8.2%     57808   2026-10-02T21:46:53
+     8   RUNNING       65      866   7.5%     62988   2026-10-02T21:39:24
+     9   RUNNING       62      933   6.6%     53436   2026-10-02T21:46:23
+ total                676     9019   7.5%
+2026-10-02 21:54:31,588 INFO run_parallel sheet refreshed: {"NOT_FOUND": 315, "REPLACED_VERIFIED": 249, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 38, "RETRY_UNREACHABLE": 51, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8333}
+2026-10-02 21:54:31,589 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 155
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       72      926   7.8%     60516   2026-10-02T21:49:27
+     1   RUNNING       72      914   7.9%     63304   2026-10-02T21:48:27
+     2   RUNNING       70      882   7.9%     60120   2026-10-02T21:48:54
+     3   RUNNING       61      909   6.7%     54724   2026-10-02T21:51:26
+     4   RUNNING       69      882   7.8%     58760   2026-10-02T21:54:24
+     5   RUNNING       70      907   7.7%     59120   2026-10-02T21:49:33
+     6   RUNNING       64      886   7.2%     52796   2026-10-02T21:47:28
+     7   RUNNING       78      914   8.5%     60420   2026-10-02T21:54:04
+     8   RUNNING       68      866   7.9%     63452   2026-10-02T21:52:55
+     9   RUNNING       62      933   6.6%     53436   2026-10-02T21:46:23
+ total                686     9019   7.6%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 21:59:31,903 INFO run_parallel sheet refreshed: {"NOT_FOUND": 326, "REPLACED_VERIFIED": 259, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 39, "RETRY_UNREACHABLE": 52, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8310}
+2026-10-02 21:59:31,904 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 161
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       74      926   8.0%     61848   2026-10-02T21:56:35
+     1   RUNNING       72      914   7.9%     63304   2026-10-02T21:48:27
+     2   RUNNING       71      882   8.0%     60552   2026-10-02T21:59:26
+     3   RUNNING       64      909   7.0%     55452   2026-10-02T21:59:28
+     4   RUNNING       72      882   8.2%     59504   2026-10-02T21:58:55
+     5   RUNNING       75      907   8.3%     59860   2026-10-02T21:59:25
+     6   RUNNING       65      886   7.3%     52952   2026-10-02T21:57:55
+     7   RUNNING       80      914   8.8%     61116   2026-10-02T21:58:30
+     8   RUNNING       72      866   8.3%     63840   2026-10-02T21:57:39
+     9   RUNNING       64      933   6.9%     56156   2026-10-02T21:59:24
+ total                709     9019   7.9%
+2026-10-02 22:04:32,228 INFO run_parallel sheet refreshed: {"NOT_FOUND": 332, "REPLACED_VERIFIED": 270, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 39, "RETRY_UNREACHABLE": 53, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 7, "PENDING": 8292}
+2026-10-02 22:04:32,229 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 165
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       75      926   8.1%     62388   2026-10-02T22:01:56
+     1   RUNNING       74      914   8.1%     64804   2026-10-02T22:03:43
+     2   RUNNING       74      882   8.4%     62084   2026-10-02T22:03:33
+     3   RUNNING       64      909   7.0%     55452   2026-10-02T21:59:28
+     4   RUNNING       75      882   8.5%     60584   2026-10-02T22:04:30
+     5   RUNNING       76      907   8.4%     61716   2026-10-02T22:00:00
+     6   RUNNING       68      886   7.7%     55516   2026-10-02T22:01:38
+     7   RUNNING       80      914   8.8%     61116   2026-10-02T21:58:30
+     8   RUNNING       74      866   8.5%     65788   2026-10-02T22:03:27
+     9   RUNNING       67      933   7.2%     56868   2026-10-02T22:02:30
+ total                727     9019   8.1%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 22:09:32,560 INFO run_parallel sheet refreshed: {"NOT_FOUND": 343, "REPLACED_VERIFIED": 274, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 42, "RETRY_UNREACHABLE": 53, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 8, "PENDING": 8273}
+2026-10-02 22:09:32,561 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 172
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       77      926   8.3%     62576   2026-10-02T22:09:29
+     1   RUNNING       76      914   8.3%     63920   2026-10-02T22:05:27
+     2   RUNNING       75      882   8.5%     62020   2026-10-02T22:08:23
+     3   RUNNING       69      909   7.6%     56936   2026-10-02T22:09:03
+     4   RUNNING       77      882   8.7%     60972   2026-10-02T22:08:05
+     5   RUNNING       77      907   8.5%     61840   2026-10-02T22:07:27
+     6   RUNNING       71      886   8.0%     55192   2026-10-02T22:07:28
+     7   RUNNING       81      914   8.9%     59308   2026-10-02T22:08:28
+     8   RUNNING       74      866   8.5%     65788   2026-10-02T22:03:27
+     9   RUNNING       69      933   7.4%     57332   2026-10-02T22:08:44
+ total                746     9019   8.3%
+2026-10-02 22:14:32,884 INFO run_parallel sheet refreshed: {"NOT_FOUND": 352, "REPLACED_VERIFIED": 277, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 45, "RETRY_UNREACHABLE": 55, "VERIFIED_ACTIVE": 18, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 8, "PENDING": 8256}
+2026-10-02 22:14:32,885 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 177
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       80      926   8.6%     63364   2026-10-02T22:13:25
+     1   RUNNING       76      914   8.3%     63920   2026-10-02T22:05:27
+     2   RUNNING       76      882   8.6%     62440   2026-10-02T22:10:34
+     3   RUNNING       69      909   7.6%     56936   2026-10-02T22:09:03
+     4   RUNNING       79      882   9.0%     60956   2026-10-02T22:13:28
+     5   RUNNING       78      907   8.6%     62380   2026-10-02T22:12:24
+     6   RUNNING       72      886   8.1%     54852   2026-10-02T22:10:28
+     7   RUNNING       85      914   9.3%     61192   2026-10-02T22:14:26
+     8   RUNNING       76      866   8.8%     66916   2026-10-02T22:12:28
+     9   RUNNING       72      933   7.7%     58800   2026-10-02T22:10:36
+ total                763     9019   8.5%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 22:19:33,208 INFO run_parallel sheet refreshed: {"NOT_FOUND": 357, "REPLACED_VERIFIED": 282, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 46, "RETRY_UNREACHABLE": 55, "VERIFIED_ACTIVE": 19, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 8, "PENDING": 8244}
+2026-10-02 22:19:33,209 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 185
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       80      926   8.6%     63364   2026-10-02T22:13:25
+     1   RUNNING       78      914   8.5%     65096   2026-10-02T22:18:58
+     2   RUNNING       78      882   8.8%     63088   2026-10-02T22:18:08
+     3   RUNNING       70      909   7.7%     57352   2026-10-02T22:14:41
+     4   RUNNING       79      882   9.0%     60956   2026-10-02T22:13:28
+     5   RUNNING       79      907   8.7%     62568   2026-10-02T22:18:33
+     6   RUNNING       74      886   8.4%     56012   2026-10-02T22:17:39
+     7   RUNNING       85      914   9.3%     61192   2026-10-02T22:14:26
+     8   RUNNING       80      866   9.2%     83384   2026-10-02T22:19:03
+     9   RUNNING       72      933   7.7%     58800   2026-10-02T22:10:36
+ total                775     9019   8.6%
+2026-10-02 22:24:33,532 INFO run_parallel sheet refreshed: {"NOT_FOUND": 366, "REPLACED_VERIFIED": 286, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 47, "RETRY_UNREACHABLE": 56, "VERIFIED_ACTIVE": 19, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 8, "PENDING": 8229}
+2026-10-02 22:24:33,533 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 187
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       82      926   8.9%     65172   2026-10-02T22:24:29
+     1   RUNNING       78      914   8.5%     65096   2026-10-02T22:18:58
+     2   RUNNING       79      882   9.0%     62424   2026-10-02T22:20:30
+     3   RUNNING       73      909   8.0%     58528   2026-10-02T22:24:29
+     4   RUNNING       81      882   9.2%     63060   2026-10-02T22:23:32
+     5   RUNNING       80      907   8.8%     62984   2026-10-02T22:21:30
+     6   RUNNING       77      886   8.7%     58948   2026-10-02T22:24:33
+     7   RUNNING       86      914   9.4%     61704   2026-10-02T22:21:35
+     8   RUNNING       81      866   9.4%     83336   2026-10-02T22:20:29
+     9   RUNNING       73      933   7.8%     58444   2026-10-02T22:23:30
+ total                790     9019   8.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 22:29:33,864 INFO run_parallel sheet refreshed: {"NOT_FOUND": 376, "REPLACED_VERIFIED": 296, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 48, "RETRY_UNREACHABLE": 57, "VERIFIED_ACTIVE": 22, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 9, "PENDING": 8203}
+2026-10-02 22:29:33,866 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 192
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       85      926   9.2%     65188   2026-10-02T22:27:35
+     1   RUNNING       81      914   8.9%     73956   2026-10-02T22:29:32
+     2   RUNNING       80      882   9.1%     62872   2026-10-02T22:25:29
+     3   RUNNING       77      909   8.5%     61852   2026-10-02T22:27:33
+     4   RUNNING       82      882   9.3%     61808   2026-10-02T22:26:29
+     5   RUNNING       87      907   9.6%     69292   2026-10-02T22:28:49
+     6   RUNNING       77      886   8.7%     58948   2026-10-02T22:24:33
+     7   RUNNING       89      914   9.7%     63544   2026-10-02T22:27:35
+     8   RUNNING       83      866   9.6%     80708   2026-10-02T22:27:30
+     9   RUNNING       75      933   8.0%     59076   2026-10-02T22:29:01
+ total                816     9019   9.0%
+2026-10-02 22:34:34,210 INFO run_parallel sheet refreshed: {"NOT_FOUND": 386, "REPLACED_VERIFIED": 302, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 48, "RETRY_UNREACHABLE": 58, "VERIFIED_ACTIVE": 22, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 9, "PENDING": 8186}
+2026-10-02 22:34:34,211 INFO run_parallel search health: limit 10/min, blocks since last check 9, total blocks 201
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       85      926   9.2%     65188   2026-10-02T22:27:35
+     1   RUNNING       82      914   9.0%     73104   2026-10-02T22:31:35
+     2   RUNNING       84      882   9.5%     64340   2026-10-02T22:33:37
+     3   RUNNING       77      909   8.5%     61852   2026-10-02T22:27:33
+     4   RUNNING       85      882   9.6%     64560   2026-10-02T22:33:39
+     5   RUNNING       89      907   9.8%     63632   2026-10-02T22:31:32
+     6   RUNNING       80      886   9.0%     58348   2026-10-02T22:33:30
+     7   RUNNING       89      914   9.7%     63544   2026-10-02T22:27:35
+     8   RUNNING       85      866   9.8%     83708   2026-10-02T22:34:33
+     9   RUNNING       77      933   8.3%     59620   2026-10-02T22:33:41
+ total                833     9019   9.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 22:39:34,562 INFO run_parallel sheet refreshed: {"NOT_FOUND": 391, "REPLACED_VERIFIED": 306, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 48, "RETRY_UNREACHABLE": 59, "VERIFIED_ACTIVE": 22, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 9, "PENDING": 8176}
+2026-10-02 22:39:34,563 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 207
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       86      926   9.3%     65620   2026-10-02T22:38:31
+     1   RUNNING       83      914   9.1%     78408   2026-10-02T22:36:36
+     2   RUNNING       84      882   9.5%     64340   2026-10-02T22:33:37
+     3   RUNNING       79      909   8.7%     60304   2026-10-02T22:38:30
+     4   RUNNING       85      882   9.6%     64560   2026-10-02T22:33:39
+     5   RUNNING       90      907   9.9%     73900   2026-10-02T22:37:41
+     6   RUNNING       81      886   9.1%     58688   2026-10-02T22:39:30
+     7   RUNNING       90      914   9.8%     63172   2026-10-02T22:39:33
+     8   RUNNING       85      866   9.8%     83708   2026-10-02T22:34:33
+     9   RUNNING       80      933   8.6%     59512   2026-10-02T22:37:35
+ total                843     9019   9.3%
+2026-10-02 22:44:34,909 INFO run_parallel sheet refreshed: {"NOT_FOUND": 400, "REPLACED_VERIFIED": 312, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 51, "RETRY_UNREACHABLE": 61, "VERIFIED_ACTIVE": 22, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 9, "PENDING": 8156}
+2026-10-02 22:44:34,910 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 215
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       89      926   9.6%     66300   2026-10-02T22:44:33
+     1   RUNNING       85      914   9.3%     75316   2026-10-02T22:44:32
+     2   RUNNING       87      882   9.9%     64356   2026-10-02T22:41:35
+     3   RUNNING       81      909   8.9%     61868   2026-10-02T22:43:32
+     4   RUNNING       87      882   9.9%     63600   2026-10-02T22:44:32
+     5   RUNNING       92      907  10.1%     74316   2026-10-02T22:43:32
+     6   RUNNING       84      886   9.5%     59352   2026-10-02T22:44:34
+     7   RUNNING       92      914  10.1%     63560   2026-10-02T22:43:43
+     8   RUNNING       86      866   9.9%     83740   2026-10-02T22:43:31
+     9   RUNNING       80      933   8.6%     59512   2026-10-02T22:37:35
+ total                863     9019   9.6%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 22:49:35,246 INFO run_parallel sheet refreshed: {"NOT_FOUND": 409, "REPLACED_VERIFIED": 319, "MERGED_SUCCESSOR_SITE": 1, "COMPANY_CLOSED": 52, "RETRY_UNREACHABLE": 61, "VERIFIED_ACTIVE": 22, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 9, "PENDING": 8139}
+2026-10-02 22:49:35,247 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 219
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       91      926   9.8%     69732   2026-10-02T22:45:34
+     1   RUNNING       86      914   9.4%     75732   2026-10-02T22:46:32
+     2   RUNNING       91      882  10.3%     65004   2026-10-02T22:49:33
+     3   RUNNING       82      909   9.0%     61884   2026-10-02T22:46:32
+     4   RUNNING       88      882  10.0%     65272   2026-10-02T22:49:34
+     5   RUNNING       93      907  10.3%     76716   2026-10-02T22:49:35
+     6   RUNNING       87      886   9.8%     62088   2026-10-02T22:48:34
+     7   RUNNING       92      914  10.1%     63560   2026-10-02T22:43:43
+     8   RUNNING       88      866  10.2%     84728   2026-10-02T22:49:32
+     9   RUNNING       83      933   8.9%     61908   2026-10-02T22:48:51
+ total                881     9019   9.8%
+2026-10-02 22:54:35,605 INFO run_parallel sheet refreshed: {"NOT_FOUND": 416, "REPLACED_VERIFIED": 324, "MERGED_SUCCESSOR_SITE": 2, "COMPANY_CLOSED": 52, "RETRY_UNREACHABLE": 62, "VERIFIED_ACTIVE": 22, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 9, "PENDING": 8125}
+2026-10-02 22:54:35,606 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 222
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       91      926   9.8%     69732   2026-10-02T22:45:34
+     1   RUNNING       87      914   9.5%     78764   2026-10-02T22:53:42
+     2   RUNNING       93      882  10.5%     70820   2026-10-02T22:53:45
+     3   RUNNING       82      909   9.0%     61884   2026-10-02T22:46:32
+     4   RUNNING       91      882  10.3%     74472   2026-10-02T22:53:46
+     5   RUNNING       96      907  10.6%     79992   2026-10-02T22:53:34
+     6   RUNNING       88      886   9.9%     64764   2026-10-02T22:49:44
+     7   RUNNING       92      914  10.1%     63560   2026-10-02T22:43:43
+     8   RUNNING       89      866  10.3%     84512   2026-10-02T22:51:38
+     9   RUNNING       85      933   9.1%     62588   2026-10-02T22:50:40
+ total                894     9019   9.9%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 22:59:35,950 INFO run_parallel sheet refreshed: {"NOT_FOUND": 420, "REPLACED_VERIFIED": 333, "MERGED_SUCCESSOR_SITE": 2, "COMPANY_CLOSED": 52, "RETRY_UNREACHABLE": 62, "VERIFIED_ACTIVE": 25, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8108}
+2026-10-02 22:59:35,951 INFO run_parallel search health: limit 10/min, blocks since last check 10, total blocks 232
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       93      926  10.0%     75532   2026-10-02T22:57:35
+     1   RUNNING       91      914  10.0%     84672   2026-10-02T22:56:42
+     2   RUNNING       94      882  10.7%     76832   2026-10-02T22:58:43
+     3   RUNNING       82      909   9.0%     61884   2026-10-02T22:46:32
+     4   RUNNING       93      882  10.5%     84028   2026-10-02T22:57:50
+     5   RUNNING       98      907  10.8%     83872   2026-10-02T22:56:46
+     6   RUNNING       88      886   9.9%     64764   2026-10-02T22:49:44
+     7   RUNNING       95      914  10.4%     63900   2026-10-02T22:59:33
+     8   RUNNING       91      866  10.5%     89012   2026-10-02T22:57:43
+     9   RUNNING       86      933   9.2%     63796   2026-10-02T22:55:42
+ total                911     9019  10.1%
+2026-10-02 23:04:36,295 INFO run_parallel sheet refreshed: {"NOT_FOUND": 429, "REPLACED_VERIFIED": 337, "MERGED_SUCCESSOR_SITE": 2, "COMPANY_CLOSED": 54, "RETRY_UNREACHABLE": 65, "VERIFIED_ACTIVE": 25, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8090}
+2026-10-02 23:04:36,296 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 238
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       95      926  10.3%     76536   2026-10-02T23:00:38
+     1   RUNNING       91      914  10.0%     84672   2026-10-02T22:56:42
+     2   RUNNING       96      882  10.9%     71884   2026-10-02T23:04:34
+     3   RUNNING       86      909   9.5%     63104   2026-10-02T23:04:34
+     4   RUNNING       93      882  10.5%     84028   2026-10-02T22:57:50
+     5   RUNNING       98      907  10.8%     83872   2026-10-02T22:56:46
+     6   RUNNING       93      886  10.5%     66912   2026-10-02T23:01:38
+     7   RUNNING       98      914  10.7%     64736   2026-10-02T23:02:59
+     8   RUNNING       92      866  10.6%     94408   2026-10-02T23:04:18
+     9   RUNNING       87      933   9.3%     63084   2026-10-02T23:03:34
+ total                929     9019  10.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 23:09:36,646 INFO run_parallel sheet refreshed: {"NOT_FOUND": 438, "REPLACED_VERIFIED": 345, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 55, "RETRY_UNREACHABLE": 66, "VERIFIED_ACTIVE": 26, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8069}
+2026-10-02 23:09:36,647 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 241
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       95      926  10.3%     76536   2026-10-02T23:00:38
+     1   RUNNING       94      914  10.3%     83696   2026-10-02T23:08:37
+     2   RUNNING       99      882  11.2%     72612   2026-10-02T23:09:36
+     3   RUNNING       89      909   9.8%     63784   2026-10-02T23:08:39
+     4   RUNNING       96      882  10.9%     84012   2026-10-02T23:07:37
+     5   RUNNING      100      907  11.0%     81740   2026-10-02T23:06:36
+     6   RUNNING       95      886  10.7%     65104   2026-10-02T23:06:35
+     7   RUNNING      101      914  11.1%     69620   2026-10-02T23:05:03
+     8   RUNNING       92      866  10.6%     94408   2026-10-02T23:04:18
+     9   RUNNING       89      933   9.5%     62572   2026-10-02T23:07:34
+ total                950     9019  10.5%
+2026-10-02 23:14:36,992 INFO run_parallel sheet refreshed: {"NOT_FOUND": 446, "REPLACED_VERIFIED": 353, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 56, "RETRY_UNREACHABLE": 67, "VERIFIED_ACTIVE": 27, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8050}
+2026-10-02 23:14:36,993 INFO run_parallel search health: limit 10/min, blocks since last check 10, total blocks 251
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING       99      926  10.7%     84684   2026-10-02T23:10:56
+     1   RUNNING       95      914  10.4%     87576   2026-10-02T23:10:40
+     2   RUNNING      100      882  11.3%     77992   2026-10-02T23:10:36
+     3   RUNNING       90      909   9.9%     64464   2026-10-02T23:11:44
+     4   RUNNING       97      882  11.0%     84304   2026-10-02T23:12:42
+     5   RUNNING      103      907  11.4%     82760   2026-10-02T23:12:34
+     6   RUNNING       96      886  10.8%     66264   2026-10-02T23:13:49
+     7   RUNNING      102      914  11.2%     65816   2026-10-02T23:10:47
+     8   RUNNING       96      866  11.1%     88996   2026-10-02T23:11:35
+     9   RUNNING       91      933   9.8%     73968   2026-10-02T23:14:35
+ total                969     9019  10.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 23:19:37,352 INFO run_parallel sheet refreshed: {"NOT_FOUND": 452, "REPLACED_VERIFIED": 360, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 56, "RETRY_UNREACHABLE": 67, "VERIFIED_ACTIVE": 27, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8037}
+2026-10-02 23:19:37,353 INFO run_parallel search health: limit 12/min, blocks since last check 1, total blocks 252
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      100      926  10.8%     83848   2026-10-02T23:16:36
+     1   RUNNING       96      914  10.5%     85120   2026-10-02T23:18:38
+     2   RUNNING      102      882  11.6%     83728   2026-10-02T23:18:39
+     3   RUNNING       91      909  10.0%     66072   2026-10-02T23:15:41
+     4   RUNNING      100      882  11.3%     85108   2026-10-02T23:17:44
+     5   RUNNING      103      907  11.4%     82760   2026-10-02T23:12:34
+     6   RUNNING       98      886  11.1%     68600   2026-10-02T23:17:43
+     7   RUNNING      102      914  11.2%     65816   2026-10-02T23:10:47
+     8   RUNNING       97      866  11.2%     91284   2026-10-02T23:14:38
+     9   RUNNING       93      933  10.0%     72112   2026-10-02T23:18:39
+ total                982     9019  10.9%
+2026-10-02 23:24:37,709 INFO run_parallel sheet refreshed: {"NOT_FOUND": 461, "REPLACED_VERIFIED": 363, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 57, "RETRY_UNREACHABLE": 69, "VERIFIED_ACTIVE": 27, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8022}
+2026-10-02 23:24:37,710 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 260
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      105      926  11.3%     85088   2026-10-02T23:22:36
+     1   RUNNING       97      914  10.6%     86188   2026-10-02T23:20:36
+     2   RUNNING      103      882  11.7%     84888   2026-10-02T23:23:36
+     3   RUNNING       92      909  10.1%     63800   2026-10-02T23:24:36
+     4   RUNNING      101      882  11.5%     85788   2026-10-02T23:20:43
+     5   RUNNING      105      907  11.6%     87368   2026-10-02T23:22:40
+     6   RUNNING       99      886  11.2%     67872   2026-10-02T23:23:35
+     7   RUNNING      104      914  11.4%     69636   2026-10-02T23:23:38
+     8   RUNNING       97      866  11.2%     91284   2026-10-02T23:14:38
+     9   RUNNING       94      933  10.1%     84792   2026-10-02T23:22:43
+ total                997     9019  11.1%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 23:29:38,135 INFO run_parallel sheet refreshed: {"NOT_FOUND": 467, "REPLACED_VERIFIED": 367, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 59, "RETRY_UNREACHABLE": 69, "VERIFIED_ACTIVE": 27, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 8010}
+2026-10-02 23:29:38,136 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 266
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      105      926  11.3%     85088   2026-10-02T23:22:36
+     1   RUNNING       99      914  10.8%     91228   2026-10-02T23:26:36
+     2   RUNNING      104      882  11.8%     84796   2026-10-02T23:24:38
+     3   RUNNING       94      909  10.3%     66800   2026-10-02T23:26:47
+     4   RUNNING      103      882  11.7%     85172   2026-10-02T23:26:38
+     5   RUNNING      108      907  11.9%     87028   2026-10-02T23:28:37
+     6   RUNNING      100      886  11.3%     67888   2026-10-02T23:25:38
+     7   RUNNING      104      914  11.4%     69636   2026-10-02T23:23:38
+     8   RUNNING       97      866  11.2%     91284   2026-10-02T23:14:38
+     9   RUNNING       95      933  10.2%     75624   2026-10-02T23:26:39
+ total               1009     9019  11.2%
+2026-10-02 23:34:38,504 INFO run_parallel sheet refreshed: {"NOT_FOUND": 472, "REPLACED_VERIFIED": 373, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 60, "RETRY_UNREACHABLE": 72, "VERIFIED_ACTIVE": 27, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 10, "PENDING": 7995}
+2026-10-02 23:34:38,505 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 270
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      106      926  11.4%     87840   2026-10-02T23:33:42
+     1   RUNNING       99      914  10.8%     91228   2026-10-02T23:26:36
+     2   RUNNING      104      882  11.8%     84796   2026-10-02T23:24:38
+     3   RUNNING       97      909  10.7%     83392   2026-10-02T23:33:41
+     4   RUNNING      105      882  11.9%     97016   2026-10-02T23:33:15
+     5   RUNNING      108      907  11.9%     87028   2026-10-02T23:28:37
+     6   RUNNING      102      886  11.5%     68860   2026-10-02T23:32:47
+     7   RUNNING      106      914  11.6%     65320   2026-10-02T23:33:02
+     8   RUNNING       98      866  11.3%     98228   2026-10-02T23:34:36
+     9   RUNNING       99      933  10.6%     87388   2026-10-02T23:31:46
+ total               1024     9019  11.4%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 23:39:38,868 INFO run_parallel sheet refreshed: {"NOT_FOUND": 482, "REPLACED_VERIFIED": 376, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 61, "RETRY_UNREACHABLE": 74, "VERIFIED_ACTIVE": 29, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 11, "PENDING": 7976}
+2026-10-02 23:39:38,869 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 273
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      108      926  11.7%     92308   2026-10-02T23:35:40
+     1   RUNNING      102      914  11.2%    102268   2026-10-02T23:38:50
+     2   RUNNING      106      882  12.0%     86128   2026-10-02T23:37:40
+     3   RUNNING      101      909  11.1%     86312   2026-10-02T23:35:50
+     4   RUNNING      106      882  12.0%     85928   2026-10-02T23:38:38
+     5   RUNNING      111      907  12.2%     91912   2026-10-02T23:38:40
+     6   RUNNING      102      886  11.5%     68860   2026-10-02T23:32:47
+     7   RUNNING      106      914  11.6%     65320   2026-10-02T23:33:02
+     8   RUNNING      100      866  11.5%    100856   2026-10-02T23:36:36
+     9   RUNNING      101      933  10.8%     85812   2026-10-02T23:35:41
+ total               1043     9019  11.6%
+2026-10-02 23:44:39,421 INFO run_parallel sheet refreshed: {"NOT_FOUND": 490, "REPLACED_VERIFIED": 381, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 63, "RETRY_UNREACHABLE": 75, "VERIFIED_ACTIVE": 29, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 11, "PENDING": 7960}
+2026-10-02 23:44:39,422 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 275
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      111      926  12.0%     97736   2026-10-02T23:43:49
+     1   RUNNING      102      914  11.2%    102268   2026-10-02T23:38:50
+     2   RUNNING      109      882  12.4%     87224   2026-10-02T23:44:38
+     3   RUNNING      101      909  11.1%     86312   2026-10-02T23:35:50
+     4   RUNNING      107      882  12.1%     87800   2026-10-02T23:42:41
+     5   RUNNING      112      907  12.3%     89300   2026-10-02T23:41:39
+     6   RUNNING      103      886  11.6%     69632   2026-10-02T23:40:37
+     7   RUNNING      111      914  12.1%     72776   2026-10-02T23:41:38
+     8   RUNNING      101      866  11.7%     97872   2026-10-02T23:39:40
+     9   RUNNING      102      933  10.9%     93172   2026-10-02T23:41:58
+ total               1059     9019  11.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 23:49:39,777 INFO run_parallel sheet refreshed: {"NOT_FOUND": 497, "REPLACED_VERIFIED": 385, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 64, "RETRY_UNREACHABLE": 75, "VERIFIED_ACTIVE": 29, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 12, "PENDING": 7947}
+2026-10-02 23:49:39,778 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 280
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      112      926  12.1%     92756   2026-10-02T23:45:41
+     1   RUNNING      104      914  11.4%     96052   2026-10-02T23:49:38
+     2   RUNNING      109      882  12.4%     87224   2026-10-02T23:44:38
+     3   RUNNING      103      909  11.3%     85632   2026-10-02T23:45:49
+     4   RUNNING      109      882  12.4%    100448   2026-10-02T23:48:41
+     5   RUNNING      114      907  12.6%     92656   2026-10-02T23:48:42
+     6   RUNNING      105      886  11.9%     70548   2026-10-02T23:45:41
+     7   RUNNING      111      914  12.1%     72776   2026-10-02T23:41:38
+     8   RUNNING      101      866  11.7%     97872   2026-10-02T23:39:40
+     9   RUNNING      104      933  11.1%     89692   2026-10-02T23:47:41
+ total               1072     9019  11.9%
+2026-10-02 23:54:40,139 INFO run_parallel sheet refreshed: {"NOT_FOUND": 509, "REPLACED_VERIFIED": 387, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 66, "RETRY_UNREACHABLE": 75, "VERIFIED_ACTIVE": 29, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 12, "PENDING": 7931}
+2026-10-02 23:54:40,140 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 286
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      114      926  12.3%     95092   2026-10-02T23:53:54
+     1   RUNNING      105      914  11.5%     98648   2026-10-02T23:50:55
+     2   RUNNING      110      882  12.5%     89916   2026-10-02T23:51:41
+     3   RUNNING      103      909  11.3%     85632   2026-10-02T23:45:49
+     4   RUNNING      110      882  12.5%    101436   2026-10-02T23:53:50
+     5   RUNNING      114      907  12.6%     92656   2026-10-02T23:48:42
+     6   RUNNING      110      886  12.4%     78232   2026-10-02T23:53:51
+     7   RUNNING      114      914  12.5%     78712   2026-10-02T23:51:40
+     8   RUNNING      102      866  11.8%    108092   2026-10-02T23:53:51
+     9   RUNNING      106      933  11.4%     97008   2026-10-02T23:52:46
+ total               1088     9019  12.1%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-02 23:59:40,529 INFO run_parallel sheet refreshed: {"NOT_FOUND": 518, "REPLACED_VERIFIED": 389, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 67, "RETRY_UNREACHABLE": 76, "VERIFIED_ACTIVE": 29, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 12, "PENDING": 7918}
+2026-10-02 23:59:40,530 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 290
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      115      926  12.4%    103008   2026-10-02T23:55:49
+     1   RUNNING      106      914  11.6%    101400   2026-10-02T23:56:51
+     2   RUNNING      114      882  12.9%     94940   2026-10-02T23:57:42
+     3   RUNNING      103      909  11.3%     85632   2026-10-02T23:45:49
+     4   RUNNING      110      882  12.5%    101436   2026-10-02T23:53:50
+     5   RUNNING      116      907  12.8%     95700   2026-10-02T23:57:56
+     6   RUNNING      110      886  12.4%     78232   2026-10-02T23:53:51
+     7   RUNNING      115      914  12.6%     80460   2026-10-02T23:57:42
+     8   RUNNING      105      866  12.1%    103268   2026-10-02T23:58:00
+     9   RUNNING      107      933  11.5%    101568   2026-10-02T23:55:43
+ total               1101     9019  12.2%
+2026-10-03 00:04:40,897 INFO run_parallel sheet refreshed: {"NOT_FOUND": 526, "REPLACED_VERIFIED": 394, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 69, "RETRY_UNREACHABLE": 76, "VERIFIED_ACTIVE": 29, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 12, "PENDING": 7903}
+2026-10-03 00:04:40,898 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 295
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      117      926  12.6%    109516   2026-10-03T00:00:50
+     1   RUNNING      108      914  11.8%    106056   2026-10-03T00:01:43
+     2   RUNNING      114      882  12.9%     94940   2026-10-02T23:57:42
+     3   RUNNING      106      909  11.7%     91632   2026-10-03T00:03:43
+     4   RUNNING      110      882  12.5%    101436   2026-10-02T23:53:50
+     5   RUNNING      117      907  12.9%     97216   2026-10-02T23:59:47
+     6   RUNNING      111      886  12.5%     77628   2026-10-02T23:59:42
+     7   RUNNING      118      914  12.9%     85608   2026-10-03T00:03:46
+     8   RUNNING      107      866  12.4%      3924   2026-10-03T00:03:48
+     9   RUNNING      108      933  11.6%    101860   2026-10-03T00:00:42
+ total               1116     9019  12.4%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 00:09:41,270 INFO run_parallel sheet refreshed: {"NOT_FOUND": 536, "REPLACED_VERIFIED": 396, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 70, "RETRY_UNREACHABLE": 78, "VERIFIED_ACTIVE": 30, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 13, "PENDING": 7886}
+2026-10-03 00:09:41,271 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 299
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      122      926  13.2%    109904   2026-10-03T00:08:52
+     1   RUNNING      109      914  11.9%    104416   2026-10-03T00:04:49
+     2   RUNNING      116      882  13.2%     95480   2026-10-03T00:07:43
+     3   RUNNING      107      909  11.8%     89128   2026-10-03T00:07:44
+     4   RUNNING      112      882  12.7%    106028   2026-10-03T00:06:44
+     5   RUNNING      121      907  13.3%    102612   2026-10-03T00:06:51
+     6   RUNNING      111      886  12.5%     77628   2026-10-02T23:59:42
+     7   RUNNING      119      914  13.0%     88068   2026-10-03T00:07:01
+     8   RUNNING      107      866  12.4%      3924   2026-10-03T00:03:48
+     9   RUNNING      109      933  11.7%    109144   2026-10-03T00:07:42
+ total               1133     9019  12.6%
+2026-10-03 00:14:41,667 INFO run_parallel sheet refreshed: {"NOT_FOUND": 543, "REPLACED_VERIFIED": 403, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 71, "RETRY_UNREACHABLE": 78, "VERIFIED_ACTIVE": 30, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 14, "PENDING": 7869, "FOUND_VERIFIED": 1}
+2026-10-03 00:14:41,668 INFO run_parallel search health: limit 10/min, blocks since last check 1, total blocks 300
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      124      926  13.4%      2520   2026-10-03T00:12:57
+     1   RUNNING      111      914  12.1%    113292   2026-10-03T00:13:41
+     2   RUNNING      120      882  13.6%    102980   2026-10-03T00:12:44
+     3   RUNNING      107      909  11.8%     89128   2026-10-03T00:07:44
+     4   RUNNING      113      882  12.8%    104544   2026-10-03T00:10:49
+     5   RUNNING      121      907  13.3%    102612   2026-10-03T00:06:51
+     6   RUNNING      114      886  12.9%     82376   2026-10-03T00:13:43
+     7   RUNNING      121      914  13.2%     94468   2026-10-03T00:13:49
+     8   RUNNING      108      866  12.5%    113132   2026-10-03T00:12:44
+     9   RUNNING      111      933  11.9%    104660   2026-10-03T00:12:45
+ total               1150     9019  12.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 00:19:42,036 INFO run_parallel sheet refreshed: {"NOT_FOUND": 555, "REPLACED_VERIFIED": 406, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 72, "RETRY_UNREACHABLE": 78, "VERIFIED_ACTIVE": 31, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 14, "PENDING": 7851, "FOUND_VERIFIED": 2}
+2026-10-03 00:19:42,037 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 307
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      125      926  13.5%       664   2026-10-03T00:17:44
+     1   RUNNING      112      914  12.3%      3108   2026-10-03T00:16:55
+     2   RUNNING      122      882  13.8%      7440   2026-10-03T00:18:45
+     3   RUNNING      107      909  11.8%     89128   2026-10-03T00:07:44
+     4   RUNNING      115      882  13.0%    109492   2026-10-03T00:15:43
+     5   RUNNING      121      907  13.3%    102612   2026-10-03T00:06:51
+     6   RUNNING      115      886  13.0%     81588   2026-10-03T00:16:12
+     7   RUNNING      123      914  13.5%     88392   2026-10-03T00:14:52
+     8   RUNNING      113      866  13.0%      5068   2026-10-03T00:18:52
+     9   RUNNING      115      933  12.3%    109948   2026-10-03T00:18:47
+ total               1168     9019  13.0%
+2026-10-03 00:24:42,407 INFO run_parallel sheet refreshed: {"NOT_FOUND": 564, "REPLACED_VERIFIED": 406, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 73, "RETRY_UNREACHABLE": 78, "VERIFIED_ACTIVE": 31, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 14, "PENDING": 7838, "FOUND_VERIFIED": 5}
+2026-10-03 00:24:42,408 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 311
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      128      926  13.8%      6292   2026-10-03T00:23:42
+     1   RUNNING      113      914  12.4%      5396   2026-10-03T00:21:42
+     2   RUNNING      125      882  14.2%      7748   2026-10-03T00:24:03
+     3   RUNNING      107      909  11.8%     89128   2026-10-03T00:07:44
+     4   RUNNING      116      882  13.2%    111596   2026-10-03T00:19:56
+     5   RUNNING      122      907  13.5%     98176   2026-10-03T00:23:58
+     6   RUNNING      115      886  13.0%     81588   2026-10-03T00:16:12
+     7   RUNNING      124      914  13.6%     92860   2026-10-03T00:21:42
+     8   RUNNING      114      866  13.2%      6056   2026-10-03T00:23:59
+     9   RUNNING      117      933  12.5%       708   2026-10-03T00:23:45
+ total               1181     9019  13.1%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 00:29:42,783 INFO run_parallel sheet refreshed: {"NOT_FOUND": 579, "REPLACED_VERIFIED": 407, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 74, "RETRY_UNREACHABLE": 78, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7819, "FOUND_VERIFIED": 5}
+2026-10-03 00:29:42,784 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 315
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      129      926  13.9%      9772   2026-10-03T00:26:19
+     1   RUNNING      115      914  12.6%    112904   2026-10-03T00:26:57
+     2   RUNNING      125      882  14.2%      7748   2026-10-03T00:24:03
+     3   RUNNING      107      909  11.8%     89128   2026-10-03T00:07:44
+     4   RUNNING      118      882  13.4%    111936   2026-10-03T00:28:08
+     5   RUNNING      125      907  13.8%    105304   2026-10-03T00:26:58
+     6   RUNNING      119      886  13.4%     84308   2026-10-03T00:28:50
+     7   RUNNING      128      914  14.0%     98224   2026-10-03T00:28:16
+     8   RUNNING      116      866  13.4%      6940   2026-10-03T00:28:47
+     9   RUNNING      118      933  12.6%    111944   2026-10-03T00:28:45
+ total               1200     9019  13.3%
+2026-10-03 00:34:43,161 INFO run_parallel sheet refreshed: {"NOT_FOUND": 589, "REPLACED_VERIFIED": 408, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 76, "RETRY_UNREACHABLE": 78, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7805, "FOUND_VERIFIED": 6}
+2026-10-03 00:34:43,162 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 323
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      130      926  14.0%     15988   2026-10-03T00:33:43
+     1   RUNNING      118      914  12.9%     13268   2026-10-03T00:33:50
+     2   RUNNING      126      882  14.3%      8816   2026-10-03T00:33:48
+     3   RUNNING      108      909  11.9%     98140   2026-10-03T00:30:47
+     4   RUNNING      119      882  13.5%      1552   2026-10-03T00:29:50
+     5   RUNNING      126      907  13.9%    103756   2026-10-03T00:30:47
+     6   RUNNING      119      886  13.4%     84308   2026-10-03T00:28:50
+     7   RUNNING      128      914  14.0%     98224   2026-10-03T00:28:16
+     8   RUNNING      119      866  13.7%      9056   2026-10-03T00:33:47
+     9   RUNNING      121      933  13.0%      3756   2026-10-03T00:31:45
+ total               1214     9019  13.5%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 00:39:43,537 INFO run_parallel sheet refreshed: {"NOT_FOUND": 603, "REPLACED_VERIFIED": 409, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 77, "RETRY_UNREACHABLE": 79, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7788, "FOUND_VERIFIED": 6}
+2026-10-03 00:39:43,538 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 325
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      131      926  14.1%     16668   2026-10-03T00:38:48
+     1   RUNNING      119      914  13.0%     16112   2026-10-03T00:38:48
+     2   RUNNING      126      882  14.3%      8816   2026-10-03T00:33:48
+     3   RUNNING      112      909  12.3%     96208   2026-10-03T00:37:46
+     4   RUNNING      122      882  13.8%      2280   2026-10-03T00:38:55
+     5   RUNNING      126      907  13.9%    103756   2026-10-03T00:30:47
+     6   RUNNING      120      886  13.5%     85296   2026-10-03T00:36:49
+     7   RUNNING      129      914  14.1%     97096   2026-10-03T00:35:47
+     8   RUNNING      122      866  14.1%     11500   2026-10-03T00:38:46
+     9   RUNNING      124      933  13.3%      7544   2026-10-03T00:38:50
+ total               1231     9019  13.6%
+2026-10-03 00:44:43,914 INFO run_parallel sheet refreshed: {"NOT_FOUND": 614, "REPLACED_VERIFIED": 411, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 79, "RETRY_UNREACHABLE": 79, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7772, "FOUND_VERIFIED": 7}
+2026-10-03 00:44:43,915 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 331
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      133      926  14.4%     11564   2026-10-03T00:43:48
+     1   RUNNING      122      914  13.3%     18508   2026-10-03T00:40:56
+     2   RUNNING      128      882  14.5%      9280   2026-10-03T00:43:01
+     3   RUNNING      112      909  12.3%     96208   2026-10-03T00:37:46
+     4   RUNNING      123      882  13.9%      3252   2026-10-03T00:40:00
+     5   RUNNING      129      907  14.2%    109432   2026-10-03T00:42:48
+     6   RUNNING      120      886  13.5%     85296   2026-10-03T00:36:49
+     7   RUNNING      130      914  14.2%     97576   2026-10-03T00:41:46
+     8   RUNNING      126      866  14.5%     16416   2026-10-03T00:43:52
+     9   RUNNING      124      933  13.3%      7544   2026-10-03T00:38:50
+ total               1247     9019  13.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 00:49:44,289 INFO run_parallel sheet refreshed: {"NOT_FOUND": 628, "REPLACED_VERIFIED": 411, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 81, "RETRY_UNREACHABLE": 79, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7754, "FOUND_VERIFIED": 9}
+2026-10-03 00:49:44,290 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 333
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      134      926  14.5%     16944   2026-10-03T00:46:49
+     1   RUNNING      125      914  13.7%     19172   2026-10-03T00:47:52
+     2   RUNNING      130      882  14.7%     10052   2026-10-03T00:46:55
+     3   RUNNING      113      909  12.4%    101296   2026-10-03T00:47:48
+     4   RUNNING      126      882  14.3%      6392   2026-10-03T00:48:48
+     5   RUNNING      130      907  14.3%    105952   2026-10-03T00:45:05
+     6   RUNNING      121      886  13.7%     86164   2026-10-03T00:46:52
+     7   RUNNING      131      914  14.3%     97776   2026-10-03T00:44:46
+     8   RUNNING      127      866  14.7%     17916   2026-10-03T00:49:06
+     9   RUNNING      128      933  13.7%      8024   2026-10-03T00:47:46
+ total               1265     9019  14.0%
+2026-10-03 00:54:44,668 INFO run_parallel sheet refreshed: {"NOT_FOUND": 642, "REPLACED_VERIFIED": 413, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 84, "RETRY_UNREACHABLE": 80, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7734, "FOUND_VERIFIED": 9}
+2026-10-03 00:54:44,669 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 336
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      137      926  14.8%     18924   2026-10-03T00:53:22
+     1   RUNNING      125      914  13.7%     19172   2026-10-03T00:47:52
+     2   RUNNING      132      882  15.0%     21912   2026-10-03T00:53:45
+     3   RUNNING      116      909  12.8%    113340   2026-10-03T00:52:23
+     4   RUNNING      127      882  14.4%      6376   2026-10-03T00:52:07
+     5   RUNNING      132      907  14.6%      5480   2026-10-03T00:52:48
+     6   RUNNING      125      886  14.1%     92256   2026-10-03T00:53:48
+     7   RUNNING      133      914  14.6%     99012   2026-10-03T00:50:53
+     8   RUNNING      130      866  15.0%     20236   2026-10-03T00:53:50
+     9   RUNNING      128      933  13.7%      8024   2026-10-03T00:47:46
+ total               1285     9019  14.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 00:59:45,048 INFO run_parallel sheet refreshed: {"NOT_FOUND": 656, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 84, "RETRY_UNREACHABLE": 81, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7711, "FOUND_VERIFIED": 15}
+2026-10-03 00:59:45,049 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 342
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      137      926  14.8%     18924   2026-10-03T00:53:22
+     1   RUNNING      129      914  14.1%     21524   2026-10-03T00:57:57
+     2   RUNNING      134      882  15.2%     23428   2026-10-03T00:57:45
+     3   RUNNING      118      909  13.0%    112368   2026-10-03T00:58:46
+     4   RUNNING      130      882  14.7%      6684   2026-10-03T00:59:14
+     5   RUNNING      135      907  14.9%      6084   2026-10-03T00:57:45
+     6   RUNNING      125      886  14.1%     92256   2026-10-03T00:53:48
+     7   RUNNING      137      914  15.0%    105120   2026-10-03T00:58:49
+     8   RUNNING      131      866  15.1%     22152   2026-10-03T00:56:56
+     9   RUNNING      132      933  14.1%     10572   2026-10-03T00:57:04
+ total               1308     9019  14.5%
+2026-10-03 01:04:45,435 INFO run_parallel sheet refreshed: {"NOT_FOUND": 674, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 84, "RETRY_UNREACHABLE": 81, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7689, "FOUND_VERIFIED": 19}
+2026-10-03 01:04:45,436 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 347
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      140      926  15.1%     22016   2026-10-03T01:04:17
+     1   RUNNING      131      914  14.3%     23536   2026-10-03T01:03:50
+     2   RUNNING      135      882  15.3%     23752   2026-10-03T01:02:54
+     3   RUNNING      121      909  13.3%       668   2026-10-03T01:02:53
+     4   RUNNING      131      882  14.9%      8000   2026-10-03T01:00:46
+     5   RUNNING      139      907  15.3%      9344   2026-10-03T01:03:09
+     6   RUNNING      126      886  14.2%     95192   2026-10-03T01:03:52
+     7   RUNNING      137      914  15.0%    105120   2026-10-03T00:58:49
+     8   RUNNING      135      866  15.6%     23636   2026-10-03T01:03:56
+     9   RUNNING      135      933  14.5%     15876   2026-10-03T01:03:56
+ total               1330     9019  14.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 01:09:45,817 INFO run_parallel sheet refreshed: {"NOT_FOUND": 691, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 84, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7667, "FOUND_VERIFIED": 23}
+2026-10-03 01:09:45,818 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 350
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      141      926  15.2%     23564   2026-10-03T01:04:58
+     1   RUNNING      133      914  14.6%     23812   2026-10-03T01:09:05
+     2   RUNNING      137      882  15.5%     24060   2026-10-03T01:09:03
+     3   RUNNING      124      909  13.6%      8012   2026-10-03T01:08:46
+     4   RUNNING      133      882  15.1%      9144   2026-10-03T01:07:49
+     5   RUNNING      142      907  15.7%     11048   2026-10-03T01:08:51
+     6   RUNNING      129      886  14.6%     99460   2026-10-03T01:08:51
+     7   RUNNING      141      914  15.4%    112528   2026-10-03T01:09:02
+     8   RUNNING      136      866  15.7%     23544   2026-10-03T01:05:52
+     9   RUNNING      136      933  14.6%     16356   2026-10-03T01:05:14
+ total               1352     9019  15.0%
+2026-10-03 01:14:46,211 INFO run_parallel sheet refreshed: {"NOT_FOUND": 707, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 84, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7651, "FOUND_VERIFIED": 23}
+2026-10-03 01:14:46,212 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 358
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      142      926  15.3%     23408   2026-10-03T01:13:48
+     1   RUNNING      136      914  14.9%     24120   2026-10-03T01:13:46
+     2   RUNNING      140      882  15.9%     24108   2026-10-03T01:12:57
+     3   RUNNING      125      909  13.8%      8028   2026-10-03T01:10:55
+     4   RUNNING      134      882  15.2%      9160   2026-10-03T01:12:46
+     5   RUNNING      142      907  15.7%     11048   2026-10-03T01:08:51
+     6   RUNNING      129      886  14.6%     99460   2026-10-03T01:08:51
+     7   RUNNING      144      914  15.8%      1356   2026-10-03T01:14:36
+     8   RUNNING      138      866  15.9%     23668   2026-10-03T01:13:51
+     9   RUNNING      138      933  14.8%     17824   2026-10-03T01:14:03
+ total               1368     9019  15.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 01:19:46,596 INFO run_parallel sheet refreshed: {"NOT_FOUND": 723, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 84, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7633, "FOUND_VERIFIED": 25}
+2026-10-03 01:19:46,597 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 362
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      145      926  15.7%     23872   2026-10-03T01:18:12
+     1   RUNNING      138      914  15.1%     24152   2026-10-03T01:17:47
+     2   RUNNING      142      882  16.1%     24540   2026-10-03T01:16:50
+     3   RUNNING      126      909  13.9%      9172   2026-10-03T01:17:51
+     4   RUNNING      137      882  15.5%     14724   2026-10-03T01:18:59
+     5   RUNNING      144      907  15.9%     12888   2026-10-03T01:19:02
+     6   RUNNING      129      886  14.6%     99460   2026-10-03T01:08:51
+     7   RUNNING      145      914  15.9%      1664   2026-10-03T01:14:59
+     8   RUNNING      140      866  16.2%     23992   2026-10-03T01:15:57
+     9   RUNNING      140      933  15.0%     20500   2026-10-03T01:15:49
+ total               1386     9019  15.4%
+2026-10-03 01:24:46,985 INFO run_parallel sheet refreshed: {"NOT_FOUND": 738, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 86, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7612, "FOUND_VERIFIED": 29}
+2026-10-03 01:24:46,986 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 368
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      145      926  15.7%     23872   2026-10-03T01:18:12
+     1   RUNNING      141      914  15.4%     25004   2026-10-03T01:24:03
+     2   RUNNING      144      882  16.3%     24572   2026-10-03T01:24:04
+     3   RUNNING      130      909  14.3%     11784   2026-10-03T01:23:54
+     4   RUNNING      140      882  15.9%     16380   2026-10-03T01:22:09
+     5   RUNNING      145      907  16.0%     17804   2026-10-03T01:20:52
+     6   RUNNING      131      886  14.8%    102956   2026-10-03T01:21:49
+     7   RUNNING      147      914  16.1%      3040   2026-10-03T01:24:04
+     8   RUNNING      144      866  16.6%     24056   2026-10-03T01:22:54
+     9   RUNNING      140      933  15.0%     20500   2026-10-03T01:15:49
+ total               1407     9019  15.6%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 01:29:47,377 INFO run_parallel sheet refreshed: {"NOT_FOUND": 751, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 87, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7594, "FOUND_VERIFIED": 33}
+2026-10-03 01:29:47,378 INFO run_parallel search health: limit 10/min, blocks since last check 8, total blocks 376
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      147      926  15.9%     23904   2026-10-03T01:28:02
+     1   RUNNING      143      914  15.6%     25020   2026-10-03T01:28:58
+     2   RUNNING      146      882  16.6%     25408   2026-10-03T01:29:03
+     3   RUNNING      131      909  14.4%     13764   2026-10-03T01:26:56
+     4   RUNNING      143      882  16.2%     19704   2026-10-03T01:27:58
+     5   RUNNING      148      907  16.3%     17928   2026-10-03T01:27:55
+     6   RUNNING      132      886  14.9%    103048   2026-10-03T01:25:55
+     7   RUNNING      149      914  16.3%      6612   2026-10-03T01:29:11
+     8   RUNNING      144      866  16.6%     24056   2026-10-03T01:22:54
+     9   RUNNING      142      933  15.2%     21816   2026-10-03T01:29:05
+ total               1425     9019  15.8%
+2026-10-03 01:34:47,774 INFO run_parallel sheet refreshed: {"NOT_FOUND": 769, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 87, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7573, "FOUND_VERIFIED": 36}
+2026-10-03 01:34:47,775 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 380
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      150      926  16.2%     24044   2026-10-03T01:33:09
+     1   RUNNING      145      914  15.9%     25636   2026-10-03T01:32:56
+     2   RUNNING      148      882  16.8%     25592   2026-10-03T01:31:54
+     3   RUNNING      133      909  14.6%     16424   2026-10-03T01:34:16
+     4   RUNNING      144      882  16.3%     18652   2026-10-03T01:31:09
+     5   RUNNING      149      907  16.4%     19288   2026-10-03T01:30:57
+     6   RUNNING      134      886  15.1%       580   2026-10-03T01:33:02
+     7   RUNNING      150      914  16.4%      5500   2026-10-03T01:31:00
+     8   RUNNING      148      866  17.1%     24796   2026-10-03T01:33:02
+     9   RUNNING      145      933  15.5%     23656   2026-10-03T01:32:55
+ total               1446     9019  16.0%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 01:39:48,192 INFO run_parallel sheet refreshed: {"NOT_FOUND": 784, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 87, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "PENDING": 7556, "FOUND_VERIFIED": 38}
+2026-10-03 01:39:48,193 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 385
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      152      926  16.4%     25032   2026-10-03T01:39:11
+     1   RUNNING      148      914  16.2%     25728   2026-10-03T01:39:13
+     2   RUNNING      149      882  16.9%     25668   2026-10-03T01:39:13
+     3   RUNNING      134      909  14.7%     18712   2026-10-03T01:38:57
+     4   RUNNING      146      882  16.6%     22332   2026-10-03T01:37:58
+     5   RUNNING      150      907  16.5%     19412   2026-10-03T01:35:07
+     6   RUNNING      136      886  15.3%       936   2026-10-03T01:39:05
+     7   RUNNING      151      914  16.5%      6116   2026-10-03T01:39:01
+     8   RUNNING      149      866  17.2%     24860   2026-10-03T01:39:12
+     9   RUNNING      148      933  15.9%     23748   2026-10-03T01:38:13
+ total               1463     9019  16.2%
+2026-10-03 01:44:48,588 INFO run_parallel sheet refreshed: {"NOT_FOUND": 801, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 87, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 45, "PENDING": 7532}
+2026-10-03 01:44:48,589 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 387
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      154      926  16.6%     25080   2026-10-03T01:42:34
+     1   RUNNING      149      914  16.3%     25792   2026-10-03T01:41:04
+     2   RUNNING      152      882  17.2%     25748   2026-10-03T01:43:06
+     3   RUNNING      136      909  15.0%     20908   2026-10-03T01:42:07
+     4   RUNNING      149      882  16.9%     23476   2026-10-03T01:42:57
+     5   RUNNING      153      907  16.9%     20864   2026-10-03T01:40:55
+     6   RUNNING      139      886  15.7%      3720   2026-10-03T01:44:01
+     7   RUNNING      153      914  16.7%      6920   2026-10-03T01:41:48
+     8   RUNNING      152      866  17.6%     25200   2026-10-03T01:42:03
+     9   RUNNING      150      933  16.1%     24088   2026-10-03T01:43:57
+ total               1487     9019  16.5%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 01:49:48,985 INFO run_parallel sheet refreshed: {"NOT_FOUND": 820, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 87, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 48, "PENDING": 7510}
+2026-10-03 01:49:48,986 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 392
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      156      926  16.8%     25340   2026-10-03T01:48:02
+     1   RUNNING      151      914  16.5%     25824   2026-10-03T01:48:58
+     2   RUNNING      153      882  17.3%     25764   2026-10-03T01:48:06
+     3   RUNNING      139      909  15.3%     21712   2026-10-03T01:49:35
+     4   RUNNING      151      882  17.1%     23600   2026-10-03T01:46:57
+     5   RUNNING      157      907  17.3%     23524   2026-10-03T01:49:12
+     6   RUNNING      139      886  15.7%      3720   2026-10-03T01:44:01
+     7   RUNNING      156      914  17.1%      9224   2026-10-03T01:49:21
+     8   RUNNING      152      866  17.6%     25200   2026-10-03T01:42:03
+     9   RUNNING      155      933  16.6%     24736   2026-10-03T01:48:56
+ total               1509     9019  16.7%
+2026-10-03 01:54:49,387 INFO run_parallel sheet refreshed: {"NOT_FOUND": 835, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 87, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 53, "PENDING": 7490}
+2026-10-03 01:54:49,388 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 394
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      157      926  17.0%     25496   2026-10-03T01:54:00
+     1   RUNNING      154      914  16.8%     26148   2026-10-03T01:52:27
+     2   RUNNING      156      882  17.7%     26380   2026-10-03T01:54:10
+     3   RUNNING      140      909  15.4%     21836   2026-10-03T01:50:15
+     4   RUNNING      153      882  17.3%     23664   2026-10-03T01:52:13
+     5   RUNNING      157      907  17.3%     23524   2026-10-03T01:49:12
+     6   RUNNING      142      886  16.0%      7524   2026-10-03T01:52:57
+     7   RUNNING      157      914  17.2%      9548   2026-10-03T01:50:08
+     8   RUNNING      156      866  18.0%     25308   2026-10-03T01:54:14
+     9   RUNNING      157      933  16.8%     25416   2026-10-03T01:54:04
+ total               1529     9019  17.0%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 01:59:49,790 INFO run_parallel sheet refreshed: {"NOT_FOUND": 850, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 89, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 57, "PENDING": 7469}
+2026-10-03 01:59:49,791 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 401
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      159      926  17.2%     25388   2026-10-03T01:56:56
+     1   RUNNING      157      914  17.2%     26888   2026-10-03T01:59:14
+     2   RUNNING      157      882  17.8%     26520   2026-10-03T01:57:00
+     3   RUNNING      143      909  15.7%     23724   2026-10-03T01:59:26
+     4   RUNNING      156      882  17.7%     23988   2026-10-03T01:58:58
+     5   RUNNING      159      907  17.5%     23588   2026-10-03T01:58:06
+     6   RUNNING      144      886  16.3%      7880   2026-10-03T01:59:47
+     7   RUNNING      159      914  17.4%     10108   2026-10-03T01:58:01
+     8   RUNNING      156      866  18.0%     25308   2026-10-03T01:54:14
+     9   RUNNING      160      933  17.1%     25588   2026-10-03T01:59:42
+ total               1550     9019  17.2%
+2026-10-03 02:04:50,199 INFO run_parallel sheet refreshed: {"NOT_FOUND": 864, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 89, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 62, "PENDING": 7450}
+2026-10-03 02:04:50,200 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 408
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      160      926  17.3%     25528   2026-10-03T02:03:00
+     1   RUNNING      157      914  17.2%     26888   2026-10-03T01:59:14
+     2   RUNNING      160      882  18.1%     27248   2026-10-03T02:04:04
+     3   RUNNING      145      909  16.0%     24032   2026-10-03T02:00:58
+     4   RUNNING      158      882  17.9%     24080   2026-10-03T02:04:00
+     5   RUNNING      161      907  17.8%     23864   2026-10-03T02:04:16
+     6   RUNNING      145      886  16.4%     10044   2026-10-03T02:02:19
+     7   RUNNING      161      914  17.6%     12768   2026-10-03T02:01:59
+     8   RUNNING      160      866  18.5%     26312   2026-10-03T02:03:01
+     9   RUNNING      162      933  17.4%     25912   2026-10-03T02:03:08
+ total               1569     9019  17.4%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 02:09:50,641 INFO run_parallel sheet refreshed: {"NOT_FOUND": 881, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 89, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 65, "PENDING": 7430}
+2026-10-03 02:09:50,643 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 411
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      164      926  17.7%     25820   2026-10-03T02:08:58
+     1   RUNNING      158      914  17.3%     27924   2026-10-03T02:08:13
+     2   RUNNING      161      882  18.3%     27200   2026-10-03T02:05:00
+     3   RUNNING      149      909  16.4%     24048   2026-10-03T02:09:47
+     4   RUNNING      161      882  18.3%     24112   2026-10-03T02:07:05
+     5   RUNNING      162      907  17.9%     24004   2026-10-03T02:07:17
+     6   RUNNING      146      886  16.5%      8992   2026-10-03T02:05:36
+     7   RUNNING      162      914  17.7%     12996   2026-10-03T02:07:12
+     8   RUNNING      161      866  18.6%     26636   2026-10-03T02:09:10
+     9   RUNNING      165      933  17.7%     26716   2026-10-03T02:08:15
+ total               1589     9019  17.6%
+2026-10-03 02:14:51,045 INFO run_parallel sheet refreshed: {"NOT_FOUND": 897, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 90, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 71, "PENDING": 7407}
+2026-10-03 02:14:51,046 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 416
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      167      926  18.0%     27352   2026-10-03T02:12:59
+     1   RUNNING      161      914  17.6%     28404   2026-10-03T02:14:06
+     2   RUNNING      163      882  18.5%     27492   2026-10-03T02:14:09
+     3   RUNNING      150      909  16.5%     24140   2026-10-03T02:13:01
+     4   RUNNING      164      882  18.6%     25084   2026-10-03T02:14:00
+     5   RUNNING      167      907  18.4%     25024   2026-10-03T02:13:04
+     6   RUNNING      146      886  16.5%      8992   2026-10-03T02:05:36
+     7   RUNNING      163      914  17.8%     13832   2026-10-03T02:10:59
+     8   RUNNING      164      866  18.9%     26760   2026-10-03T02:13:02
+     9   RUNNING      167      933  17.9%     26204   2026-10-03T02:11:06
+ total               1612     9019  17.9%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 02:19:51,466 INFO run_parallel sheet refreshed: {"NOT_FOUND": 908, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 91, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 74, "PENDING": 7392}
+2026-10-03 02:19:51,467 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 420
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      168      926  18.1%     27384   2026-10-03T02:15:06
+     1   RUNNING      162      914  17.7%     28560   2026-10-03T02:18:00
+     2   RUNNING      164      882  18.6%     27556   2026-10-03T02:16:27
+     3   RUNNING      152      909  16.7%     24188   2026-10-03T02:19:09
+     4   RUNNING      166      882  18.8%     25548   2026-10-03T02:19:23
+     5   RUNNING      169      907  18.6%     25520   2026-10-03T02:18:02
+     6   RUNNING      150      886  16.9%     13988   2026-10-03T02:18:58
+     7   RUNNING      165      914  18.1%     13556   2026-10-03T02:17:04
+     8   RUNNING      164      866  18.9%     26760   2026-10-03T02:13:02
+     9   RUNNING      167      933  17.9%     26204   2026-10-03T02:11:06
+ total               1627     9019  18.0%
+2026-10-03 02:24:51,880 INFO run_parallel sheet refreshed: {"NOT_FOUND": 929, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 94, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 77, "PENDING": 7365}
+2026-10-03 02:24:51,882 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 423
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      172      926  18.6%     28836   2026-10-03T02:22:02
+     1   RUNNING      165      914  18.1%     29084   2026-10-03T02:24:30
+     2   RUNNING      166      882  18.8%     27680   2026-10-03T02:24:03
+     3   RUNNING      154      909  16.9%     24496   2026-10-03T02:23:59
+     4   RUNNING      169      882  19.2%     25968   2026-10-03T02:22:08
+     5   RUNNING      172      907  19.0%     25812   2026-10-03T02:24:02
+     6   RUNNING      150      886  16.9%     13988   2026-10-03T02:18:58
+     7   RUNNING      167      914  18.3%     15056   2026-10-03T02:24:13
+     8   RUNNING      167      866  19.3%     27488   2026-10-03T02:23:00
+     9   RUNNING      172      933  18.4%     27860   2026-10-03T02:24:03
+ total               1654     9019  18.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 02:29:52,326 INFO run_parallel sheet refreshed: {"NOT_FOUND": 942, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 94, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 87, "PENDING": 7342}
+2026-10-03 02:29:52,327 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 427
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      173      926  18.7%     28852   2026-10-03T02:29:17
+     1   RUNNING      167      914  18.3%     29100   2026-10-03T02:28:11
+     2   RUNNING      167      882  18.9%     28312   2026-10-03T02:27:18
+     3   RUNNING      157      909  17.3%     24868   2026-10-03T02:27:15
+     4   RUNNING      171      882  19.4%     26740   2026-10-03T02:29:09
+     5   RUNNING      173      907  19.1%     25876   2026-10-03T02:25:05
+     6   RUNNING      154      886  17.4%     16260   2026-10-03T02:29:40
+     7   RUNNING      169      914  18.5%     17156   2026-10-03T02:28:19
+     8   RUNNING      171      866  19.7%     27936   2026-10-03T02:29:11
+     9   RUNNING      175      933  18.8%     28540   2026-10-03T02:29:13
+ total               1677     9019  18.6%
+2026-10-03 02:34:52,759 INFO run_parallel sheet refreshed: {"NOT_FOUND": 952, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 95, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 96, "PENDING": 7322}
+2026-10-03 02:34:52,760 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 431
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      176      926  19.0%     29268   2026-10-03T02:33:12
+     1   RUNNING      170      914  18.6%     29596   2026-10-03T02:34:22
+     2   RUNNING      170      882  19.3%     28732   2026-10-03T02:33:03
+     3   RUNNING      160      909  17.6%     25208   2026-10-03T02:34:03
+     4   RUNNING      173      882  19.6%     27048   2026-10-03T02:30:09
+     5   RUNNING      173      907  19.1%     25876   2026-10-03T02:25:05
+     6   RUNNING      155      886  17.5%     21532   2026-10-03T02:33:09
+     7   RUNNING      171      914  18.7%     19168   2026-10-03T02:32:09
+     8   RUNNING      173      866  20.0%     28972   2026-10-03T02:31:18
+     9   RUNNING      176      933  18.9%     28524   2026-10-03T02:32:17
+ total               1697     9019  18.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 02:39:53,213 INFO run_parallel sheet refreshed: {"NOT_FOUND": 966, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 95, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 102, "PENDING": 7302}
+2026-10-03 02:39:53,214 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 435
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      179      926  19.3%     30304   2026-10-03T02:39:08
+     1   RUNNING      171      914  18.7%     30260   2026-10-03T02:36:11
+     2   RUNNING      173      882  19.6%     29520   2026-10-03T02:39:15
+     3   RUNNING      162      909  17.8%     25532   2026-10-03T02:37:06
+     4   RUNNING      175      882  19.8%     27404   2026-10-03T02:38:02
+     5   RUNNING      176      907  19.4%     25908   2026-10-03T02:39:09
+     6   RUNNING      157      886  17.7%     21564   2026-10-03T02:38:03
+     7   RUNNING      173      914  18.9%     21132   2026-10-03T02:36:09
+     8   RUNNING      175      866  20.2%     29776   2026-10-03T02:37:10
+     9   RUNNING      176      933  18.9%     28524   2026-10-03T02:32:17
+ total               1717     9019  19.0%
+2026-10-03 02:44:53,636 INFO run_parallel sheet refreshed: {"NOT_FOUND": 980, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 95, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 109, "PENDING": 7281}
+2026-10-03 02:44:53,638 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 442
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      180      926  19.4%     30136   2026-10-03T02:41:13
+     1   RUNNING      174      914  19.0%     30336   2026-10-03T02:43:12
+     2   RUNNING      177      882  20.1%     29876   2026-10-03T02:42:02
+     3   RUNNING      165      909  18.2%     25980   2026-10-03T02:44:09
+     4   RUNNING      177      882  20.1%     27420   2026-10-03T02:40:24
+     5   RUNNING      178      907  19.6%     27036   2026-10-03T02:44:16
+     6   RUNNING      160      886  18.1%     23448   2026-10-03T02:42:09
+     7   RUNNING      174      914  19.0%     23436   2026-10-03T02:43:05
+     8   RUNNING      176      866  20.3%     29744   2026-10-03T02:40:18
+     9   RUNNING      177      933  19.0%     28864   2026-10-03T02:43:19
+ total               1738     9019  19.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 02:49:54,096 INFO run_parallel sheet refreshed: {"NOT_FOUND": 999, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 95, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 117, "PENDING": 7254}
+2026-10-03 02:49:54,098 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 445
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      182      926  19.7%     30476   2026-10-03T02:48:22
+     1   RUNNING      177      914  19.4%     31064   2026-10-03T02:47:08
+     2   RUNNING      181      882  20.5%     30000   2026-10-03T02:49:17
+     3   RUNNING      166      909  18.3%     26012   2026-10-03T02:49:08
+     4   RUNNING      180      882  20.4%     28532   2026-10-03T02:47:29
+     5   RUNNING      181      907  20.0%     26864   2026-10-03T02:47:19
+     6   RUNNING      162      886  18.3%     23944   2026-10-03T02:49:02
+     7   RUNNING      177      914  19.4%     22276   2026-10-03T02:49:08
+     8   RUNNING      177      866  20.4%     29792   2026-10-03T02:49:07
+     9   RUNNING      182      933  19.5%     29748   2026-10-03T02:49:14
+ total               1765     9019  19.6%
+2026-10-03 02:54:54,561 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1012, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 96, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 123, "PENDING": 7234}
+2026-10-03 02:54:54,563 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 452
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      185      926  20.0%     30832   2026-10-03T02:54:05
+     1   RUNNING      178      914  19.5%     30368   2026-10-03T02:54:12
+     2   RUNNING      182      882  20.6%     30200   2026-10-03T02:54:19
+     3   RUNNING      169      909  18.6%     26644   2026-10-03T02:53:48
+     4   RUNNING      183      882  20.7%     29028   2026-10-03T02:51:13
+     5   RUNNING      183      907  20.2%     27376   2026-10-03T02:54:04
+     6   RUNNING      163      886  18.4%     23960   2026-10-03T02:53:07
+     7   RUNNING      179      914  19.6%     23744   2026-10-03T02:51:14
+     8   RUNNING      181      866  20.9%     30256   2026-10-03T02:53:08
+     9   RUNNING      182      933  19.5%     29748   2026-10-03T02:49:14
+ total               1785     9019  19.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 02:59:55,128 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1029, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 96, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 127, "PENDING": 7213}
+2026-10-03 02:59:55,129 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 457
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      187      926  20.2%     31480   2026-10-03T02:58:15
+     1   RUNNING      181      914  19.8%     31220   2026-10-03T02:56:23
+     2   RUNNING      182      882  20.6%     30200   2026-10-03T02:54:19
+     3   RUNNING      172      909  18.9%     26676   2026-10-03T02:59:22
+     4   RUNNING      185      882  21.0%     29416   2026-10-03T02:56:07
+     5   RUNNING      185      907  20.4%     27484   2026-10-03T02:58:05
+     6   RUNNING      165      886  18.6%     24144   2026-10-03T02:58:05
+     7   RUNNING      181      914  19.8%     23792   2026-10-03T02:58:19
+     8   RUNNING      183      866  21.1%     30720   2026-10-03T02:59:13
+     9   RUNNING      185      933  19.8%     30040   2026-10-03T02:57:09
+ total               1806     9019  20.0%
+2026-10-03 03:04:55,596 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1040, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 97, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 135, "PENDING": 7193}
+2026-10-03 03:04:55,597 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 459
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      188      926  20.3%     31280   2026-10-03T03:02:12
+     1   RUNNING      183      914  20.0%     31884   2026-10-03T03:04:11
+     2   RUNNING      183      882  20.7%     30292   2026-10-03T03:00:04
+     3   RUNNING      173      909  19.0%     27140   2026-10-03T03:01:06
+     4   RUNNING      189      882  21.4%     30204   2026-10-03T03:03:21
+     5   RUNNING      187      907  20.6%     28148   2026-10-03T03:01:19
+     6   RUNNING      167      886  18.8%     24268   2026-10-03T03:03:22
+     7   RUNNING      183      914  20.0%     24068   2026-10-03T03:02:14
+     8   RUNNING      186      866  21.5%     32220   2026-10-03T03:02:21
+     9   RUNNING      187      933  20.0%     30536   2026-10-03T03:04:31
+ total               1826     9019  20.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 03:09:56,039 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1058, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 98, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 144, "PENDING": 7165}
+2026-10-03 03:09:56,040 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 465
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      190      926  20.5%     31880   2026-10-03T03:08:14
+     1   RUNNING      185      914  20.2%     32672   2026-10-03T03:08:09
+     2   RUNNING      188      882  21.3%     30632   2026-10-03T03:09:16
+     3   RUNNING      179      909  19.7%     27912   2026-10-03T03:09:15
+     4   RUNNING      191      882  21.7%     30464   2026-10-03T03:06:06
+     5   RUNNING      190      907  20.9%     28504   2026-10-03T03:09:13
+     6   RUNNING      169      886  19.1%     24300   2026-10-03T03:07:10
+     7   RUNNING      186      914  20.4%     24256   2026-10-03T03:08:14
+     8   RUNNING      186      866  21.5%     32220   2026-10-03T03:02:21
+     9   RUNNING      190      933  20.4%     31200   2026-10-03T03:09:20
+ total               1854     9019  20.6%
+2026-10-03 03:14:56,480 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1071, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 99, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 150, "PENDING": 7145}
+2026-10-03 03:14:56,482 INFO run_parallel search health: limit 10/min, blocks since last check 9, total blocks 474
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      192      926  20.7%     31976   2026-10-03T03:13:07
+     1   RUNNING      189      914  20.7%     32008   2026-10-03T03:14:06
+     2   RUNNING      190      882  21.5%     30972   2026-10-03T03:14:22
+     3   RUNNING      179      909  19.7%     27912   2026-10-03T03:09:15
+     4   RUNNING      192      882  21.8%     30496   2026-10-03T03:12:06
+     5   RUNNING      191      907  21.1%     28796   2026-10-03T03:10:06
+     6   RUNNING      172      886  19.4%     24964   2026-10-03T03:14:07
+     7   RUNNING      190      914  20.8%     25028   2026-10-03T03:13:10
+     8   RUNNING      189      866  21.8%     32560   2026-10-03T03:14:07
+     9   RUNNING      190      933  20.4%     31200   2026-10-03T03:09:20
+ total               1874     9019  20.8%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 03:19:56,914 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1087, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 101, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 153, "PENDING": 7124}
+2026-10-03 03:19:56,915 INFO run_parallel search health: limit 10/min, blocks since last check 2, total blocks 476
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      194      926  21.0%     32732   2026-10-03T03:19:31
+     1   RUNNING      192      914  21.0%     32964   2026-10-03T03:19:17
+     2   RUNNING      192      882  21.8%     31312   2026-10-03T03:17:17
+     3   RUNNING      181      909  19.9%     27944   2026-10-03T03:19:12
+     4   RUNNING      193      882  21.9%     30512   2026-10-03T03:19:05
+     5   RUNNING      193      907  21.3%     28968   2026-10-03T03:19:16
+     6   RUNNING      174      886  19.6%     25304   2026-10-03T03:19:16
+     7   RUNNING      192      914  21.0%     25212   2026-10-03T03:19:15
+     8   RUNNING      192      866  22.2%     33176   2026-10-03T03:19:08
+     9   RUNNING      192      933  20.6%     31308   2026-10-03T03:19:16
+ total               1895     9019  21.0%
+2026-10-03 03:24:57,351 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1099, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 102, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 158, "PENDING": 7106}
+2026-10-03 03:24:57,352 INFO run_parallel search health: limit 10/min, blocks since last check 10, total blocks 486
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      195      926  21.1%     31992   2026-10-03T03:22:07
+     1   RUNNING      192      914  21.0%     32964   2026-10-03T03:19:17
+     2   RUNNING      194      882  22.0%     32164   2026-10-03T03:24:49
+     3   RUNNING      183      909  20.1%     28144   2026-10-03T03:23:12
+     4   RUNNING      195      882  22.1%     30804   2026-10-03T03:22:10
+     5   RUNNING      195      907  21.5%     29584   2026-10-03T03:21:36
+     6   RUNNING      177      886  20.0%     25460   2026-10-03T03:23:17
+     7   RUNNING      194      914  21.2%     25708   2026-10-03T03:21:50
+     8   RUNNING      194      866  22.4%     33272   2026-10-03T03:24:10
+     9   RUNNING      194      933  20.8%     31632   2026-10-03T03:20:18
+ total               1913     9019  21.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 03:29:57,793 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1113, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 102, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 165, "PENDING": 7085}
+2026-10-03 03:29:57,794 INFO run_parallel search health: limit 10/min, blocks since last check 1, total blocks 487
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      197      926  21.3%     33120   2026-10-03T03:28:12
+     1   RUNNING      195      914  21.3%     33692   2026-10-03T03:29:41
+     2   RUNNING      198      882  22.4%     31776   2026-10-03T03:28:13
+     3   RUNNING      185      909  20.4%     29088   2026-10-03T03:29:13
+     4   RUNNING      196      882  22.2%     30852   2026-10-03T03:26:21
+     5   RUNNING      196      907  21.6%     29680   2026-10-03T03:26:23
+     6   RUNNING      179      886  20.2%     25644   2026-10-03T03:29:19
+     7   RUNNING      196      914  21.4%     25756   2026-10-03T03:27:21
+     8   RUNNING      196      866  22.6%     33532   2026-10-03T03:29:38
+     9   RUNNING      196      933  21.0%     31680   2026-10-03T03:28:52
+ total               1934     9019  21.4%
+2026-10-03 03:34:58,236 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1127, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 104, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 173, "PENDING": 7061}
+2026-10-03 03:34:58,237 INFO run_parallel search health: limit 10/min, blocks since last check 5, total blocks 492
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      199      926  21.5%     33444   2026-10-03T03:34:11
+     1   RUNNING      197      914  21.6%     33708   2026-10-03T03:34:14
+     2   RUNNING      200      882  22.7%     33616   2026-10-03T03:33:20
+     3   RUNNING      188      909  20.7%     29288   2026-10-03T03:31:48
+     4   RUNNING      197      882  22.3%     30900   2026-10-03T03:31:14
+     5   RUNNING      199      907  21.9%     30004   2026-10-03T03:34:10
+     6   RUNNING      181      886  20.4%     25736   2026-10-03T03:33:11
+     7   RUNNING      200      914  21.9%     27256   2026-10-03T03:34:15
+     8   RUNNING      199      866  23.0%     34028   2026-10-03T03:32:20
+     9   RUNNING      198      933  21.2%     32004   2026-10-03T03:34:12
+ total               1958     9019  21.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 03:39:58,688 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1140, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 105, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 176, "PENDING": 7044}
+2026-10-03 03:39:58,689 INFO run_parallel search health: limit 10/min, blocks since last check 9, total blocks 501
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      202      926  21.8%     33784   2026-10-03T03:39:23
+     1   RUNNING      198      914  21.7%     33724   2026-10-03T03:39:12
+     2   RUNNING      201      882  22.8%     33000   2026-10-03T03:35:12
+     3   RUNNING      190      909  20.9%     29476   2026-10-03T03:39:12
+     4   RUNNING      200      882  22.7%     31348   2026-10-03T03:37:12
+     5   RUNNING      200      907  22.1%     30112   2026-10-03T03:36:11
+     6   RUNNING      183      886  20.7%     25752   2026-10-03T03:38:33
+     7   RUNNING      201      914  22.0%     27332   2026-10-03T03:39:13
+     8   RUNNING      200      866  23.1%     34336   2026-10-03T03:38:13
+     9   RUNNING      200      933  21.4%     32360   2026-10-03T03:36:13
+ total               1975     9019  21.9%
+2026-10-03 03:44:59,227 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1158, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 106, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 189, "PENDING": 7012}
+2026-10-03 03:44:59,228 INFO run_parallel search health: limit 12/min, blocks since last check 0, total blocks 501
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      206      926  22.2%     33940   2026-10-03T03:44:19
+     1   RUNNING      201      914  22.0%     34220   2026-10-03T03:42:41
+     2   RUNNING      203      882  23.0%     33740   2026-10-03T03:44:25
+     3   RUNNING      191      909  21.0%     29784   2026-10-03T03:41:14
+     4   RUNNING      203      882  23.0%     31996   2026-10-03T03:43:18
+     5   RUNNING      205      907  22.6%     30776   2026-10-03T03:44:27
+     6   RUNNING      187      886  21.1%     26804   2026-10-03T03:44:27
+     7   RUNNING      204      914  22.3%     27856   2026-10-03T03:43:12
+     8   RUNNING      203      866  23.4%     34508   2026-10-03T03:44:34
+     9   RUNNING      204      933  21.9%     32668   2026-10-03T03:44:24
+ total               2007     9019  22.3%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 03:49:59,686 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1170, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 107, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 195, "PENDING": 6993}
+2026-10-03 03:49:59,687 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 505
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      209      926  22.6%     34248   2026-10-03T03:49:14
+     1   RUNNING      203      914  22.2%     34188   2026-10-03T03:49:34
+     2   RUNNING      206      882  23.4%     34160   2026-10-03T03:46:23
+     3   RUNNING      193      909  21.2%     29816   2026-10-03T03:47:17
+     4   RUNNING      207      882  23.5%     32784   2026-10-03T03:48:24
+     5   RUNNING      205      907  22.6%     30776   2026-10-03T03:44:27
+     6   RUNNING      189      886  21.3%     26448   2026-10-03T03:47:29
+     7   RUNNING      204      914  22.3%     27856   2026-10-03T03:43:12
+     8   RUNNING      204      866  23.6%     34384   2026-10-03T03:45:12
+     9   RUNNING      206      933  22.1%     33100   2026-10-03T03:49:18
+ total               2026     9019  22.5%
+2026-10-03 03:55:00,161 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1184, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 109, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 201, "PENDING": 6971}
+2026-10-03 03:55:00,163 INFO run_parallel search health: limit 10/min, blocks since last check 11, total blocks 516
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      209      926  22.6%     34248   2026-10-03T03:49:14
+     1   RUNNING      205      914  22.4%     34528   2026-10-03T03:52:25
+     2   RUNNING      210      882  23.8%     34592   2026-10-03T03:54:16
+     3   RUNNING      196      909  21.6%     30620   2026-10-03T03:54:19
+     4   RUNNING      209      882  23.7%     33124   2026-10-03T03:54:14
+     5   RUNNING      208      907  22.9%     30840   2026-10-03T03:54:14
+     6   RUNNING      189      886  21.3%     26448   2026-10-03T03:47:29
+     7   RUNNING      208      914  22.8%     28352   2026-10-03T03:53:20
+     8   RUNNING      206      866  23.8%     34848   2026-10-03T03:54:14
+     9   RUNNING      208      933  22.3%     33180   2026-10-03T03:54:16
+ total               2048     9019  22.7%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 04:00:00,621 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1199, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 110, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 208, "PENDING": 6948}
+2026-10-03 04:00:00,622 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 520
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      212      926  22.9%     34296   2026-10-03T03:58:17
+     1   RUNNING      208      914  22.8%     34820   2026-10-03T03:59:15
+     2   RUNNING      211      882  23.9%     35304   2026-10-03T03:57:23
+     3   RUNNING      199      909  21.9%     30944   2026-10-03T03:58:25
+     4   RUNNING      211      882  23.9%     33636   2026-10-03T03:59:24
+     5   RUNNING      210      907  23.2%     31596   2026-10-03T03:59:38
+     6   RUNNING      194      886  21.9%     27748   2026-10-03T03:59:23
+     7   RUNNING      209      914  22.9%     29172   2026-10-03T03:59:17
+     8   RUNNING      207      866  23.9%     35048   2026-10-03T03:55:28
+     9   RUNNING      210      933  22.5%     33212   2026-10-03T03:58:15
+ total               2071     9019  23.0%
+2026-10-03 04:05:01,089 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1214, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 110, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 210, "PENDING": 6931}
+2026-10-03 04:05:01,091 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 526
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      214      926  23.1%     35084   2026-10-03T04:02:30
+     1   RUNNING      209      914  22.9%     34852   2026-10-03T04:01:20
+     2   RUNNING      214      882  24.3%     34884   2026-10-03T04:04:25
+     3   RUNNING      199      909  21.9%     30944   2026-10-03T03:58:25
+     4   RUNNING      213      882  24.1%     33992   2026-10-03T04:02:17
+     5   RUNNING      210      907  23.2%     31596   2026-10-03T03:59:38
+     6   RUNNING      197      886  22.2%     28136   2026-10-03T04:04:31
+     7   RUNNING      212      914  23.2%     29544   2026-10-03T04:02:18
+     8   RUNNING      209      866  24.1%     35528   2026-10-03T04:03:17
+     9   RUNNING      211      933  22.6%     33504   2026-10-03T04:01:32
+ total               2088     9019  23.2%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 04:10:01,579 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1233, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 110, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 215, "PENDING": 6907}
+2026-10-03 04:10:01,580 INFO run_parallel search health: limit 12/min, blocks since last check 2, total blocks 528
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      216      926  23.3%     35252   2026-10-03T04:09:17
+     1   RUNNING      213      914  23.3%     35348   2026-10-03T04:09:28
+     2   RUNNING      215      882  24.4%     36448   2026-10-03T04:08:19
+     3   RUNNING      200      909  22.0%     31068   2026-10-03T04:09:23
+     4   RUNNING      215      882  24.4%     34440   2026-10-03T04:07:35
+     5   RUNNING      213      907  23.5%     31904   2026-10-03T04:09:16
+     6   RUNNING      199      886  22.5%     28892   2026-10-03T04:09:26
+     7   RUNNING      215      914  23.5%     29992   2026-10-03T04:08:17
+     8   RUNNING      211      866  24.4%     35900   2026-10-03T04:06:30
+     9   RUNNING      215      933  23.0%     34000   2026-10-03T04:09:16
+ total               2112     9019  23.4%
+2026-10-03 04:15:02,037 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1247, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 110, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 219, "PENDING": 6889}
+2026-10-03 04:15:02,038 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 535
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      218      926  23.5%     35344   2026-10-03T04:12:21
+     1   RUNNING      214      914  23.4%     35380   2026-10-03T04:12:17
+     2   RUNNING      219      882  24.8%     36788   2026-10-03T04:14:27
+     3   RUNNING      202      909  22.2%     31424   2026-10-03T04:14:23
+     4   RUNNING      217      882  24.6%     34672   2026-10-03T04:12:26
+     5   RUNNING      213      907  23.5%     31904   2026-10-03T04:09:16
+     6   RUNNING      201      886  22.7%     29232   2026-10-03T04:11:19
+     7   RUNNING      215      914  23.5%     29992   2026-10-03T04:08:17
+     8   RUNNING      215      866  24.8%     37044   2026-10-03T04:13:29
+     9   RUNNING      216      933  23.2%     34168   2026-10-03T04:11:33
+ total               2130     9019  23.6%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 04:20:02,526 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1260, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 110, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 220, "PENDING": 6875}
+2026-10-03 04:20:02,527 INFO run_parallel search health: limit 10/min, blocks since last check 7, total blocks 542
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      221      926  23.9%     35764   2026-10-03T04:18:20
+     1   RUNNING      217      914  23.7%     35456   2026-10-03T04:18:34
+     2   RUNNING      219      882  24.8%     36788   2026-10-03T04:14:27
+     3   RUNNING      203      909  22.3%     31392   2026-10-03T04:16:22
+     4   RUNNING      218      882  24.7%     34796   2026-10-03T04:18:35
+     5   RUNNING      214      907  23.6%     32260   2026-10-03T04:18:37
+     6   RUNNING      202      886  22.8%     29540   2026-10-03T04:19:21
+     7   RUNNING      216      914  23.6%     30176   2026-10-03T04:17:28
+     8   RUNNING      215      866  24.8%     37044   2026-10-03T04:13:29
+     9   RUNNING      219      933  23.5%     34772   2026-10-03T04:19:27
+ total               2144     9019  23.8%
+2026-10-03 04:25:02,988 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1275, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 112, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 227, "PENDING": 6851}
+2026-10-03 04:25:02,989 INFO run_parallel search health: limit 10/min, blocks since last check 6, total blocks 548
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      223      926  24.1%     35872   2026-10-03T04:24:32
+     1   RUNNING      219      914  24.0%     35964   2026-10-03T04:22:20
+     2   RUNNING      222      882  25.2%     37608   2026-10-03T04:24:36
+     3   RUNNING      205      909  22.6%     31748   2026-10-03T04:24:21
+     4   RUNNING      220      882  24.9%     35088   2026-10-03T04:22:23
+     5   RUNNING      216      907  23.8%     32772   2026-10-03T04:24:21
+     6   RUNNING      205      886  23.1%     29432   2026-10-03T04:22:24
+     7   RUNNING      219      914  24.0%     30160   2026-10-03T04:23:23
+     8   RUNNING      219      866  25.3%     37368   2026-10-03T04:22:28
+     9   RUNNING      220      933  23.6%     34804   2026-10-03T04:20:21
+ total               2168     9019  24.0%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results
+2026-10-03 04:30:03,491 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1294, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 113, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 230, "PENDING": 6828}
+2026-10-03 04:30:03,492 INFO run_parallel search health: limit 10/min, blocks since last check 3, total blocks 551
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      226      926  24.4%     36828   2026-10-03T04:29:22
+     1   RUNNING      221      914  24.2%     36012   2026-10-03T04:27:25
+     2   RUNNING      224      882  25.4%     37932   2026-10-03T04:29:46
+     3   RUNNING      206      909  22.7%     31684   2026-10-03T04:27:49
+     4   RUNNING      224      882  25.4%     35428   2026-10-03T04:28:33
+     5   RUNNING      217      907  23.9%     32384   2026-10-03T04:25:39
+     6   RUNNING      206      886  23.3%     29864   2026-10-03T04:29:21
+     7   RUNNING      221      914  24.2%     31428   2026-10-03T04:26:24
+     8   RUNNING      222      866  25.6%     38328   2026-10-03T04:29:22
+     9   RUNNING      224      933  24.0%     35516   2026-10-03T04:29:39
+ total               2191     9019  24.3%
+2026-10-03 04:35:03,963 INFO run_parallel sheet refreshed: {"NOT_FOUND": 1305, "REPLACED_VERIFIED": 415, "MERGED_SUCCESSOR_SITE": 3, "COMPANY_CLOSED": 114, "RETRY_UNREACHABLE": 82, "VERIFIED_ACTIVE": 32, "NEEDS_REVIEW_SUGGESTION": 7, "NEEDS_REVIEW": 15, "FOUND_VERIFIED": 239, "PENDING": 6807}
+2026-10-03 04:35:03,964 INFO run_parallel search health: limit 10/min, blocks since last check 4, total blocks 555
+worker    status    saved    owned    pct  last row   updated
+     0   RUNNING      227      926  24.5%     36892   2026-10-03T04:33:27
+     1   RUNNING      224      914  24.5%     36524   2026-10-03T04:34:22
+     2   RUNNING      226      882  25.6%     39816   2026-10-03T04:34:32
+     3   RUNNING      208      909  22.9%     32860   2026-10-03T04:34:32
+     4   RUNNING      224      882  25.4%     35428   2026-10-03T04:28:33
+     5   RUNNING      220      907  24.3%     33112   2026-10-03T04:33:22
+     6   RUNNING      209      886  23.6%     30268   2026-10-03T04:31:27
+     7   RUNNING      222      914  24.3%     31676   2026-10-03T04:32:21
+     8   RUNNING      224      866  25.9%     39764   2026-10-03T04:33:25
+     9   RUNNING      228      933  24.4%     36952   2026-10-03T04:34:42
+ total               2212     9019  24.5%
+backup saved to /mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/results

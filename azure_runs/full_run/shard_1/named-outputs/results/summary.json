@@ -1,0 +1,99 @@
+{
+  "rows_resolved": 9019,
+  "rows_in_queue": 9019,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "NOT_FOUND": 3613,
+    "REPLACED_VERIFIED": 583,
+    "MERGED_SUCCESSOR_SITE": 8,
+    "COMPANY_CLOSED": 414,
+    "RETRY_UNREACHABLE": 843,
+    "VERIFIED_ACTIVE": 757,
+    "NEEDS_REVIEW_SUGGESTION": 666,
+    "NEEDS_REVIEW": 963,
+    "FOUND_VERIFIED": 1172
+  },
+  "decisions": {
+    "REVIEW": 6085,
+    "ACCEPT": 2520,
+    "REJECT": 414
+  },
+  "outcomes": {
+    "NOT_FOUND": 3613,
+    "REPLACED": 561,
+    "MERGED_INTO": 8,
+    "COMPANY_CLOSED": 414,
+    "TEMP_UNREACHABLE": 175,
+    "VERIFIED": 779,
+    "REPLACEMENT_SUGGESTED": 666,
+    "INSUFFICIENT_PROOF": 502,
+    "UNREADABLE": 177,
+    "REDIRECT_UNCONFIRMED": 19,
+    "BLOCKED": 491,
+    "GOVERNMENT_SITE": 222,
+    "NO_PROOF": 220,
+    "FOUND": 1172
+  },
+  "found_via": {
+    "SEARCH": 1740,
+    "WAYBACK": 1,
+    "WWW_VARIANT": 452,
+    "SUPPLIED": 325,
+    "REDIRECT": 2
+  },
+  "answer_types": {
+    "OWN_SITE": 2084,
+    "SUCCESSOR_SITE": 8,
+    "REGIONAL_SITE": 267,
+    "GROUP_SITE": 161
+  },
+  "domains_changed": 1762,
+  "accepted_with_proof": 2520,
+  "accepted_with_proof_rate": 0.2794,
+  "strong_proof_accepts": 1874,
+  "by_original_domain_status": {
+    "UNVERIFIED_INACTIVE": {
+      "REVIEW:NOT_FOUND": 592,
+      "ACCEPT:REPLACED": 415,
+      "ACCEPT:MERGED_INTO": 3,
+      "REJECT:COMPANY_CLOSED": 77,
+      "REVIEW:TEMP_UNREACHABLE": 72,
+      "ACCEPT:VERIFIED": 32,
+      "REVIEW:REPLACEMENT_SUGGESTED": 7,
+      "REVIEW:INSUFFICIENT_PROOF": 12,
+      "REVIEW:UNREADABLE": 5,
+      "REVIEW:REDIRECT_UNCONFIRMED": 1,
+      "REVIEW:BLOCKED": 5,
+      "REVIEW:GOVERNMENT_SITE": 1,
+      "REVIEW:NO_PROOF": 1
+    },
+    "NOT_FOUND": {
+      "REVIEW:NOT_FOUND": 2776,
+      "ACCEPT:FOUND": 1172,
+      "REJECT:COMPANY_CLOSED": 182,
+      "ACCEPT:MERGED_INTO": 4
+    },
+    "REPLACED_INACTIVE": {
+      "ACCEPT:VERIFIED": 747,
+      "REVIEW:REPLACEMENT_SUGGESTED": 659,
+      "REVIEW:BLOCKED": 486,
+      "REVIEW:NOT_FOUND": 245,
+      "REVIEW:GOVERNMENT_SITE": 221,
+      "REVIEW:INSUFFICIENT_PROOF": 490,
+      "REVIEW:TEMP_UNREACHABLE": 103,
+      "ACCEPT:MERGED_INTO": 1,
+      "REVIEW:NO_PROOF": 219,
+      "REVIEW:UNREADABLE": 172,
+      "ACCEPT:REPLACED": 146,
+      "REJECT:COMPANY_CLOSED": 155,
+      "REVIEW:REDIRECT_UNCONFIRMED": 18
+    }
+  },
+  "consistency_flags": 33,
+  "review_queue_rows": 8261,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "/mnt/azureml/cr/j/664d03b82bba4efa84b4b6077edfdcf3/cap/data-capability/wd/INPUT_queue/shard_1.csv",
+  "input_sha256": "c83f456629abddd1c6ec6007b0649ce984cc381097a8ee00db9b6056f183dcaf",
+  "generated_at": "2026-10-04T05:11:27.231744+00:00"
+}

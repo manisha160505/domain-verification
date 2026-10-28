@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-import os
 import re
 from urllib.parse import urlsplit
 
@@ -97,61 +96,41 @@ def external_evidence_from_file(path: str | None, organization: str, domain: str
     return records
 
 
-async def search_authoritative(organization: str, domain: str, fetcher,
-                               api_key: str | None = None) -> list[Evidence]:
-    """Optional Tavily discovery. Search snippets are never verification evidence.
-
-    The selected source URL is fetched through Scrapling before extracting text.
-    """
-    key = api_key or os.environ.get("TAVILY_API_KEY")
-    apify_token = getattr(fetcher.config, "apify_token", None) or os.environ.get("APIFY_TOKEN") if hasattr(fetcher, "config") else None
-    if not key and not apify_token:
-        return []
+async def search_authoritative(organization: str, domain: str, fetcher, search=None) -> list[Evidence]:
+    """Optional free web search (Yahoo / DuckDuckGo / Bing). Search snippets are never evidence:
+    each source URL is fetched and its text inspected before anything is recorded."""
+    from .discovery import SearchCache, WebSearch, is_excluded
+    from .extractor import extract_page
+    own_search = search is None
+    if own_search:
+        search = WebSearch(SearchCache(":memory:"))
     queries = [f'"{organization}" "{domain}"', f'"{organization}" official website subsidiary']
     found: list[Evidence] = []
     seen: set[str] = set()
-    for query in queries:
-        candidate_urls: list[str] = []
-        if apify_token:
-            from .apify_escalation import search_with_apify
-            apify_items = await search_with_apify(query, token=apify_token, max_results=4)
-            candidate_urls.extend([it["url"] for it in apify_items if it.get("url")])
-        elif key:
-            from scrapling.fetchers import AsyncFetcher
-            try:
-                response = await AsyncFetcher.post("https://api.tavily.com/search",
-                                                   json={"query": query,
-                                                         "search_depth": "basic", "max_results": 5},
-                                                   headers={"Authorization": f"Bearer {key}",
-                                                            "Content-Type": "application/json"},
-                                                   timeout=20, retries=1)
-                payload = response.json()
-                candidate_urls.extend([it.get("url", "") for it in payload.get("results", [])])
-            except Exception:
-                continue
-        for url in candidate_urls:
-            host = (urlsplit(url).hostname or "").lower()
-            if not host or url in seen or urlsplit(url).scheme not in ("http", "https"):
-                continue
-            seen.add(url)
-            # Search is discovery only. Source text is fetched and inspected below.
-            fetched = await fetcher.fetch(url)
-            if fetched.status != 200:
-                continue
-            from .extractor import extract_page
-            page = extract_page(fetched.final_url or url, fetched.html, fetched.status)
-            mention = relationship_mention(page["visible_text"], organization)
-            if not mention:
-                mention = entity_mention(page["visible_text"], organization)
-            if not mention:
-                continue
-            source_type = "official_parent" if host == domain or host.endswith("." + domain) else (
-                "government_or_regulator" if re.search(r"\.(gov|go\.jp|gov\.au|go\.kr|gov\.sg)(?:\.|$)", host) else "external_site")
-            strength = "VERY_STRONG" if source_type == "government_or_regulator" else (
-                "STRONG" if source_type == "official_parent" else "MEDIUM")
-            relationship = "group_entity" if relationship_mention(mention, organization) else "name_mention"
-            found.append(Evidence(page["url"], source_type, mention, relationship,
-                                  strength, page.get("title", ""), "external"))
-            if len(found) >= 4:
-                return found
+    try:
+        for query in queries:
+            for item in await search.search(query):
+                url = item.get("url", "")
+                host = (urlsplit(url).hostname or "").lower()
+                if not host or url in seen or urlsplit(url).scheme not in ("http", "https") or is_excluded(host):
+                    continue
+                seen.add(url)
+                fetched = await fetcher.fetch(url)
+                if fetched.status != 200:
+                    continue
+                page = extract_page(fetched.final_url or url, fetched.html, fetched.status)
+                mention = relationship_mention(page["visible_text"], organization) or entity_mention(page["visible_text"], organization)
+                if not mention:
+                    continue
+                source_type = "official_parent" if host == domain or host.endswith("." + domain) else (
+                    "government_or_regulator" if re.search(r"\.(gov|go\.jp|gov\.au|go\.kr|gov\.sg)(?:\.|$)", host) else "external_site")
+                relationship = "group_entity" if relationship_mention(mention, organization) else "name_mention"
+                strength = "STRONG" if source_type in ("official_parent", "government_or_regulator") and relationship == "group_entity" else "MEDIUM"
+                found.append(Evidence(page["url"], source_type, mention, relationship, strength, page.get("title", ""), "external"))
+                if len(found) >= 4:
+                    return found
+    finally:
+        if own_search:
+            await search.close()
+            search.cache.close()
     return found

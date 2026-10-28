@@ -1,0 +1,110 @@
+{
+  "population": 16509,
+  "seed": 20261006,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "run_date": "2026-10-06T08:12:53+00:00",
+  "n_drawn": 800,
+  "n_judged": 382,
+  "n_match": 286,
+  "n_mismatch": 96,
+  "raw_accuracy": 0.7487,
+  "wilson_fpc_95": [
+    0.7034,
+    0.7891
+  ],
+  "cluster_bootstrap_95": [
+    0.7046632124352331,
+    0.7916666666666666
+  ],
+  "country_reweighted_accuracy": 0.7463,
+  "replacement_rate": 0.5225,
+  "replaced_reasons": {
+    "LOW_CONFIDENCE": 195,
+    "NO_DOMAIN_FOUND": 194,
+    "MEDIUM_NOT_CONFIRMED": 20,
+    "TECHNICAL_FAILURE": 9
+  },
+  "bounds": [
+    0.3575,
+    0.88
+  ],
+  "reliability_flag": true,
+  "by_country": {
+    "JP": {
+      "judged": 182,
+      "match": 137,
+      "replaced": 124,
+      "accuracy": 0.7527,
+      "replacement_rate": 0.4052
+    },
+    "AU": {
+      "judged": 51,
+      "match": 38,
+      "replaced": 88,
+      "accuracy": 0.7451,
+      "replacement_rate": 0.6331
+    },
+    "TH": {
+      "judged": 37,
+      "match": 25,
+      "replaced": 41,
+      "accuracy": 0.6757,
+      "replacement_rate": 0.5256
+    },
+    "SG": {
+      "judged": 30,
+      "match": 27,
+      "replaced": 36,
+      "accuracy": 0.9,
+      "replacement_rate": 0.5455
+    },
+    "MY": {
+      "judged": 21,
+      "match": 16,
+      "replaced": 47,
+      "accuracy": 0.7619,
+      "replacement_rate": 0.6912
+    },
+    "KR": {
+      "judged": 13,
+      "match": 10,
+      "replaced": 30,
+      "accuracy": 0.7692,
+      "replacement_rate": 0.6977
+    },
+    "ID": {
+      "judged": 22,
+      "match": 12,
+      "replaced": 10,
+      "accuracy": 0.5455,
+      "replacement_rate": 0.3125
+    },
+    "NZ": {
+      "judged": 12,
+      "match": 11,
+      "replaced": 15,
+      "accuracy": 0.9167,
+      "replacement_rate": 0.5556
+    },
+    "PH": {
+      "judged": 5,
+      "match": 5,
+      "replaced": 18,
+      "accuracy": 1.0,
+      "replacement_rate": 0.7826
+    },
+    "VN": {
+      "judged": 9,
+      "match": 5,
+      "replaced": 9,
+      "accuracy": 0.5556,
+      "replacement_rate": 0.5
+    }
+  },
+  "tiers_of_judged": {
+    "HIGH": 352,
+    "MEDIUM": 30
+  }
+}

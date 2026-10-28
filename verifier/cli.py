@@ -10,14 +10,14 @@ from pathlib import Path
 from .cache import SQLiteCache
 from .config import Config
 from .export import write_outputs
+from .fetcher import quiet_scrapling_logs
 from .input import iter_input
 from .pipeline import process_records, representative_rows
 
 
 async def _run(args) -> None:
     config = Config(concurrency=args.concurrency, max_evidence_pages=args.max_evidence_pages,
-                    use_dynamic=args.dynamic, use_stealth=args.stealth, use_proxy=bool(args.proxy_url),
-                    use_apify=args.use_apify, apify_token=args.apify_token)
+                    use_dynamic=args.dynamic, use_stealth=args.stealth, use_proxy=bool(args.proxy_url))
     if args.full_run:
         records = list(iter_input(args.input, args.organization_column, args.domain_column))
     else:
@@ -64,14 +64,12 @@ def main() -> None:
     parser.add_argument("--stealth", action="store_true")
     parser.add_argument("--proxy-url")
     parser.add_argument("--external-evidence", help="JSONL of fetched, reviewed authoritative sources")
-    parser.add_argument("--search-ambiguous", action="store_true", help="requires TAVILY_API_KEY or Apify token")
+    parser.add_argument("--search-ambiguous", action="store_true", help="search the web (free Bing) for sources on pairs without strong proof")
     parser.add_argument("--max-external-searches", type=int, default=100)
     parser.add_argument("--offline", action="store_true", help="inspect sample/output using cached evidence only")
-    parser.add_argument("--use-apify", action="store_true", default=True, help="use Apify actors for unblocking and search")
-    parser.add_argument("--no-apify", dest="use_apify", action="store_false", help="disable Apify actors")
-    parser.add_argument("--apify-token", default=os.environ.get("APIFY_TOKEN") or os.environ.get("APIFY_API_TOKEN"), help="Apify API Token (can also be set via APIFY_TOKEN env var)")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    quiet_scrapling_logs(logging.WARNING)
     asyncio.run(_run(args))
 
 

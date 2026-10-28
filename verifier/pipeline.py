@@ -10,8 +10,8 @@ from urllib.parse import urlsplit
 from .cache import SQLiteCache
 from .config import Config
 from .evidence import external_evidence_from_file, search_authoritative, website_evidence
-from .extractor import extract_page, relevant_links
-from .fetcher import TieredFetcher, dns_status, utc_now
+from .extractor import english_link, extract_page, latin_share, relevant_links
+from .fetcher import DNS_DEAD, TieredFetcher, dns_status, utc_now
 from .input import iter_input
 from .models import DomainRecord
 from .normalization import normalize_domain, registered_domain
@@ -20,27 +20,54 @@ from .verification import verify_row
 LOG = logging.getLogger(__name__)
 
 
+def _host_variants(domain: str) -> list[str]:
+    bare = domain[4:] if domain.startswith("www.") else domain
+    return [bare, "www." + bare] if bare.count(".") >= 1 else [bare]
+
+
 async def investigate_domain(domain: str, config: Config, fetcher: TieredFetcher) -> DomainRecord:
+    """Inspect a domain, trying the bare host and www., over https then http, before
+    calling it dead. DNS 'does not exist' is kept apart from temporary failures."""
     root = "https://" + domain + "/"
     record = DomainRecord(domain, registered_domain(domain), root, checked_at=utc_now())
-    record.dns_status = await dns_status(domain)
-    if record.dns_status == "UNSAFE_ADDRESS":
+    statuses = {host: await dns_status(host) for host in _host_variants(domain)}
+    resolved = [h for h, s in statuses.items() if s == "RESOLVED"]
+    if any(s == "UNSAFE_ADDRESS" for s in statuses.values()) and not resolved:
+        record.dns_status = "UNSAFE_ADDRESS"
         record.blocked_reason = "DNS returned a private or non-global address"
         record.fetch_error_type = "UNSAFE_ADDRESS"
         return record
-    if record.dns_status == "FAILED":
-        record.http_status = 0
-        record.domain_active = False
-        record.fetch_error = "DNS resolution failed (host not found)"
-        record.fetch_error_type = "DNS"
+    if not resolved:
+        dead = all(s in DNS_DEAD for s in statuses.values())
+        record.dns_status = "FAILED" if dead else "TEMPORARY"
+        record.domain_active = False if dead else None
+        record.fetch_error = ("DNS: host does not exist (bare and www.)" if dead
+                              else f"DNS lookup did not complete: {statuses}")
+        record.fetch_error_type = "DNS" if dead else "DNS_TEMPORARY"
         return record
-    home = await fetcher.fetch(root)
+    record.dns_status = "RESOLVED"
+    home = None
+    for host in resolved:
+        for scheme in ("https", "http"):
+            url = f"{scheme}://{host}/"
+            attempt = await fetcher.fetch(url)
+            if home is not None:
+                attempt.attempts += home.attempts
+            home = attempt
+            if home.status:
+                break
+        if home.status and home.status < 400:
+            break
+    root = home.requested_url
+    record.requested_url = root
+    record.live_host = urlsplit(root).hostname or ""
     if home.status in (403, 429) and config.use_stealth:
         home = await fetcher.fetch(root, allow_browser=True, use_stealth=True)
     page = extract_page(home.final_url or root, home.html, home.status)
     if page["js_shell"] and config.use_dynamic:
         home = await fetcher.fetch(root, allow_browser=True, force_browser=True)
         page = extract_page(home.final_url or root, home.html, home.status)
+    record.tls_valid = home.tls_valid
     record.http_status = home.status
     record.final_url = home.final_url
     record.final_registered_domain = registered_domain(urlsplit(home.final_url).hostname or "")
@@ -59,7 +86,17 @@ async def investigate_domain(domain: str, config: Config, fetcher: TieredFetcher
     if home.status < 200 or home.status >= 400:
         return record
     record.pages.append(page)
-    for url in relevant_links(page, config.max_evidence_pages):
+    sister = registered_domain(urlsplit(home.final_url or root).hostname or "")
+    # Local-language home page (Japanese, Thai, Korean...): also read the site's English page,
+    # where the English legal name usually appears (code review #10, framework 2.8).
+    if latin_share(page.get("visible_text", "")) < 0.3:
+        english = english_link(page, sister)
+        if english:
+            fetched = await fetcher.fetch(english)
+            record.fetch_attempts += fetched.attempts
+            if 200 <= fetched.status < 400:
+                record.pages.append(extract_page(fetched.final_url or english, fetched.html, fetched.status))
+    for url in relevant_links(page, config.max_evidence_pages, sister_domain=sister):
         fetched = await fetcher.fetch(url)
         record.fetch_attempts += fetched.attempts
         if 200 <= fetched.status < 400:
@@ -125,44 +162,6 @@ async def process_records(records: list[tuple[int, dict, dict]], config: Config,
     if num_workers > 0:
         await asyncio.gather(*(domain_worker() for _ in range(num_workers)))
     LOG.info("completed domain investigations (%s total)", len(domain_records))
-
-    if fetch_domains and config.use_apify and getattr(config, "apify_token", None):
-        blocked_domains = [d for d, r in domain_records.items()
-                           if (r.blocked_reason or r.http_status in (403, 429)) and not r.pages and r.dns_status != "FAILED"]
-        if blocked_domains:
-            LOG.info("Escalating %d blocked domains to Apify website-content-crawler...", len(blocked_domains))
-            from .apify_escalation import fetch_urls_with_apify
-            async def _handle_apify_batch(batch: list[str]) -> None:
-                batch_urls = [f"https://{d}/" for d in batch]
-                try:
-                    apify_records = await fetch_urls_with_apify(batch_urls, token=config.apify_token)
-                    for rec in apify_records:
-                        if rec.status == 200 and rec.html:
-                            host = urlsplit(rec.final_url or rec.requested_url).hostname or ""
-                            if host.startswith("www."):
-                                host = host[4:]
-                            matched_domain = host if host in domain_records else next((bd for bd in batch if bd == host or host.endswith("." + bd) or bd.endswith("." + host)), None)
-                            if matched_domain and matched_domain in domain_records:
-                                old = domain_records[matched_domain]
-                                extracted = extract_page(rec.final_url or rec.requested_url, rec.html, 200)
-                                new_rec = replace(old,
-                                                  http_status=200,
-                                                  final_url=rec.final_url or old.final_url,
-                                                  final_registered_domain=registered_domain(host) or old.final_registered_domain,
-                                                  domain_active=True,
-                                                  blocked_reason=None,
-                                                  fetch_error=None,
-                                                  fetch_error_type=None,
-                                                  fetch_method="APIFY_CRAWLER",
-                                                  pages=[extracted])
-                                domain_records[matched_domain] = new_rec
-                                await cache.put(new_rec)
-                                LOG.info("Apify successfully unblocked %s (title=%s)", matched_domain, extracted.get("title", "")[:40])
-                except Exception as exc:
-                    LOG.warning("Apify unblocking batch error: %s", exc)
-
-            batches = [blocked_domains[i:i + 20] for i in range(0, len(blocked_domains), 20)]
-            await asyncio.gather(*(_handle_apify_batch(b) for b in batches))
 
     path_records = {}
     path_urls = list(dict.fromkeys(

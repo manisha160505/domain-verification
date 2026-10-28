@@ -1,0 +1,10 @@
+# Only the code needed for the Azure run is uploaded (the data file goes as a separate input).
+*
+!verifier/
+!verifier/**
+!azure/
+!azure/**
+verifier/legacy/
+**/__pycache__/
+**/*.csv
+**/*.sqlite

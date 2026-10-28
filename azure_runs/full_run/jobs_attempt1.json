@@ -1,0 +1,22 @@
+﻿{
+    "shard_2":  {
+                    "compute":  "HPC2",
+                    "shard":  "shards/shard_2.csv",
+                    "job":  "khaki_plastic_rkcb64b9qk"
+                },
+    "shard_4":  {
+                    "compute":  "HPC4",
+                    "shard":  "shards/shard_4.csv",
+                    "job":  "funny_tray_xfkbtd1lxy"
+                },
+    "shard_3":  {
+                    "compute":  "HPC3",
+                    "shard":  "shards/shard_3.csv",
+                    "job":  "olive_picture_3r8w24vrl9"
+                },
+    "shard_1":  {
+                    "compute":  "HPC1",
+                    "shard":  "shards/shard_1.csv",
+                    "job":  "silver_deer_qnfpnd6rxq"
+                }
+}

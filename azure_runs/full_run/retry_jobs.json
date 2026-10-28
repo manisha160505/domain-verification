@@ -1,0 +1,22 @@
+﻿{
+    "shard_1":  {
+                    "compute":  "HPC1",
+                    "shard":  "shards_retry/shard_1.csv",
+                    "job":  "modest_stick_1tsfx68gy9"
+                },
+    "shard_2":  {
+                    "compute":  "HPC2",
+                    "shard":  "shards_retry/shard_2.csv",
+                    "job":  "purple_dog_441m5kzrmm"
+                },
+    "shard_3":  {
+                    "compute":  "HPC3",
+                    "shard":  "shards_retry/shard_3.csv",
+                    "job":  "plum_spinach_l9hmb9wb7f"
+                },
+    "shard_4":  {
+                    "compute":  "HPC4",
+                    "shard":  "shards_retry/shard_4.csv",
+                    "job":  "kind_brain_2md3384qmd"
+                }
+}

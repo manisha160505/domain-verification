@@ -15,7 +15,7 @@ python -m verifier --input 'Domains List_V2.xlsx' --sample-size 75 --output-dir 
 python -m verifier --input 'Domains List_V2.xlsx' --full-run --output-dir verifier/full_output
 ```
 
-The default command is a 75-row dry run. The full dataset requires `--full-run`; inspect dry-run evidence and results first. `--dynamic` and `--stealth` enable browser fallbacks. `--proxy-url` supplies a proxy for the stealth tier. `--search-ambiguous` needs `TAVILY_API_KEY`; set `--max-external-searches` to cap API usage. `--offline` reads cached evidence without making requests, useful for output/schema checks; it does **not** verify uncached domains.
+The default command is a 75-row dry run. The full dataset requires `--full-run`; inspect dry-run evidence and results first. `--dynamic` and `--stealth` enable browser fallbacks. `--proxy-url` supplies a proxy for the stealth tier. `--search-ambiguous` uses free web search; `--max-external-searches` caps it. `--offline` reads cached evidence without making requests, useful for output/schema checks; it does **not** verify uncached domains.
 
 Local outputs:
 
@@ -28,18 +28,16 @@ The SQLite cache keeps domain pages, input path pages, and entity-level evidence
 
 ## Decision rules
 
-- `VERIFIED_EXACT`: official legal/footer or Organization JSON-LD identifies the entity.
-- `VERIFIED_GROUP`: an official group site identifies itself and explicitly relates the entity to the group. An identical brand token alone cannot establish the relationship.
-- `PROBABLE`: corroborating site signals exist but legal/group proof is absent.
-- `UNVERIFIED`: accessible site or missing input without adequate relationship evidence.
-- `MISMATCH`: strong, fetched/curated authoritative evidence explicitly supports an unrelated owner. A different homepage name alone is insufficient.
-- `INACTIVE`: parking, expiry, HTTP 410, or DNS failure only when independent network health is confirmed.
-- `REDIRECT`: cross-registered-domain redirect; `destination_verification_status` records the destination assessment.
-- `BLOCKED`: robots, protection, persistent access errors, or an environment unable to reach the site.
+Decisions come from `decision.py`, the proof-ladder engine (see the root `README.md`). Every row ends as `ACCEPT`, `REJECT` or `REVIEW`, with an outcome code.
+
+- `ACCEPT / VERIFIED` needs one strong proof, or two supporting proofs where one is the company name. Strong proofs are: the legal name in structured data, the footer, the copyright line or a legal/about page; a tax or registration number on the site; the subsidiary named on its group's site. A look-alike domain or a contact email on the site's own domain is only a hint.
+- `REJECT` covers `NO_DOMAIN_SUPPLIED`, `INVALID_DOMAIN`, `DOMAIN_NOT_EXIST` (DNS says the name does not exist for both the bare domain and www.), `PARKED`, `SITE_GONE` (HTTP 410) and `MISMATCH` (the site clearly names a different owner).
+- `REVIEW` covers `TEMP_UNREACHABLE`, `BLOCKED`, `UNREADABLE`, `GOVERNMENT_SITE`, `REDIRECT_UNCONFIRMED`, `INSUFFICIENT_PROOF` and `NO_PROOF`. Nothing is judged valid or mismatched without readable content.
+- Redirects are judged at the destination. If the destination proves the company, it is accepted and recorded as the current website.
 
 External search is discovery only. A search snippet is never evidence: the returned source URL is fetched and the relevant text retained. A previously reviewed external-evidence JSONL can be passed with `--external-evidence`; each entry needs `organization`, `domain`, `source_url`, `source_type`, `source_title`, `evidence_text`, `relationship`, `strength`, and `fetched_at`.
 
-## Apify Actor
+## Apify Actor (optional hosting wrapper; not used by the free resolver)
 
 The Actor definition is [`.actor/actor.json`](../.actor/actor.json); its image uses the supplied Scrapling repository. Supply an HTTPS CSV/XLSX URL as `input_file`, or a path inside the image. `dry_run` defaults to true. Set `dry_run: false` only after reviewing the sample. The Actor writes separate named result, evidence, and review datasets, plus `PROGRESS` and `SUMMARY` records in a named key-value store. The dataset and cache names are derived from input-file contents and `run_key`. On restart it reads existing row/evidence IDs and skips published items; persisted domain and pair caches avoid recrawling. Change `run_key` to start a fresh verification run.
 
@@ -59,7 +57,7 @@ Example input:
 }
 ```
 
-If `use_proxy` is enabled, configure Apify Proxy in the Actor account; the proxy is reserved for stealth escalation. Keep `TAVILY_API_KEY` in an Actor secret, never in the input file.
+If `use_proxy` is enabled, configure Apify Proxy in the Actor account; the proxy is reserved for stealth escalation.
 
 ## Validation and present environment
 

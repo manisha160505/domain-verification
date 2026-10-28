@@ -1,0 +1,544 @@
+{
+  "population": 17805,
+  "seed": 20261006,
+  "run_date": "2026-10-06T14:54:10+00:00",
+  "threshold": 0.7,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "n_judged": 398,
+  "n_confirmed_not_found": 333,
+  "n_site_found": 65,
+  "confirmed_rate": 0.8367,
+  "wilson_fpc_95": [
+    0.7977,
+    0.8694
+  ],
+  "positive_reasons": {
+    "NO_DOMAIN": 185,
+    "LOW_CONFIDENCE": 139,
+    "AMBIGUOUS": 9
+  },
+  "technical_failures": 2,
+  "by_country": {
+    "JP": {
+      "judged": 88,
+      "confirmed": 64,
+      "confirmed_rate": 0.7273
+    },
+    "AU": {
+      "judged": 80,
+      "confirmed": 63,
+      "confirmed_rate": 0.7875
+    },
+    "MY": {
+      "judged": 52,
+      "confirmed": 47,
+      "confirmed_rate": 0.9038
+    },
+    "KR": {
+      "judged": 45,
+      "confirmed": 41,
+      "confirmed_rate": 0.9111
+    },
+    "TH": {
+      "judged": 41,
+      "confirmed": 30,
+      "confirmed_rate": 0.7317
+    },
+    "SG": {
+      "judged": 29,
+      "confirmed": 27,
+      "confirmed_rate": 0.931
+    },
+    "PH": {
+      "judged": 22,
+      "confirmed": 22,
+      "confirmed_rate": 1.0
+    },
+    "ID": {
+      "judged": 17,
+      "confirmed": 17,
+      "confirmed_rate": 1.0
+    },
+    "NZ": {
+      "judged": 14,
+      "confirmed": 13,
+      "confirmed_rate": 0.9286
+    },
+    "VN": {
+      "judged": 10,
+      "confirmed": 9,
+      "confirmed_rate": 0.9
+    }
+  },
+  "by_old_url": {
+    "no URL provided": {
+      "judged": 234,
+      "confirmed": 196,
+      "confirmed_rate": 0.8376
+    },
+    "old URL provided": {
+      "judged": 164,
+      "confirmed": 137,
+      "confirmed_rate": 0.8354
+    }
+  },
+  "sites_found": [
+    {
+      "row_id": 94716,
+      "country": "SG",
+      "company": "ST. ANTHONY'S CANOSSIAN PRIMARY SCHOOL",
+      "domain": "moe.edu.sg",
+      "score": 0.8
+    },
+    {
+      "row_id": 5910,
+      "country": "JP",
+      "company": "API CORPORATION",
+      "domain": "api-group.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 97813,
+      "country": "MY",
+      "company": "TA SECURITY BHD",
+      "domain": "tasecurities.com.my",
+      "score": 1.0
+    },
+    {
+      "row_id": 83814,
+      "country": "MY",
+      "company": "RW TECH LABS SDN. BHD.",
+      "domain": "gentingrewards.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 110084,
+      "country": "TH",
+      "company": "Welfare Fund, Ministry of Education",
+      "domain": "aidfunds.org",
+      "score": 0.8
+    },
+    {
+      "row_id": 110675,
+      "country": "NZ",
+      "company": "Whangaparoa School",
+      "domain": "wgp.school.nz",
+      "score": 0.8
+    },
+    {
+      "row_id": 97411,
+      "country": "MY",
+      "company": "SYARIKAT LION INDUSTRIES",
+      "domain": "lion.com.my",
+      "score": 0.8
+    },
+    {
+      "row_id": 35029,
+      "country": "AU",
+      "company": "GRACE MCKELLAR CENTRE",
+      "domain": "barwonhealth.org.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 8505,
+      "country": "JP",
+      "company": "AUTO POLICE, K.K.",
+      "domain": "autopolis.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 105404,
+      "country": "TH",
+      "company": "TRANSPARENCY THAILAND",
+      "domain": "fact.or.th",
+      "score": 0.8
+    },
+    {
+      "row_id": 105262,
+      "country": "TH",
+      "company": "TRAFFIC AND TRANSPORTATION DEPARTMENT, BANGKOK METROPOLITAN ADMINISTRATION",
+      "domain": "bangkok.go.th",
+      "score": 0.8
+    },
+    {
+      "row_id": 44691,
+      "country": "JP",
+      "company": "J M S, K.K.",
+      "domain": "jms.cc",
+      "score": 0.8
+    },
+    {
+      "row_id": 47749,
+      "country": "TH",
+      "company": "Kanchanapisek SamutPrakan Technical College",
+      "domain": "kpsptc.ac.th",
+      "score": 0.8
+    },
+    {
+      "row_id": 81629,
+      "country": "AU",
+      "company": "RAYTHEON AUSTRALIA PTY LTD ACCOUNTS PAYABLE",
+      "domain": "raytheon.com.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 105277,
+      "country": "VN",
+      "company": "Training Center for Financial Officers",
+      "domain": "efti.edu.vn",
+      "score": 0.8
+    },
+    {
+      "row_id": 102877,
+      "country": "JP",
+      "company": "TOEI CORPORATION",
+      "domain": "toei.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 3041,
+      "country": "JP",
+      "company": "AICHIKEN KOSEI AGRICULTURAL COOPERATIVE ASSOC. AIHOKU SENIOR NURSING SCHOOL",
+      "domain": "jaaikosei.or.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 30650,
+      "country": "JP",
+      "company": "FITEC Co., Ltd. Tokyo",
+      "domain": "fitec.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 52350,
+      "country": "JP",
+      "company": "KUROBE TOURISM K.K.",
+      "domain": "ykkcenterpark.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 59669,
+      "country": "JP",
+      "company": "MERUE, K.K.",
+      "domain": "melheui.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 90268,
+      "country": "MY",
+      "company": "SIME DARBY AUTO CONNEXION SDN. BHD.",
+      "domain": "sdacford.com.my",
+      "score": 0.8
+    },
+    {
+      "row_id": 21836,
+      "country": "JP",
+      "company": "DAIHO TAXI COMPANY",
+      "domain": "daihotaxi.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 104687,
+      "country": "JP",
+      "company": "TOYODENSO, CO.,LTD.",
+      "domain": "toyo-denso.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 3108,
+      "country": "JP",
+      "company": "AIMEX, K.K.",
+      "domain": "aimex-japan.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 34906,
+      "country": "AU",
+      "company": "Goulburn Valley Health - Hume Rural Health Alliance",
+      "domain": "hrha.org.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 8279,
+      "country": "AU",
+      "company": "AUSTRALIAN MEDICAL ASSOCIATION (NSW) LIMITED",
+      "domain": "amansw.com.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 109754,
+      "country": "AU",
+      "company": "WARRAWEE CARE CENTRE INCORPORATED",
+      "domain": "warraweecarecentre.org",
+      "score": 0.8
+    },
+    {
+      "row_id": 93483,
+      "country": "AU",
+      "company": "ST CHRISTOPHER'S SCHOOL AIRPORT WEST",
+      "domain": "stcapw.catholic.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 22576,
+      "country": "SG",
+      "company": "DATAPOST PTE LTD",
+      "domain": "datapost.com.sg",
+      "score": 0.8
+    },
+    {
+      "row_id": 100146,
+      "country": "TH",
+      "company": "THAI CENTRAL CHEMICAL PUBLIC COMPANY LIMITED",
+      "domain": "tcccthai.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 97735,
+      "country": "JP",
+      "company": "T&D INFORMATION SYSTEM LTD.",
+      "domain": "td-system.co.jp",
+      "score": 1.0
+    },
+    {
+      "row_id": 52381,
+      "country": "JP",
+      "company": "KUSABA JIMUSHO, K.K.",
+      "domain": "ksbo.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 94359,
+      "country": "AU",
+      "company": "ST MONICAS SCHOOL",
+      "domain": "smfootscray.catholic.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 93871,
+      "country": "AU",
+      "company": "ST JOHNS PRIMARY SCHOOL EUROA",
+      "domain": "sjeuroa.catholic.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 36878,
+      "country": "KR",
+      "company": "Hana CNS Co., Ltd.",
+      "domain": "hana-cns.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 89335,
+      "country": "JP",
+      "company": "SHIP HEALTH CARE PHARMACY K.K.",
+      "domain": "ship-ph.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 32205,
+      "country": "JP",
+      "company": "FUJIMI CONSTRUCTION CO., LTD.",
+      "domain": "nishimatsu.co.jp",
+      "score": 1.0
+    },
+    {
+      "row_id": 92390,
+      "country": "AU",
+      "company": "South Eastern Local Health District",
+      "domain": "nsw.gov.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 20082,
+      "country": "KR",
+      "company": "Copyright Discussion Adjustment Committee",
+      "domain": "copyright.or.kr",
+      "score": 0.8
+    },
+    {
+      "row_id": 29265,
+      "country": "JP",
+      "company": "EXCITE JAPAN CO., LTD.",
+      "domain": "excite.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 96254,
+      "country": "JP",
+      "company": "SUN NETWORK MAEDA, K.K.",
+      "domain": "1049.cc",
+      "score": 0.8
+    },
+    {
+      "row_id": 112351,
+      "country": "AU",
+      "company": "YARRAM PRIMARY SCHOOL",
+      "domain": "yarram-ps.vic.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 87407,
+      "country": "JP",
+      "company": "SEIWA BUTSURYU CO., LTD.",
+      "domain": "seiwabutsuryu.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 66450,
+      "country": "JP",
+      "company": "NIHON BUSINESS DATA PROCESSING CENTER CO.,LTD.",
+      "domain": "nihon-data.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 48781,
+      "country": "AU",
+      "company": "KEITHCOT FARM CHILDREN'S CENTRE (Preschool)",
+      "domain": "keithcotfarmcc.sa.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 100291,
+      "country": "TH",
+      "company": "THAI POLYCARBONATE COMPANY LIMITED",
+      "domain": "tpcc-tpac.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 37287,
+      "country": "KR",
+      "company": "Hanwha Engine Co., Ltd.",
+      "domain": "hanwha-engine.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 66474,
+      "country": "JP",
+      "company": "NIHON GIKEN K.K.",
+      "domain": "nippon-giken.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 93646,
+      "country": "AU",
+      "company": "St Francis Catholic School (Hughenden)",
+      "domain": "sfsh.catholic.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 16844,
+      "country": "TH",
+      "company": "Chaingmai technical college",
+      "domain": "cmtc.ac.th",
+      "score": 0.8
+    },
+    {
+      "row_id": 101422,
+      "country": "AU",
+      "company": "THE PRESBYTERIAN SCHOOL OF ST. ANDREW LIMITED",
+      "domain": "standrews.vic.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 111560,
+      "country": "AU",
+      "company": "WORKERS EDUCATIONAL ASSOCIATION - HUNTER",
+      "domain": "atwea.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 37044,
+      "country": "KR",
+      "company": "Hanjin Co, Ltd",
+      "domain": "hanjin.co.kr",
+      "score": 0.8
+    },
+    {
+      "row_id": 96265,
+      "country": "JP",
+      "company": "SUN ROAD, K.K.",
+      "domain": "sunroad-inc.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 93642,
+      "country": "AU",
+      "company": "St Flannan’s Catholic Parish School Zillmere",
+      "domain": "stflannans.qld.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 108955,
+      "country": "TH",
+      "company": "VINYTHAI PUBLIC CO., LTD.",
+      "domain": "agcvinythai.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 101424,
+      "country": "TH",
+      "company": "THE PRIME MINISTERS OFFICE",
+      "domain": "opm.go.th",
+      "score": 0.8
+    },
+    {
+      "row_id": 9913,
+      "country": "TH",
+      "company": "Bank Of Ayudhaya Public Company Limited",
+      "domain": "krungsri.com",
+      "score": 0.8
+    },
+    {
+      "row_id": 20468,
+      "country": "AU",
+      "company": "COWELL AREA SCHOOL",
+      "domain": "cowellas.sa.edu.au",
+      "score": 0.8
+    },
+    {
+      "row_id": 27376,
+      "country": "MY",
+      "company": "EDUCATION SERVICE COMMISSION",
+      "domain": "spp.gov.my",
+      "score": 0.8
+    },
+    {
+      "row_id": 41539,
+      "country": "JP",
+      "company": "I N G, K.K.",
+      "domain": "ingjapan.co.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 104222,
+      "country": "JP",
+      "company": "TOSHO FUDOSAN K.K.",
+      "domain": "sumitomo-rd.co.jp",
+      "score": 1.0
+    },
+    {
+      "row_id": 96903,
+      "country": "TH",
+      "company": "SUPHANBURI TECHNICAL COLLEGE",
+      "domain": "stc.ac.th",
+      "score": 0.8
+    },
+    {
+      "row_id": 44756,
+      "country": "JP",
+      "company": "J.FRONT ONE PARTNER CO., LTD.",
+      "domain": "j-front-one-partner.jp",
+      "score": 0.8
+    },
+    {
+      "row_id": 33066,
+      "country": "AU",
+      "company": "GDF SUEZ Australian Energy Pty Ltd",
+      "domain": "engie.com.au",
+      "score": 0.8
+    }
+  ]
+}

@@ -4,9 +4,14 @@ from dataclasses import asdict, dataclass, field
 from typing import Any
 
 
-STATUSES = (
-    "VALID", "VALID_GROUP", "VERIFIED_EXACT", "VERIFIED_ENTITY", "VERIFIED_GROUP", "STRONG_MATCH", "PROBABLE",
-    "REVIEW", "UNVERIFIED", "MISMATCH", "INACTIVE", "REDIRECT", "BLOCKED",
+DECISIONS = ("ACCEPT", "REJECT", "REVIEW")
+# Outcome codes written by decision.py / discovery.py / master_resolver.py.
+OUTCOMES = (
+    "VERIFIED", "FOUND", "REPLACED", "MERGED_INTO", "REVIEWER_OVERRIDE",              # ACCEPT
+    "NO_DOMAIN_SUPPLIED", "INVALID_DOMAIN", "DOMAIN_NOT_EXIST", "PARKED", "SITE_GONE",  # REJECT
+    "MISMATCH", "COMPANY_CLOSED",
+    "TEMP_UNREACHABLE", "BLOCKED", "UNREADABLE", "GOVERNMENT_SITE", "REDIRECT_UNCONFIRMED",  # REVIEW
+    "INSUFFICIENT_PROOF", "NO_PROOF", "REPLACEMENT_SUGGESTED", "UNCALIBRATED_ACCEPT", "NOT_FOUND", "NOT_CHECKED", "NO_NAME",
 )
 
 
@@ -36,6 +41,7 @@ class FetchRecord:
     error: str = ""
     error_type: str = ""
     checked_at: str = ""
+    tls_valid: bool | None = None
 
 
 @dataclass
@@ -58,6 +64,8 @@ class DomainRecord:
     pages: list[dict[str, Any]] = field(default_factory=list)
     fetch_error: str = ""
     fetch_error_type: str = ""
+    live_host: str = ""
+    tls_valid: bool | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

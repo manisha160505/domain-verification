@@ -1,0 +1,87 @@
+{
+  "rows_resolved": 5918,
+  "rows_in_queue": 5918,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "VERIFIED_ACTIVE": 1567,
+    "NEEDS_REVIEW_SUGGESTION": 363,
+    "REPLACED_VERIFIED": 128,
+    "RETRY_UNREACHABLE": 1129,
+    "NEEDS_REVIEW": 2241,
+    "NOT_FOUND": 245,
+    "COMPANY_CLOSED": 245
+  },
+  "decisions": {
+    "ACCEPT": 1695,
+    "REVIEW": 3978,
+    "REJECT": 245
+  },
+  "outcomes": {
+    "VERIFIED": 1629,
+    "REPLACEMENT_SUGGESTED": 363,
+    "BLOCKED": 553,
+    "TEMP_UNREACHABLE": 180,
+    "INSUFFICIENT_PROOF": 1319,
+    "NO_PROOF": 549,
+    "NOT_FOUND": 245,
+    "REPLACED": 66,
+    "UNREADABLE": 396,
+    "COMPANY_CLOSED": 245,
+    "REDIRECT_UNCONFIRMED": 131,
+    "GOVERNMENT_SITE": 241,
+    "NOT_CHECKED": 1
+  },
+  "found_via": {
+    "SUPPLIED": 1479,
+    "REDIRECT": 60,
+    "WWW_VARIANT": 90,
+    "SEARCH": 66
+  },
+  "answer_types": {
+    "OWN_SITE": 1183,
+    "GROUP_SITE": 275,
+    "REGIONAL_SITE": 237
+  },
+  "domains_changed": 128,
+  "accepted_with_proof": 1695,
+  "accepted_with_proof_rate": 0.2864,
+  "strong_proof_accepts": 1034,
+  "by_original_domain_status": {
+    "PRE_EXISTING_ACTIVE": {
+      "ACCEPT:VERIFIED": 1524,
+      "REVIEW:REPLACEMENT_SUGGESTED": 291,
+      "REVIEW:BLOCKED": 392,
+      "REVIEW:TEMP_UNREACHABLE": 155,
+      "REVIEW:INSUFFICIENT_PROOF": 1056,
+      "REVIEW:NO_PROOF": 328,
+      "REVIEW:NOT_FOUND": 135,
+      "ACCEPT:REPLACED": 54,
+      "REVIEW:UNREADABLE": 287,
+      "REJECT:COMPANY_CLOSED": 192,
+      "REVIEW:REDIRECT_UNCONFIRMED": 128,
+      "REVIEW:GOVERNMENT_SITE": 154,
+      "REVIEW:NOT_CHECKED": 1
+    },
+    "VERIFIED_ACTIVE": {
+      "REVIEW:NOT_FOUND": 110,
+      "ACCEPT:VERIFIED": 105,
+      "REVIEW:NO_PROOF": 221,
+      "REVIEW:UNREADABLE": 109,
+      "REVIEW:INSUFFICIENT_PROOF": 263,
+      "REVIEW:BLOCKED": 161,
+      "ACCEPT:REPLACED": 12,
+      "REVIEW:TEMP_UNREACHABLE": 25,
+      "REVIEW:GOVERNMENT_SITE": 87,
+      "REVIEW:REPLACEMENT_SUGGESTED": 72,
+      "REJECT:COMPANY_CLOSED": 53,
+      "REVIEW:REDIRECT_UNCONFIRMED": 3
+    }
+  },
+  "consistency_flags": 14,
+  "review_queue_rows": 4351,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "shard.csv",
+  "input_sha256": "ae1445803709757fad6b1af1f648cce77c2b98287d001c7fd7566bfa465c1c31",
+  "generated_at": "2026-10-05T18:33:53.750662+00:00"
+}

@@ -40,6 +40,7 @@ apify_test_output/
 dry_run_output/
 recovery_output/
 pilot_recovery_output/
+resolver_output/
 
 # CSV files (exclude large datasets, keep sample fixtures for unit tests)
 *.csv
@@ -67,3 +68,4 @@ browserforge/.venv/
 Thumbs.db
 .idea/
 .vscode/
+shards/

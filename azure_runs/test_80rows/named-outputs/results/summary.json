@@ -1,0 +1,60 @@
+{
+  "rows_resolved": 80,
+  "rows_in_queue": 96824,
+  "rows_pending": 96744,
+  "updated_domain_status": {
+    "REPLACED_VERIFIED": 29,
+    "VERIFIED_ACTIVE": 2,
+    "NOT_FOUND": 39,
+    "NEEDS_REVIEW": 1,
+    "RETRY_UNREACHABLE": 1,
+    "COMPANY_CLOSED": 5,
+    "MERGED_SUCCESSOR_SITE": 3,
+    "PENDING": 96744
+  },
+  "decisions": {
+    "ACCEPT": 34,
+    "REVIEW": 41,
+    "REJECT": 5
+  },
+  "outcomes": {
+    "REPLACED": 29,
+    "VERIFIED": 2,
+    "NOT_FOUND": 39,
+    "REDIRECT_UNCONFIRMED": 1,
+    "TEMP_UNREACHABLE": 1,
+    "COMPANY_CLOSED": 5,
+    "MERGED_INTO": 3
+  },
+  "found_via": {
+    "SEARCH": 32,
+    "WWW_VARIANT": 2
+  },
+  "answer_types": {
+    "OWN_SITE": 29,
+    "REGIONAL_SITE": 2,
+    "SUCCESSOR_SITE": 3
+  },
+  "domains_changed": 32,
+  "accepted_with_proof": 34,
+  "accepted_with_proof_rate": 0.425,
+  "strong_proof_accepts": 24,
+  "by_original_domain_status": {
+    "UNVERIFIED_INACTIVE": {
+      "ACCEPT:REPLACED": 29,
+      "ACCEPT:VERIFIED": 2,
+      "REVIEW:NOT_FOUND": 39,
+      "REVIEW:REDIRECT_UNCONFIRMED": 1,
+      "REVIEW:TEMP_UNREACHABLE": 1,
+      "REJECT:COMPANY_CLOSED": 5,
+      "ACCEPT:MERGED_INTO": 3
+    }
+  },
+  "consistency_flags": 0,
+  "review_queue_rows": 78,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "/mnt/azureml/cr/j/b9d722c4e89e46338964297b28dfc6f5/cap/data-capability/wd/INPUT_queue/work_queue_master.csv",
+  "input_sha256": "b62b49228420c60c70c67bd5db97f209e5d6cfb1f9651c0c0e2c5d21feb4f02c",
+  "generated_at": "2026-10-02T16:53:28.046154+00:00"
+}

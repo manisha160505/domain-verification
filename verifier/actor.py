@@ -33,10 +33,12 @@ async def _summary_from_dataset(dataset) -> dict:
     high_confidence = 0
     total = 0
     not_attempted: set[str] = set()
-    async for row in dataset.iterate_items(fields=["verification_status", "normalized_domain", "http_status", "confidence", "fetch_attempts", "dns_status"]):
+    decisions: dict[str, int] = {}
+    async for row in dataset.iterate_items(fields=["decision", "outcome", "normalized_domain", "http_status", "confidence", "fetch_attempts", "dns_status"]):
         total += 1
-        status = row.get("verification_status", "UNVERIFIED")
+        status = row.get("outcome", "NOT_CHECKED")
         counts[status] = counts.get(status, 0) + 1
+        decisions[row.get("decision", "REVIEW")] = decisions.get(row.get("decision", "REVIEW"), 0) + 1
         domain = row.get("normalized_domain", "")
         if domain:
             seen_domains.add(domain)
@@ -50,9 +52,9 @@ async def _summary_from_dataset(dataset) -> dict:
     return {"total_rows": total, "unique_domains": len(seen_domains),
             "domains_successfully_fetched": len(fetched_domains),
             "domains_failed": len(failed_domains), "domains_not_attempted": len(not_attempted),
-            "status_counts": counts,
+            "outcome_counts": counts, "decision_counts": decisions,
             "fetch_success_rate": len(fetched_domains) / (len(fetched_domains) + len(failed_domains)) if fetched_domains or failed_domains else None,
-            "verification_rate": (counts.get("VERIFIED_EXACT", 0) + counts.get("VERIFIED_GROUP", 0)) / total if total else 0,
+            "accept_rate": decisions.get("ACCEPT", 0) / total if total else 0,
             "high_confidence_rate": high_confidence / total if total else 0,
             "ground_truth_accuracy": None}
 
@@ -159,18 +161,17 @@ async def main() -> None:
                                                "input_row_id": row["input_row_id"],
                                                "organization": row["organization_for_verification"],
                                                "domain": row["normalized_domain"],
-                                               "evidence_url": evidence["url"],
-                                               "evidence_type": evidence["evidence_type"],
-                                               "evidence_text": evidence["text"],
-                                               "relationship": evidence["relationship"],
-                                               "strength": evidence["strength"],
+                                               "evidence_url": evidence.get("url", ""),
+                                               "evidence_type": evidence.get("evidence_type", ""),
+                                               "evidence_text": evidence.get("text", ""),
+                                               "relationship": evidence.get("relationship", ""),
+                                               "strength": evidence.get("strength", ""),
                                                "source_title": evidence.get("title", ""),
                                                "source_type": evidence.get("source_type", "website")})
             if evidence_items:
                 await evidence_dataset.push_data(evidence_items)
                 evidence_ids.update(item["evidence_id"] for item in evidence_items)
-            review_items = [r for r in output if r["verification_status"] in
-                            ("MISMATCH", "PROBABLE", "UNVERIFIED", "BLOCKED", "REDIRECT")
+            review_items = [r for r in output if r.get("decision") in ("REVIEW", "REJECT")
                             and str(r["input_row_id"]) not in review_ids]
             if review_items:
                 await review_dataset.push_data(review_items)

@@ -1,0 +1,15 @@
+{
+  "rows": 77229,
+  "inputs": [
+    "gcp_runs\\gcp_run\\final"
+  ],
+  "final_status": {
+    "VERIFIED_ACTIVE": 19973,
+    "REPLACED_ACTIVE": 1755,
+    "MERGED_COMPANY": 6,
+    "COMPANY_CLOSED": 3104,
+    "NEEDS_REVIEW": 34250,
+    "NOT_FOUND": 3261,
+    "BLOCKED": 14880
+  }
+}

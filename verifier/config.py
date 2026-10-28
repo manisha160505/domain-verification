@@ -18,8 +18,9 @@ class Config:
     use_proxy: bool = False
     respect_robots: bool = True
     max_body_bytes: int = 800_000
-    use_apify: bool = True
-    apify_token: str | None = os.environ.get("APIFY_TOKEN") or os.environ.get("APIFY_API_TOKEN")
+    # Paid Apify escalation is off: the project uses free tools only.
+    use_apify: bool = False
+    apify_token: str | None = None
 
     def validate(self) -> None:
         if self.concurrency < 1 or self.concurrency > 200:

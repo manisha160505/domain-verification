@@ -1,0 +1,15 @@
+{
+  "rows": 36259,
+  "inputs": [
+    "azure_runs\\full_run\\final"
+  ],
+  "final_status": {
+    "VERIFIED_ACTIVE": 7937,
+    "REPLACED_ACTIVE": 2361,
+    "MERGED_COMPANY": 35,
+    "COMPANY_CLOSED": 1702,
+    "NEEDS_REVIEW": 6892,
+    "NOT_FOUND": 14544,
+    "BLOCKED": 2788
+  }
+}

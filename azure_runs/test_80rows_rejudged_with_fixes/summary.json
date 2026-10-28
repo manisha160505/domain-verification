@@ -1,0 +1,56 @@
+{
+  "rows_resolved": 80,
+  "rows_in_queue": 96824,
+  "rows_pending": 96744,
+  "updated_domain_status": {
+    "REPLACED_VERIFIED": 24,
+    "VERIFIED_ACTIVE": 2,
+    "NOT_FOUND": 44,
+    "NEEDS_REVIEW": 1,
+    "RETRY_UNREACHABLE": 1,
+    "COMPANY_CLOSED": 8,
+    "PENDING": 96744
+  },
+  "decisions": {
+    "ACCEPT": 26,
+    "REVIEW": 46,
+    "REJECT": 8
+  },
+  "outcomes": {
+    "REPLACED": 24,
+    "VERIFIED": 2,
+    "NOT_FOUND": 44,
+    "REDIRECT_UNCONFIRMED": 1,
+    "TEMP_UNREACHABLE": 1,
+    "COMPANY_CLOSED": 8
+  },
+  "found_via": {
+    "SEARCH": 24,
+    "WWW_VARIANT": 2
+  },
+  "answer_types": {
+    "OWN_SITE": 24,
+    "REGIONAL_SITE": 2
+  },
+  "domains_changed": 24,
+  "accepted_with_proof": 26,
+  "accepted_with_proof_rate": 0.325,
+  "strong_proof_accepts": 20,
+  "by_original_domain_status": {
+    "UNVERIFIED_INACTIVE": {
+      "ACCEPT:REPLACED": 24,
+      "ACCEPT:VERIFIED": 2,
+      "REVIEW:NOT_FOUND": 44,
+      "REVIEW:REDIRECT_UNCONFIRMED": 1,
+      "REVIEW:TEMP_UNREACHABLE": 1,
+      "REJECT:COMPANY_CLOSED": 8
+    }
+  },
+  "consistency_flags": 0,
+  "review_queue_rows": 78,
+  "reviewer_overrides_applied": 0,
+  "code_version": "5afbc8a-modified",
+  "input_file": "work_queue_master.csv",
+  "input_sha256": "b62b49228420c60c70c67bd5db97f209e5d6cfb1f9651c0c0e2c5d21feb4f02c",
+  "generated_at": "2026-10-02T17:06:04.991043+00:00"
+}

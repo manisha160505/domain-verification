@@ -1,3 +1,5 @@
+> **Historical document.** This describes the earlier Apify-based recovery pipeline and the elimination-first engine, both now retired (`verifier/legacy/`). The current approach, using free tools and the proof-ladder decision engine with no unproven replacements, is described in `README.md`.
+
 # High-Level Design (HLD) & Technical Architecture
 ## Inactive Domain Discovery, Elimination-First Verification & Dataset Replacement Pipeline
 

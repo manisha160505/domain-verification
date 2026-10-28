@@ -1,0 +1,87 @@
+{
+  "rows_resolved": 5979,
+  "rows_in_queue": 5979,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "NEEDS_REVIEW": 2319,
+    "VERIFIED_ACTIVE": 1523,
+    "RETRY_UNREACHABLE": 1162,
+    "NOT_FOUND": 269,
+    "NEEDS_REVIEW_SUGGESTION": 340,
+    "COMPANY_CLOSED": 241,
+    "REPLACED_VERIFIED": 125
+  },
+  "decisions": {
+    "REVIEW": 4090,
+    "ACCEPT": 1648,
+    "REJECT": 241
+  },
+  "outcomes": {
+    "INSUFFICIENT_PROOF": 1365,
+    "VERIFIED": 1590,
+    "BLOCKED": 558,
+    "NOT_FOUND": 269,
+    "REPLACEMENT_SUGGESTED": 340,
+    "NO_PROOF": 596,
+    "UNREADABLE": 408,
+    "COMPANY_CLOSED": 241,
+    "TEMP_UNREACHABLE": 196,
+    "REDIRECT_UNCONFIRMED": 114,
+    "GOVERNMENT_SITE": 243,
+    "REPLACED": 58,
+    "NOT_CHECKED": 1
+  },
+  "found_via": {
+    "SUPPLIED": 1431,
+    "WWW_VARIANT": 92,
+    "REDIRECT": 67,
+    "SEARCH": 58
+  },
+  "answer_types": {
+    "GROUP_SITE": 259,
+    "REGIONAL_SITE": 257,
+    "OWN_SITE": 1132
+  },
+  "domains_changed": 125,
+  "accepted_with_proof": 1648,
+  "accepted_with_proof_rate": 0.2756,
+  "strong_proof_accepts": 973,
+  "by_original_domain_status": {
+    "PRE_EXISTING_ACTIVE": {
+      "REVIEW:INSUFFICIENT_PROOF": 1107,
+      "ACCEPT:VERIFIED": 1486,
+      "REVIEW:BLOCKED": 358,
+      "REVIEW:NOT_FOUND": 150,
+      "REVIEW:REPLACEMENT_SUGGESTED": 283,
+      "REVIEW:NO_PROOF": 362,
+      "REVIEW:UNREADABLE": 297,
+      "REJECT:COMPANY_CLOSED": 199,
+      "REVIEW:TEMP_UNREACHABLE": 172,
+      "REVIEW:REDIRECT_UNCONFIRMED": 112,
+      "REVIEW:GOVERNMENT_SITE": 136,
+      "ACCEPT:REPLACED": 47
+    },
+    "VERIFIED_ACTIVE": {
+      "REVIEW:NOT_FOUND": 119,
+      "REVIEW:INSUFFICIENT_PROOF": 258,
+      "REVIEW:BLOCKED": 200,
+      "ACCEPT:VERIFIED": 104,
+      "REJECT:COMPANY_CLOSED": 42,
+      "REVIEW:NO_PROOF": 234,
+      "REVIEW:UNREADABLE": 111,
+      "REVIEW:REPLACEMENT_SUGGESTED": 57,
+      "REVIEW:GOVERNMENT_SITE": 107,
+      "ACCEPT:REPLACED": 11,
+      "REVIEW:TEMP_UNREACHABLE": 24,
+      "REVIEW:REDIRECT_UNCONFIRMED": 2,
+      "REVIEW:NOT_CHECKED": 1
+    }
+  },
+  "consistency_flags": 14,
+  "review_queue_rows": 4456,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "shard.csv",
+  "input_sha256": "b081361bfce1e9deb4e32973896b252a7e90dc6b75661f4710ac928c19df06a7",
+  "generated_at": "2026-10-05T18:31:09.946784+00:00"
+}

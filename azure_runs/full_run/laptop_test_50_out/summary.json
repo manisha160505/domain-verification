@@ -1,0 +1,60 @@
+{
+  "rows_resolved": 50,
+  "rows_in_queue": 50,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "RETRY_UNREACHABLE": 33,
+    "NEEDS_REVIEW": 5,
+    "NEEDS_REVIEW_SUGGESTION": 5,
+    "REPLACED_VERIFIED": 3,
+    "NOT_FOUND": 4
+  },
+  "decisions": {
+    "REVIEW": 47,
+    "ACCEPT": 3
+  },
+  "outcomes": {
+    "TEMP_UNREACHABLE": 7,
+    "INSUFFICIENT_PROOF": 4,
+    "BLOCKED": 20,
+    "UNREADABLE": 6,
+    "REPLACEMENT_SUGGESTED": 5,
+    "REPLACED": 3,
+    "NOT_FOUND": 4,
+    "NO_PROOF": 1
+  },
+  "found_via": {
+    "SEARCH": 3
+  },
+  "answer_types": {
+    "REGIONAL_SITE": 1,
+    "OWN_SITE": 2
+  },
+  "domains_changed": 3,
+  "accepted_with_proof": 3,
+  "accepted_with_proof_rate": 0.06,
+  "strong_proof_accepts": 1,
+  "by_original_domain_status": {
+    "UNVERIFIED_INACTIVE": {
+      "REVIEW:TEMP_UNREACHABLE": 3,
+      "REVIEW:INSUFFICIENT_PROOF": 1
+    },
+    "REPLACED_INACTIVE": {
+      "REVIEW:BLOCKED": 20,
+      "REVIEW:UNREADABLE": 6,
+      "REVIEW:REPLACEMENT_SUGGESTED": 5,
+      "REVIEW:TEMP_UNREACHABLE": 4,
+      "ACCEPT:REPLACED": 3,
+      "REVIEW:NOT_FOUND": 4,
+      "REVIEW:INSUFFICIENT_PROOF": 3,
+      "REVIEW:NO_PROOF": 1
+    }
+  },
+  "consistency_flags": 0,
+  "review_queue_rows": 50,
+  "reviewer_overrides_applied": 0,
+  "code_version": "5afbc8a-modified",
+  "input_file": "azure_runs\\full_run\\laptop_test_50.csv",
+  "input_sha256": "6b061a70fe0558d5e1d66e4a810721cccdddf1f727f9ac7ec236f7693d6947d1",
+  "generated_at": "2026-10-04T06:57:42.265221+00:00"
+}

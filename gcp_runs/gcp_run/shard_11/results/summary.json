@@ -1,0 +1,91 @@
+{
+  "rows_resolved": 5918,
+  "rows_in_queue": 5918,
+  "rows_pending": 0,
+  "updated_domain_status": {
+    "RETRY_UNREACHABLE": 1105,
+    "VERIFIED_ACTIVE": 1512,
+    "NEEDS_REVIEW_SUGGESTION": 338,
+    "NEEDS_REVIEW": 2323,
+    "REPLACED_VERIFIED": 135,
+    "COMPANY_CLOSED": 219,
+    "NOT_FOUND": 285,
+    "MERGED_SUCCESSOR_SITE": 1
+  },
+  "decisions": {
+    "REVIEW": 4051,
+    "ACCEPT": 1648,
+    "REJECT": 219
+  },
+  "outcomes": {
+    "BLOCKED": 504,
+    "VERIFIED": 1576,
+    "REPLACEMENT_SUGGESTED": 338,
+    "REDIRECT_UNCONFIRMED": 137,
+    "INSUFFICIENT_PROOF": 1364,
+    "UNREADABLE": 398,
+    "NO_PROOF": 593,
+    "COMPANY_CLOSED": 219,
+    "NOT_FOUND": 285,
+    "REPLACED": 71,
+    "TEMP_UNREACHABLE": 203,
+    "GOVERNMENT_SITE": 228,
+    "NOT_CHECKED": 1,
+    "MERGED_INTO": 1
+  },
+  "found_via": {
+    "SUPPLIED": 1415,
+    "WWW_VARIANT": 98,
+    "REDIRECT": 63,
+    "SEARCH": 72
+  },
+  "answer_types": {
+    "GROUP_SITE": 259,
+    "OWN_SITE": 1123,
+    "REGIONAL_SITE": 265,
+    "SUCCESSOR_SITE": 1
+  },
+  "domains_changed": 136,
+  "accepted_with_proof": 1648,
+  "accepted_with_proof_rate": 0.2785,
+  "strong_proof_accepts": 978,
+  "by_original_domain_status": {
+    "PRE_EXISTING_ACTIVE": {
+      "REVIEW:BLOCKED": 339,
+      "ACCEPT:VERIFIED": 1455,
+      "REVIEW:REPLACEMENT_SUGGESTED": 265,
+      "REVIEW:REDIRECT_UNCONFIRMED": 136,
+      "REVIEW:INSUFFICIENT_PROOF": 1087,
+      "REVIEW:UNREADABLE": 284,
+      "REVIEW:NO_PROOF": 374,
+      "REJECT:COMPANY_CLOSED": 160,
+      "REVIEW:NOT_FOUND": 168,
+      "ACCEPT:REPLACED": 52,
+      "REVIEW:TEMP_UNREACHABLE": 174,
+      "REVIEW:GOVERNMENT_SITE": 141,
+      "REVIEW:NOT_CHECKED": 1,
+      "ACCEPT:MERGED_INTO": 1
+    },
+    "VERIFIED_ACTIVE": {
+      "REVIEW:BLOCKED": 165,
+      "REVIEW:NO_PROOF": 219,
+      "REVIEW:UNREADABLE": 114,
+      "REVIEW:NOT_FOUND": 117,
+      "REVIEW:INSUFFICIENT_PROOF": 277,
+      "REVIEW:GOVERNMENT_SITE": 87,
+      "REJECT:COMPANY_CLOSED": 59,
+      "ACCEPT:VERIFIED": 121,
+      "REVIEW:TEMP_UNREACHABLE": 29,
+      "ACCEPT:REPLACED": 19,
+      "REVIEW:REPLACEMENT_SUGGESTED": 73,
+      "REVIEW:REDIRECT_UNCONFIRMED": 1
+    }
+  },
+  "consistency_flags": 18,
+  "review_queue_rows": 4406,
+  "reviewer_overrides_applied": 0,
+  "code_version": "unknown",
+  "input_file": "shard.csv",
+  "input_sha256": "eee1dc84d1f5711aa0ce9a12e1164c19e698e5ee1b92ecc0709022e53b9ab439",
+  "generated_at": "2026-10-05T18:27:04.601688+00:00"
+}

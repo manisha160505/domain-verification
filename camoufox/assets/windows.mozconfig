@@ -1,2 +1,0 @@
-ac_add_options --disable-maintenance-service
-ac_add_options --disable-update-agent

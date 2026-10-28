@@ -1,0 +1,54 @@
+{
+  "population": 16509,
+  "seed": 20261006,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "run_date": "2026-10-06T06:57:07+00:00",
+  "n_drawn": 3,
+  "n_judged": 2,
+  "n_match": 1,
+  "n_mismatch": 1,
+  "raw_accuracy": 0.5,
+  "wilson_fpc_95": [
+    0.0945,
+    0.9055
+  ],
+  "cluster_bootstrap_95": null,
+  "country_reweighted_accuracy": 0.5,
+  "replacement_rate": 0.3333,
+  "replaced_reasons": {
+    "LOW_CONFIDENCE": 1
+  },
+  "bounds": [
+    0.3333,
+    0.6667
+  ],
+  "reliability_flag": false,
+  "by_country": {
+    "AU": {
+      "judged": 1,
+      "match": 1,
+      "replaced": 0,
+      "accuracy": 1.0,
+      "replacement_rate": 0.0
+    },
+    "MY": {
+      "judged": 1,
+      "match": 0,
+      "replaced": 0,
+      "accuracy": 0.0,
+      "replacement_rate": 0.0
+    },
+    "TH": {
+      "judged": 0,
+      "match": 0,
+      "replaced": 1,
+      "accuracy": null,
+      "replacement_rate": 1.0
+    }
+  },
+  "tiers_of_judged": {
+    "HIGH": 2
+  }
+}

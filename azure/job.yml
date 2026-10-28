@@ -1,0 +1,27 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+# Domain resolver on the workspace compute. Change workers / searches / limit below as needed;
+# limit_per_worker 0 means no limit (full run).
+display_name: domain-resolver
+experiment_name: domain-verification
+code: ..
+command: >-
+  bash azure/run_on_azure.sh --queue ${{inputs.queue}} --out ${{outputs.results}}
+  --workers ${{inputs.workers}} --searches ${{inputs.searches_per_minute}} --limit ${{inputs.limit_per_worker}}
+  --id-reference ${{inputs.id_reference}}
+inputs:
+  queue:
+    type: uri_file
+    path: ../shards/shard_1.csv  # set per machine: --set inputs.queue.path=../shards/shard_N.csv
+  id_reference:
+    type: uri_file
+    path: ../work_queue_master.csv  # full queue, for shared tax-ID detection across shards
+  workers: 10
+  searches_per_minute: 20
+  limit_per_worker: 0  # 0 = no limit (full run)
+outputs:
+  results:
+    type: uri_folder
+    mode: rw_mount
+environment:
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu22.04:latest
+compute: azureml:HPC1  # set per machine: --set compute=azureml:HPCn
